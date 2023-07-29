@@ -1,0 +1,29 @@
+name: schooll_website
+description: A new Flutter project.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.2 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.5
+  flutter_bloc: ^8.1.3
+  flutter_svg: ^2.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  assets:
+    - assets/image/
+
+  fonts:
+    - family: Magic Brush
+      fonts:
+        - asset: assets/fonts/dk-magical-brush/magical_brush.otf
+  uses-material-design: true
