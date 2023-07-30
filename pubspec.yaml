@@ -26,4 +26,3 @@ flutter:
     - family: Magic Brush
       fonts:
         - asset: assets/fonts/dk-magical-brush/magical_brush.otf
-  uses-material-design: true

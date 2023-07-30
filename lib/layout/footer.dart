@@ -185,7 +185,7 @@ class FooterTab extends StatelessWidget {
           right: 0,
           child: Center(
             child: Text(
-              "© 2021 Symbiosis Group of Schools. All Rights Reserved.",
+              "© 2023 Symbiosis Group of Schools. All Rights Reserved.",
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
