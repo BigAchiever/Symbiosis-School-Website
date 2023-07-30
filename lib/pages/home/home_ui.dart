@@ -24,7 +24,7 @@ class HomePageContent extends StatelessWidget {
               'assets/image/hero-background-1.png',
               fit: BoxFit.fill,
               width: size.width,
-              height: size.height * 1.5,
+              height: size.height * 1.6,
             ),
           ),
           Column(

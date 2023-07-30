@@ -70,7 +70,7 @@ class FooterTab extends StatelessWidget {
                       "Established in 2003",
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: FontWeight.normal,
+                        fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.start,
                     ),
@@ -121,7 +121,7 @@ class FooterTab extends StatelessWidget {
                       "Home",
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: FontWeight.normal,
+                        fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.start,
                     ),
@@ -130,7 +130,7 @@ class FooterTab extends StatelessWidget {
                       "About Us",
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: FontWeight.normal,
+                        fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.start,
                     ),
@@ -139,7 +139,7 @@ class FooterTab extends StatelessWidget {
                       "Resources",
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: FontWeight.normal,
+                        fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.start,
                     ),
@@ -148,7 +148,7 @@ class FooterTab extends StatelessWidget {
                       "Social Media",
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: FontWeight.normal,
+                        fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.start,
                     ),
@@ -157,7 +157,7 @@ class FooterTab extends StatelessWidget {
                       "Contact Us",
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: FontWeight.normal,
+                        fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.start,
                     ),
@@ -166,7 +166,7 @@ class FooterTab extends StatelessWidget {
                       "Feedback",
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: FontWeight.normal,
+                        fontWeight: FontWeight.w500,
                       ),
                       textAlign: TextAlign.start,
                     ),

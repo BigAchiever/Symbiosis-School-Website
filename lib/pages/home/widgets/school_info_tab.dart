@@ -127,6 +127,7 @@ class SchoolInformationTab extends StatelessWidget {
                     ),
                     child: ElevatedButton(
                       style: ButtonStyle(
+                        elevation: MaterialStateProperty.all<double>(0),
                         backgroundColor: MaterialStateProperty.all<Color>(
                           Colors.white,
                         ),

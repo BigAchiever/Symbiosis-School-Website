@@ -44,7 +44,8 @@ class ContactDetails extends StatelessWidget {
           branchName,
           style: const TextStyle(
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            fontFamily: "Magic Brush",
+            fontWeight: FontWeight.w500,
           ),
           textAlign: TextAlign.start,
         ),
@@ -53,7 +54,7 @@ class ContactDetails extends StatelessWidget {
           address,
           style: const TextStyle(
             fontSize: 14,
-            fontWeight: FontWeight.normal,
+             fontWeight: FontWeight.w500,
           ),
           textAlign: TextAlign.start,
         ),
@@ -66,7 +67,7 @@ class ContactDetails extends StatelessWidget {
               phone,
               style: const TextStyle(
                 fontSize: 14,
-                fontWeight: FontWeight.normal,
+                 fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.start,
             ),
@@ -81,17 +82,13 @@ class ContactDetails extends StatelessWidget {
               email,
               style: const TextStyle(
                 fontSize: 14,
-                fontWeight: FontWeight.normal,
+                 fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.start,
             ),
           ],
         ),
         const SizedBox(height: 20),
-        const VerticalDivider(
-          color: Colors.grey,
-          thickness: 1,
-        ),
       ],
     );
   }

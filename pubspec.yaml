@@ -21,6 +21,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/image/
+  uses-material-design: true
 
   fonts:
     - family: Magic Brush
