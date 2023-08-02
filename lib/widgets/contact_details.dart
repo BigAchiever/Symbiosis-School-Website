@@ -54,7 +54,7 @@ class ContactDetails extends StatelessWidget {
           address,
           style: const TextStyle(
             fontSize: 14,
-             fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w500,
           ),
           textAlign: TextAlign.start,
         ),
@@ -67,7 +67,7 @@ class ContactDetails extends StatelessWidget {
               phone,
               style: const TextStyle(
                 fontSize: 14,
-                 fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.start,
             ),
@@ -82,7 +82,7 @@ class ContactDetails extends StatelessWidget {
               email,
               style: const TextStyle(
                 fontSize: 14,
-                 fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.start,
             ),

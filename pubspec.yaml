@@ -14,6 +14,7 @@ dependencies:
   flutter_svg: ^2.0.7
   auto_size_text: ^3.0.0
   carousel_slider: ^4.2.1
+  lottie:
 
 dev_dependencies:
   flutter_test:

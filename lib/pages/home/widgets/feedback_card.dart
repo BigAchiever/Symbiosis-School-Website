@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -57,15 +58,14 @@ class FeedbackCard extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: SizedBox(
-                  width: size.width / 5.5,
-                  child: Text(
-                    feedback,
-                    style: const TextStyle(
-                      fontSize: 18,
-                    ),
+              SizedBox(
+                width: size.width / 5.5,
+                child: AutoSizeText(
+                  feedback,
+                  maxFontSize: 18,
+                  minFontSize: 12,
+                  style: const TextStyle(
+                    fontSize: 18,
                   ),
                 ),
               ),
@@ -73,24 +73,24 @@ class FeedbackCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: Text(
-                      'By $authorName',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.grey[700],
-                      ),
+                  AutoSizeText(
+                    'By $authorName',
+                    maxFontSize: 18,
+                    minFontSize: 12,
+                    maxLines: 1,
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.grey[700],
                     ),
                   ),
-                  FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: Text(
-                      date,
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.grey[700],
-                      ),
+                  AutoSizeText(
+                    date,
+                    maxFontSize: 18,
+                    maxLines: 1,
+                    minFontSize: 12,
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.grey[700],
                     ),
                   ),
                 ],

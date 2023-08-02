@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:schooll_website/layout/footer.dart';
 import 'package:schooll_website/pages/home/home_ui.dart';
 
 import '../pages/about/about.dart';
@@ -38,16 +37,37 @@ class _HomeScreenState extends State<HomeScreen> {
         toolbarHeight: 100,
         elevation: 0,
         backgroundColor: const Color(0xffFFCD02),
-        title: GestureDetector(
+        title: InkWell(
+            hoverColor: Colors.transparent,
             onTap: () => _onTabTapped(4),
-            child: const Text(
-              'Symbiosis School\nJabalpur',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 28,
-                fontFamily: "Magic Brush",
-                fontWeight: FontWeight.w600,
-                color: Colors.black,
+            child: const SizedBox(
+              width: 330,
+              child: Row(
+                children: [
+                  Text(
+                    'Symbiosis School\nJabalpur',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontFamily: "Magic Brush",
+                      fontWeight: FontWeight.normal,
+                      color: Colors.black,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Color.fromARGB(255, 23, 23, 23),
+                    radius: 35,
+                    child: Padding(
+                      padding: EdgeInsets.all(4.0),
+                      child: Image(
+                        image: AssetImage('assets/image/logo.png'),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             )),
         actions: [
@@ -57,7 +77,8 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                GestureDetector(
+                InkWell(
+                  hoverColor: Colors.transparent,
                   onTap: () => _onTabTapped(0),
                   child: Text(
                     'About',
@@ -71,9 +92,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 const SizedBox(
-                  width: 20,
+                  width: 30,
                 ),
-                GestureDetector(
+                InkWell(
+                  hoverColor: Colors.transparent,
                   onTap: () => _onTabTapped(1),
                   child: Text(
                     'Stories',
@@ -86,9 +108,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 const SizedBox(
-                  width: 20,
+                  width: 30,
                 ),
-                GestureDetector(
+                InkWell(
+                  hoverColor: Colors.transparent,
                   onTap: () => _onTabTapped(2),
                   child: Text(
                     'Social Media',
@@ -102,9 +125,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 const SizedBox(
-                  width: 20,
+                  width: 30,
                 ),
-                GestureDetector(
+                InkWell(
+                  hoverColor: Colors.transparent,
                   onTap: () => _onTabTapped(3),
                   child: Text(
                     'Contact',
@@ -118,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 const SizedBox(
-                  width: 20,
+                  width: 30,
                 ),
               ],
             ),

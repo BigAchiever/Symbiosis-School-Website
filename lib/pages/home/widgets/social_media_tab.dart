@@ -59,11 +59,6 @@ class _SocialMediaTabState extends State<SocialMediaTab> {
               SocialMediaCard(
                 image: "assets/image/dads.png",
                 description:
-                    "Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger, east india company has been followingg british rules",
-              ),
-              SocialMediaCard(
-                image: "assets/image/dads.png",
-                description:
                     "facebook is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
               ),
               SocialMediaCard(

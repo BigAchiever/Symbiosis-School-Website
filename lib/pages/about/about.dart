@@ -7,8 +7,32 @@ import 'package:schooll_website/widgets/bottom_picture_tab.dart';
 import 'models/values_model.dart';
 import 'widgets/values_card.dart';
 
-class AboutPage extends StatelessWidget {
+class AboutPage extends StatefulWidget {
   const AboutPage({Key? key}) : super(key: key);
+
+  @override
+  State<AboutPage> createState() => _AboutPageState();
+}
+
+class _AboutPageState extends State<AboutPage> {
+  late Image image1;
+
+  // late Image image2;
+
+  @override
+  void initState() {
+    super.initState();
+    image1 = Image.asset(
+      'assets/image/tower.png',
+    );
+  }
+
+  @override
+  void didChangeDependencies() {
+    precacheImage(image1.image, context);
+
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +44,7 @@ class AboutPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: size.height / 1.1,
+              height: size.height / 1.4,
               width: double.infinity,
               decoration: const BoxDecoration(
                 color: Colors.transparent,
@@ -91,9 +115,9 @@ class AboutPage extends StatelessWidget {
                   child: Container(
                     height: size.height * 3,
                     width: size.width,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/image/tower.png'),
+                        image: image1.image,
                         fit: BoxFit.contain,
                       ),
                     ),

@@ -11,56 +11,69 @@ class SocialMediaCard extends StatefulWidget {
 }
 
 class _SocialMediaCardState extends State<SocialMediaCard> {
-  bool _isHovered = false;
+  bool isHovered = false;
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (_) => setState(() => _isHovered = true),
-      onExit: (_) => setState(() => _isHovered = false),
+    final Size size = MediaQuery.of(context).size;
+    return InkWell(
+      onTap: () {},
       child: Container(
         decoration: BoxDecoration(
-          color: _isHovered ? Colors.cyanAccent.shade100 : Colors.white,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(12.0),
-          border: Border.all(
-            color: Colors.grey.shade400,
-            width: 0.1,
+          border: const Border(
+            bottom: BorderSide(
+              color: Colors.black,
+              width: 4,
+            ),
+            left: BorderSide(
+              color: Colors.black,
+              width: 4,
+            ),
+            right: BorderSide(
+              color: Colors.black,
+              width: 1,
+            ),
+            top: BorderSide(
+              color: Colors.black,
+              width: 1,
+            ),
           ),
         ),
-        width: 300,
-        child: IntrinsicHeight(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12.0),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 12.0, right: 12.0, top: 12.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(12.0),
-                    child: Image(
-                      fit: BoxFit.cover,
-                      image: AssetImage(widget.image),
-                    ),
+        width: size.width / 5,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12.0),
+              child: Padding(
+                padding:
+                    const EdgeInsets.only(left: 12.0, right: 12.0, top: 12.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12.0),
+                  child: Image(
+                    fit: BoxFit.cover,
+                    image: AssetImage(widget.image),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20),
-                child: Text(
-                  widget.description,
-                  textAlign: TextAlign.start,
-                  maxLines: 4,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    color: Colors.black,
-                  ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Text(
+                widget.description,
+                textAlign: TextAlign.start,
+                maxLines: 4,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontFamily: "Dan Sirf",
+                  color: Colors.black,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

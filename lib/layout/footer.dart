@@ -12,7 +12,7 @@ class FooterTab extends StatelessWidget {
       children: [
         Container(
           height: 300,
-          width: double.infinity,
+          width: size.width,
           decoration: const BoxDecoration(
             color: Color(0xffFFCD02),
             border: Border(
@@ -33,25 +33,13 @@ class FooterTab extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color.fromARGB(255, 42, 49, 90),
-                            blurRadius: 0,
-                            offset: Offset(0, -2),
-                          ),
-                        ],
-                      ),
-                      child: const CircleAvatar(
-                        backgroundColor: Colors.transparent,
-                        radius: 30,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Image(
-                            image: AssetImage('assets/image/logo.png'),
-                          ),
+                    const CircleAvatar(
+                      backgroundColor: Color.fromARGB(255, 23, 23, 23),
+                      radius: 30,
+                      child: Padding(
+                        padding: EdgeInsets.all(4.0),
+                        child: Image(
+                          image: AssetImage('assets/image/logo.png'),
                         ),
                       ),
                     ),

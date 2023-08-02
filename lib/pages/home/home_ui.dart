@@ -8,8 +8,30 @@ import 'package:schooll_website/widgets/bottom_picture_tab.dart';
 import '../../layout/footer.dart';
 import 'widgets/hero_image_cards.dart';
 
-class HomePageContent extends StatelessWidget {
+class HomePageContent extends StatefulWidget {
   const HomePageContent({super.key});
+
+  @override
+  State<HomePageContent> createState() => _HomePageContentState();
+}
+
+class _HomePageContentState extends State<HomePageContent> {
+  late Image image1;
+  late Image image2;
+
+  @override
+  void initState() {
+    super.initState();
+    image1 = Image.asset("assets/image/paper-background.png");
+    image2 = Image.asset("assets/image/hero-background-1.png");
+  }
+
+  @override
+  void didChangeDependencies() {
+    precacheImage(image1.image, context);
+    precacheImage(image2.image, context);
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +42,8 @@ class HomePageContent extends StatelessWidget {
         child: Stack(children: [
           Container(
             color: const Color(0xffFFCD02),
-            child: Image.asset(
-              'assets/image/hero-background-1.png',
+            child: Image(
+              image: image2.image,
               fit: BoxFit.fill,
               width: size.width,
               height: size.height * 1.6,
@@ -34,8 +56,8 @@ class HomePageContent extends StatelessWidget {
                   alignment: Alignment.center,
                   children: [
                     // here is the background assets of the website hero
-                    Image.asset(
-                      'assets/image/paper-background.png',
+                    Image(
+                      image: image1.image,
                       fit: BoxFit.fill,
                       width: size.width / 1.1,
                       height: size.height * 1.1,
