@@ -22,7 +22,7 @@
 
   <script>
     // Version injected by flutter build, do not touch.
-    var serviceWorkerVersion = null;
+    var serviceWorkerVersion = "3382377831";
   </script>
   <style>
     /* unminify.com */
@@ -80,6 +80,7 @@
       /* Custom font family */
       font-size: 48px;
       font-weight: 500;
+      text-align: center;
     }
 
     #loading h1 {
@@ -101,20 +102,19 @@
       /* Align the quote at the top */
       height: 150%;
       width: 90%;
-   
     }
 
     #quote {
       color: #ffffff;
       font-size: 24px;
-     
+
       font-weight: 300;
       text-align: center;
       max-width: 320px;
-     
+
       padding: 15px;
       background-color: rgba(255, 255, 255, 0.2);
-     
+
       border-radius: 10px;
     }
 
@@ -122,9 +122,9 @@
       color: #ffffff;
       /* Green text */
       font-size: 24px;
-      font-weight: 600;
+      font-weight: 500;
       text-align: center;
-      margin-bottom: 150px;
+      margin-bottom: 600px;
     }
   </style>
 </head>
@@ -135,18 +135,15 @@
     <div id="welcome-container">
       <div id="welcome-tag">Welcome to Symbiosis Group of Schools</div>
     </div>
-    <div id="quote-container">
-      <div id="quote">"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela
-      </div>
-    </div>
-    <div id="hint-text">We are Almost there...🚀</div>
+    <div id="hint-text">Hold on tight, we are almost there🚀</div>
   </div>
+
 
   <script>
     window.addEventListener('load', function (ev) {
       // Automatically Load Flutter App after 5 seconds
       setTimeout(function () {
-      
+
         load();
       }, 5000);
     });

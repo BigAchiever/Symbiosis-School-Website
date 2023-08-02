@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
               style: TextStyle(
                 fontSize: 28,
                 fontFamily: "Magic Brush",
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w600,
                 color: Colors.black,
               ),
             )),
@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.black,
                       fontSize: 20,
                       fontWeight: _selectedIndex == 0
-                          ? FontWeight.bold
+                          ? FontWeight.w600
                           : FontWeight.normal,
                     ),
                   ),
@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.black,
                         fontSize: 20,
                         fontWeight: _selectedIndex == 1
-                            ? FontWeight.bold
+                            ? FontWeight.w600
                             : FontWeight.normal),
                   ),
                 ),
@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.black,
                       fontSize: 20,
                       fontWeight: _selectedIndex == 2
-                          ? FontWeight.bold
+                          ? FontWeight.w600
                           : FontWeight.normal,
                     ),
                   ),
@@ -112,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.black,
                       fontSize: 20,
                       fontWeight: _selectedIndex == 3
-                          ? FontWeight.bold
+                          ? FontWeight.w600
                           : FontWeight.normal,
                     ),
                   ),

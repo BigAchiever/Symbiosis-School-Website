@@ -9,7 +9,9 @@ class BottomPictureTab extends StatelessWidget {
     return Stack(
       children: [
         SvgPicture.asset(
+          
           'assets/image/map.svg',
+          
           alignment: Alignment.bottomCenter,
           width: double.infinity,
           height: 200,
