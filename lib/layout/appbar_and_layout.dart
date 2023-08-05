@@ -4,7 +4,8 @@ import 'package:schooll_website/pages/home/home_ui.dart';
 import '../pages/about/about.dart';
 import '../pages/contact/contact.dart';
 import '../pages/social_media/social_media.dart';
-import '../pages/stories/stories.dart';
+import '../pages/gallery/gallery_ui.dart';
+import '../widgets/button_widget2.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -91,24 +92,24 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
+                // const SizedBox(
+                //   width: 30,
+                // ),
+                // InkWell(
+                //   hoverColor: Colors.transparent,
+                //   onTap: () => _onTabTapped(1),
+                //   child: Text(
+                //     'Gallery',
+                //     style: TextStyle(
+                //         color: Colors.black,
+                //         fontSize: 20,
+                //         fontWeight: _selectedIndex == 1
+                //             ? FontWeight.w600
+                //             : FontWeight.normal),
+                //   ),
+                // ),
                 const SizedBox(
-                  width: 30,
-                ),
-                InkWell(
-                  hoverColor: Colors.transparent,
-                  onTap: () => _onTabTapped(1),
-                  child: Text(
-                    'Stories',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: _selectedIndex == 1
-                            ? FontWeight.w600
-                            : FontWeight.normal),
-                  ),
-                ),
-                const SizedBox(
-                  width: 30,
+                  width: 40,
                 ),
                 InkWell(
                   hoverColor: Colors.transparent,
@@ -125,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 const SizedBox(
-                  width: 30,
+                  width: 40,
                 ),
                 InkWell(
                   hoverColor: Colors.transparent,
@@ -142,8 +143,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 const SizedBox(
-                  width: 30,
+                  width: 40,
                 ),
+                ButtonWidget2(
+                  text: "Admin Login",
+                  onpressed: () {},
+                )
               ],
             ),
           ),

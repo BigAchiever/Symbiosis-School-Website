@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:schooll_website/layout/appbar_and_layout.dart';
-import 'package:schooll_website/pages/contact/contact.dart';
 
 void main() {
   runApp(const MyApp());

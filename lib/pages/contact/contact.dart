@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:schooll_website/layout/footer.dart';
 import 'package:schooll_website/pages/contact/widgets/card.dart';
+
+import '../../widgets/bottom_picture_tab.dart';
 
 class ContactPage extends StatelessWidget {
   const ContactPage({super.key});
@@ -157,10 +160,10 @@ class ContactPage extends StatelessWidget {
               ),
             ),
             Container(
-              color: Colors.white,
-              height: size.height / 2,
-              width: double.infinity,
-            ),
+                width: double.infinity,
+                color: const Color(0xfff8f8f8),
+                child: const BottomPictureTab()),
+            const FooterTab()
           ],
         ),
       ),

@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 class SocialMediaCard extends StatefulWidget {
   final String description;
   final String image;
-  const SocialMediaCard(
-      {super.key, required this.description, required this.image});
+  const SocialMediaCard({
+    Key? key,
+    required this.description,
+    required this.image,
+  }) : super(key: key);
 
   @override
   _SocialMediaCardState createState() => _SocialMediaCardState();
@@ -16,27 +19,28 @@ class _SocialMediaCardState extends State<SocialMediaCard> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return InkWell(
-      onTap: () {},
+    return MouseRegion(
+      onEnter: (_) => setState(() => isHovered = true),
+      onExit: (_) => setState(() => isHovered = false),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12.0),
-          border: const Border(
+          border: Border(
             bottom: BorderSide(
-              color: Colors.black,
-              width: 4,
+              color: isHovered ? Colors.black : Colors.grey.withOpacity(0.4),
+              width: isHovered ? 4 : 1,
             ),
             left: BorderSide(
-              color: Colors.black,
-              width: 4,
+              color: isHovered ? Colors.black : Colors.grey.withOpacity(0.4),
+              width: isHovered ? 4 : 1,
             ),
             right: BorderSide(
-              color: Colors.black,
+              color: isHovered ? Colors.black : Colors.grey.withOpacity(0.4),
               width: 1,
             ),
             top: BorderSide(
-              color: Colors.black,
+              color: isHovered ? Colors.black : Colors.grey.withOpacity(0.4),
               width: 1,
             ),
           ),

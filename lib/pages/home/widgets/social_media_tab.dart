@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:schooll_website/pages/home/widgets/social_media_card.dart';
+import 'package:schooll_website/widgets/button1_widget.dart';
 
 class SocialMediaTab extends StatefulWidget {
   const SocialMediaTab({super.key});
@@ -101,40 +102,7 @@ class _SocialMediaTabState extends State<SocialMediaTab> {
           const SizedBox(
             height: 10,
           ),
-          Container(
-            height: 50,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                color: Colors.black,
-                width: 2,
-              ),
-            ),
-            child: ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(
-                  Colors.white,
-                ),
-                overlayColor: MaterialStateProperty.resolveWith<Color>(
-                  (Set<MaterialState> states) {
-                    if (states.contains(MaterialState.hovered)) {
-                      return Colors.yellow;
-                    }
-                    return Colors.white;
-                  },
-                ),
-              ),
-              onPressed: () {},
-              child: const Text(
-                "View More",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: "Magic Brush",
-                  fontSize: 18,
-                ),
-              ),
-            ),
-          ),
+          ButtonWidget1(text: "View More", onpressed: () {})
         ],
       ),
     );
