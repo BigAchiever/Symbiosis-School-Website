@@ -49,7 +49,7 @@ Widget buildSchoolImageWithTriangularShape(
                 bottomRight: Radius.circular(10),
               ),
             ),
-             height: size.height / 1.5,
+            height: size.height / 1.5,
             width: size.width / 4.8,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -66,10 +66,10 @@ Widget buildSchoolImageWithTriangularShape(
                           children: [
                             TextSpan(
                               text: title,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: "Magic Brush",
-                                fontSize: 28,
+                                fontSize: size.width / 55,
                                 fontWeight: FontWeight.normal,
                               ),
                             ),

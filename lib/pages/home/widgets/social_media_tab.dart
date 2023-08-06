@@ -31,10 +31,10 @@ class _SocialMediaTabState extends State<SocialMediaTab> {
           const SizedBox(
             height: 20,
           ),
-          const Text(
+          Text(
             "#Symbiosians",
             style: TextStyle(
-              fontSize: 48,
+              fontSize: size.width / 30,
               fontFamily: "Magic Brush",
               fontWeight: FontWeight.bold,
             ),
@@ -42,10 +42,10 @@ class _SocialMediaTabState extends State<SocialMediaTab> {
           const SizedBox(
             height: 10,
           ),
-          const Text(
+          Text(
             "We do good with others, for others",
             style: TextStyle(
-              fontSize: 18,
+              fontSize: size.width / 80,
               fontWeight: FontWeight.normal,
             ),
           ),
@@ -92,11 +92,11 @@ class _SocialMediaTabState extends State<SocialMediaTab> {
           const SizedBox(
             height: 30,
           ),
-          const Text(
+          Text(
             "See our feed for more School of X magic!",
             style: TextStyle(
               color: Colors.black,
-              fontSize: 18,
+              fontSize: size.width / 80,
             ),
           ),
           const SizedBox(

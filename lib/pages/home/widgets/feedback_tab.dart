@@ -10,7 +10,7 @@ class FeedBackTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      height: 700,
+      height: size.width / 1.6,
       width: size.width,
       decoration: const BoxDecoration(
         color: Color(0xffF8F8F8),
@@ -29,23 +29,23 @@ class FeedBackTab extends StatelessWidget {
             width: 100,
           ),
           const SizedBox(height: 30),
-          const Text(
+          Text(
             "We're Hit",
             style: TextStyle(
-              fontSize: 48,
+              fontSize: size.width / 30,
               color: Colors.black,
               fontFamily: "Magic Brush",
             ),
           ),
-          const Text(
+          Text(
             "We hate to blow our own trumpets - so listen to\nwhat others say about us instead!",
             style: TextStyle(
-              fontSize: 20,
+              fontSize: size.width / 80,
               color: Colors.black,
             ),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 40),
           const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

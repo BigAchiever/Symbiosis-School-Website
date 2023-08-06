@@ -10,7 +10,7 @@ Widget sectionButtonsWidget(
   final Size size = MediaQuery.of(context).size;
   return SizedBox(
     width: size.width,
-    height: 60,
+    height: size.height / 12,
     child: ElevatedButton(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all<Color>(
@@ -31,7 +31,7 @@ Widget sectionButtonsWidget(
       child: Text(
         title.toUpperCase(),
         style: TextStyle(
-          fontSize: 16,
+          fontSize: size.width / 90,
           color: isSelected ? Colors.black : Colors.black,
           fontWeight: FontWeight.bold,
         ),

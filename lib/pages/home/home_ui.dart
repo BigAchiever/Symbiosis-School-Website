@@ -71,12 +71,12 @@ class _HomePageContentState extends State<HomePageContent> {
                         top: 100,
                         child: SizedBox(
                           width: size.width / 1.5,
-                          child: const Column(
+                          child: Column(
                             children: [
                               Text(
                                 "DESIGNING A BETTER",
                                 style: TextStyle(
-                                  fontSize: 48,
+                                  fontSize: size.width / 30,
                                   color: Colors.black,
                                   fontFamily: "Magic Brush",
                                 ),
@@ -86,17 +86,20 @@ class _HomePageContentState extends State<HomePageContent> {
                                 child: Text(
                                   "TOMORROW, TOGETHER",
                                   style: TextStyle(
-                                    fontSize: 75,
+                                    fontSize: size.width / 20,
                                     color: Colors.black,
                                     fontFamily: "Magic Brush",
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
                               ),
+                              const SizedBox(
+                                height: 20,
+                              ),
                               Text(
                                 "School of X uses design to help you make a difference.\nTap to see how we’ve helped people like you bring positive change to their\ncommunities.",
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: size.width / 80,
                                   color: Colors.black,
                                   fontFamily: "Sans Serif",
                                 ),

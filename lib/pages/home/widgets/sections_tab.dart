@@ -29,7 +29,7 @@ class _SectionsTabState extends State<SectionsTab> {
     final currentSection = sections[_selectedIndex];
 
     return Container(
-      height: 800,
+      height: size.height * 1.2,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -59,12 +59,12 @@ class _SectionsTabState extends State<SectionsTab> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const FittedBox(
+                        FittedBox(
                           fit: BoxFit.scaleDown,
                           child: Text(
                             "Find your\nplace in the\nSchool of X",
                             style: TextStyle(
-                              fontSize: 64,
+                              fontSize: size.width / 20,
                               color: Colors.white,
                               fontFamily: "Magic Brush",
                             ),
@@ -73,10 +73,10 @@ class _SectionsTabState extends State<SectionsTab> {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Text(
+                        Text(
                           "What's your interest?",
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: size.width / 90,
                             color: Colors.white,
                           ),
                         ),
@@ -139,8 +139,8 @@ class _SectionsTabState extends State<SectionsTab> {
                         width: size.width / 3,
                         child: Text(
                           currentSection.title,
-                          style: const TextStyle(
-                            fontSize: 48,
+                          style: TextStyle(
+                            fontSize: size.width / 30,
                             color: Colors.black,
                             fontFamily: "Magic Brush",
                           ),
@@ -150,8 +150,8 @@ class _SectionsTabState extends State<SectionsTab> {
                       const SizedBox(height: 20),
                       Text(
                         currentSection.description,
-                        style: const TextStyle(
-                          fontSize: 24,
+                        style: TextStyle(
+                          fontSize: size.width / 80,
                           color: Colors.black,
                         ),
                         textAlign: TextAlign.center,

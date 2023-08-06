@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -48,8 +47,8 @@ class FeedbackCard extends StatelessWidget {
                 fit: BoxFit.scaleDown,
                 child: Text(
                   title,
-                  style: const TextStyle(
-                    fontSize: 20,
+                  style: TextStyle(
+                    fontSize: size.width / 80,
                     fontWeight: FontWeight.normal,
                     fontFamily: 'Magic Brush',
                   ),
@@ -60,12 +59,10 @@ class FeedbackCard extends StatelessWidget {
               ),
               SizedBox(
                 width: size.width / 5.5,
-                child: AutoSizeText(
+                child: Text(
                   feedback,
-                  maxFontSize: 18,
-                  minFontSize: 12,
-                  style: const TextStyle(
-                    fontSize: 18,
+                  style: TextStyle(
+                    fontSize: size.width / 85,
                   ),
                 ),
               ),
@@ -73,23 +70,19 @@ class FeedbackCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  AutoSizeText(
+                  Text(
                     'By $authorName',
-                    maxFontSize: 18,
-                    minFontSize: 12,
                     maxLines: 1,
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: size.width / 90,
                       color: Colors.grey[700],
                     ),
                   ),
-                  AutoSizeText(
+                  Text(
                     date,
-                    maxFontSize: 18,
                     maxLines: 1,
-                    minFontSize: 12,
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: size.width / 90,
                       color: Colors.grey[700],
                     ),
                   ),

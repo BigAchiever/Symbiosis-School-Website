@@ -9,7 +9,7 @@ class SchoolInformationTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      height: 700,
+      height: size.height * 1.1,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Color(0xffFFCD02),
@@ -27,10 +27,10 @@ class SchoolInformationTab extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
+          Text(
             "Our branches in Jabalpur",
             style: TextStyle(
-              fontSize: 48,
+              fontSize: size.width / 30,
               fontWeight: FontWeight.normal,
               fontFamily: 'Magic Brush',
             ),
@@ -40,10 +40,10 @@ class SchoolInformationTab extends StatelessWidget {
           ),
           SizedBox(
             width: size.width / 2,
-            child: const Text(
+            child: Text(
               "The School of X, an initiative of DesignSingapore Council,strives to be a classroom without walls for communities and businesses to solve challenges through design thinking.",
               style: TextStyle(
-                fontSize: 18,
+                fontSize: size.width / 80,
                 fontWeight: FontWeight.normal,
               ),
               textAlign: TextAlign.center,
