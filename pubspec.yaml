@@ -16,6 +16,7 @@ dependencies:
   carousel_slider: ^4.2.1
   lottie:
   video_player: ^2.1.5
+  go_router:
 
 dev_dependencies:
   flutter_test:

@@ -1,46 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:schooll_website/pages/home/home_ui.dart';
+import 'package:go_router/go_router.dart';
 
-import '../pages/about/about.dart';
-import '../pages/contact/contact.dart';
-import '../pages/social_media/social_media.dart';
-import '../pages/gallery/gallery_ui.dart';
 import '../widgets/button_widget2.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class AppbarWidget extends StatefulWidget {
+  final Widget body;
+  final int selectedIndex;
+  const AppbarWidget(
+      {super.key, required this.body, required this.selectedIndex});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<AppbarWidget> createState() => _AppbarWidgetState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 4;
-
-  final List<Widget> _pages = [
-    const AboutPage(),
-    const StoriesPage(),
-    const SocialMediaPage(),
-    const ContactPage(),
-    const HomePageContent()
-  ];
-
-  void _onTabTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
+class _AppbarWidgetState extends State<AppbarWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffFFCD02),
       appBar: AppBar(
         toolbarHeight: 100,
         elevation: 0,
         backgroundColor: const Color(0xffFFCD02),
         title: InkWell(
             hoverColor: Colors.transparent,
-            onTap: () => _onTabTapped(4),
+            onTap: () => GoRouter.of(context).go('/home'),
             child: const SizedBox(
               width: 330,
               child: Row(
@@ -80,13 +64,13 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 InkWell(
                   hoverColor: Colors.transparent,
-                  onTap: () => _onTabTapped(0),
+                  onTap: () => GoRouter.of(context).go('/about'),
                   child: Text(
                     'About',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20,
-                      fontWeight: _selectedIndex == 0
+                      fontWeight: widget.selectedIndex == 0
                           ? FontWeight.w600
                           : FontWeight.normal,
                     ),
@@ -103,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 //     style: TextStyle(
                 //         color: Colors.black,
                 //         fontSize: 20,
-                //         fontWeight: _selectedIndex == 1
+                //         fontWeight: widget.selectedIndex == 1
                 //             ? FontWeight.w600
                 //             : FontWeight.normal),
                 //   ),
@@ -113,13 +97,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 InkWell(
                   hoverColor: Colors.transparent,
-                  onTap: () => _onTabTapped(2),
+                  onTap: () => GoRouter.of(context).go('/social-media'),
                   child: Text(
                     'Social Media',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20,
-                      fontWeight: _selectedIndex == 2
+                      fontWeight: widget.selectedIndex == 2
                           ? FontWeight.w600
                           : FontWeight.normal,
                     ),
@@ -130,13 +114,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 InkWell(
                   hoverColor: Colors.transparent,
-                  onTap: () => _onTabTapped(3),
+                  onTap: () => GoRouter.of(context).go('/contact-us'),
                   child: Text(
                     'Contact',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20,
-                      fontWeight: _selectedIndex == 3
+                      fontWeight: widget.selectedIndex == 3
                           ? FontWeight.w600
                           : FontWeight.normal,
                     ),
@@ -154,16 +138,22 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: IndexedStack(
-              index: _selectedIndex,
-              children: _pages,
-            ),
-          ),
-        ],
-      ),
+      body: widget.body,
+      // body: Column(
+      //   children: [
+      //     Expanded(
+      //       child: IndexedStack(
+      //         index: widget.selectedIndex,
+      //         children: const [
+      //           AboutPage(),
+      //           SocialMediaPage(),
+      //           ContactPage(),
+      //           HomePageContent(),
+      //         ],
+      //       ),
+      //     ),
+      //   ],
+      // ),
     );
   }
 }
