@@ -19,12 +19,15 @@ class _AppbarWidgetState extends State<AppbarWidget> {
     return Scaffold(
       backgroundColor: const Color(0xffFFCD02),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: null,
         toolbarHeight: 100,
         elevation: 0,
         backgroundColor: const Color(0xffFFCD02),
         title: InkWell(
             hoverColor: Colors.transparent,
-            onTap: () => GoRouter.of(context).go('/home'),
+            onTap: () =>
+                GoRouter.of(context).go('/symbiosis-school-jabalpur/home'),
             child: const SizedBox(
               width: 330,
               child: Row(
@@ -64,40 +67,26 @@ class _AppbarWidgetState extends State<AppbarWidget> {
               children: [
                 InkWell(
                   hoverColor: Colors.transparent,
-                  onTap: () => GoRouter.of(context).go('/about'),
+                  onTap: () => GoRouter.of(context)
+                      .go('/symbiosis-school-jabalpur/about'),
                   child: Text(
                     'About',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20,
-                      fontWeight: widget.selectedIndex == 0
+                      fontWeight: widget.selectedIndex == 1
                           ? FontWeight.w600
                           : FontWeight.normal,
                     ),
                   ),
                 ),
-                // const SizedBox(
-                //   width: 30,
-                // ),
-                // InkWell(
-                //   hoverColor: Colors.transparent,
-                //   onTap: () => _onTabTapped(1),
-                //   child: Text(
-                //     'Gallery',
-                //     style: TextStyle(
-                //         color: Colors.black,
-                //         fontSize: 20,
-                //         fontWeight: widget.selectedIndex == 1
-                //             ? FontWeight.w600
-                //             : FontWeight.normal),
-                //   ),
-                // ),
                 const SizedBox(
                   width: 40,
                 ),
                 InkWell(
                   hoverColor: Colors.transparent,
-                  onTap: () => GoRouter.of(context).go('/social-media'),
+                  onTap: () => GoRouter.of(context)
+                      .go('/symbiosis-school-jabalpur/social'),
                   child: Text(
                     'Social Media',
                     style: TextStyle(
@@ -114,7 +103,8 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                 ),
                 InkWell(
                   hoverColor: Colors.transparent,
-                  onTap: () => GoRouter.of(context).go('/contact-us'),
+                  onTap: () => GoRouter.of(context)
+                      .go('/symbiosis-school-jabalpur/contact'),
                   child: Text(
                     'Contact',
                     style: TextStyle(

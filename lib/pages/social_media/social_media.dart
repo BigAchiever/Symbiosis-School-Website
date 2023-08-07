@@ -13,8 +13,7 @@ class SocialMediaPage extends StatefulWidget {
   _SocialMediaPageState createState() => _SocialMediaPageState();
 }
 
-class _SocialMediaPageState extends State<SocialMediaPage>
-    with TickerProviderStateMixin {
+class _SocialMediaPageState extends State<SocialMediaPage> {
   bool showMoreCards = false;
 
   @override
@@ -121,52 +120,25 @@ class _SocialMediaPageState extends State<SocialMediaPage>
                         height: 30,
                       ),
                       if (showMoreCards)
-                        Wrap(
+                        const Wrap(
                           alignment: WrapAlignment.center,
                           spacing: 20.0,
                           runSpacing: 30.0,
                           children: [
-                            FadeTransition(
-                              opacity: CurvedAnimation(
-                                parent: AnimationController(
-                                  vsync: this,
-                                  duration: const Duration(milliseconds: 500),
-                                )..forward(),
-                                curve: Curves.easeIn,
-                              ),
-                              child: const SocialMediaCard(
-                                description:
-                                    "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                image: "assets/image/dads.png",
-                              ),
+                            SocialMediaCard(
+                              description:
+                                  "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                              image: "assets/image/dads.png",
                             ),
-                            FadeTransition(
-                              opacity: CurvedAnimation(
-                                parent: AnimationController(
-                                  vsync: this,
-                                  duration: const Duration(milliseconds: 500),
-                                )..forward(),
-                                curve: Curves.easeIn,
-                              ),
-                              child: const SocialMediaCard(
-                                description:
-                                    "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                image: "assets/image/dads.png",
-                              ),
+                            SocialMediaCard(
+                              description:
+                                  "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                              image: "assets/image/dads.png",
                             ),
-                            FadeTransition(
-                              opacity: CurvedAnimation(
-                                parent: AnimationController(
-                                  vsync: this,
-                                  duration: const Duration(milliseconds: 500),
-                                )..forward(),
-                                curve: Curves.easeIn,
-                              ),
-                              child: const SocialMediaCard(
-                                description:
-                                    "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                image: "assets/image/dads.png",
-                              ),
+                            SocialMediaCard(
+                              description:
+                                  "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                              image: "assets/image/dads.png",
                             ),
                           ],
                         ),

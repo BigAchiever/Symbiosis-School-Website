@@ -40,7 +40,8 @@ class _HomePageContentState extends State<HomePageContent> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: AppbarWidget(
-        selectedIndex: 1,
+        selectedIndex: 0,
+        
         body: SingleChildScrollView(
           child: Stack(children: [
             Container(

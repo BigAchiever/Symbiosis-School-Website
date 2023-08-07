@@ -41,7 +41,7 @@ class _AboutPageState extends State<AboutPage> {
     return Scaffold(
       backgroundColor: const Color(0xffFFCD02),
       body: AppbarWidget(
-        selectedIndex: 0,
+        selectedIndex: 1,
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

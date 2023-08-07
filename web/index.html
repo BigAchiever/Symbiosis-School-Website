@@ -27,15 +27,7 @@
   </script>
   <style>
     /* unminify.com */
-    body {
-      inset: 0;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      position: fixed;
-      font-family: 'Open Sans', sans-serif;
-    }
-
+   
     #gif-background {
       position: fixed;
       top: 0;
@@ -49,104 +41,20 @@
       background-repeat: no-repeat;
       background-position: center;
     }
-
-    #loading {
-      align-items: center;
-      background-color: transparent;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #welcome-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      /* Align the title at the top */
-      height: 100%;
-      margin-top: 70px;
-    }
-
-    #welcome-tag {
-      color: #ffffff;
-      /* White text */
-      font-family: 'Magic Brush';
-      /* Custom font family */
-      font-size: 48px;
-      font-weight: 500;
-      text-align: center;
-    }
-
-    #loading h1 {
-      color: #ffffff;
-      /* White text */
-      font-family: 'Magic Brush';
-      /* Custom font family */
-      font-size: 48px;
-      font-weight: 500;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-
-    #quote-container {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      justify-content: center;
-      /* Align the quote at the top */
-      height: 150%;
-      width: 90%;
-    }
-
-    #quote {
-      color: #ffffff;
-      font-size: 24px;
-
-      font-weight: 300;
-      text-align: center;
-      max-width: 320px;
-
-      padding: 15px;
-      background-color: rgba(255, 255, 255, 0.2);
-
-      border-radius: 10px;
-    }
-
-    #hint-text {
-      color: #ffffff;
-      /* Green text */
-      font-size: 24px;
-      font-weight: 500;
-      text-align: center;
-      margin-bottom: 600px;
-    }
   </style>
 </head>
 
 <body>
   <div id="gif-background"></div>
-  <div id="loading">
-    <div id="welcome-container">
-      <div id="welcome-tag">Welcome to Symbiosis Group of Schools</div>
-    </div>
-    <div id="hint-text">Hold on tight, we are almost there🚀</div>
-  </div>
+ 
 
 
   <script>
     window.addEventListener('load', function (ev) {
       // Automatically Load Flutter App after 5 seconds
       setTimeout(function () {
-
         load();
-      }, 5000);
+      },);
     });
 
     function load() {
