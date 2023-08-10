@@ -22,10 +22,12 @@ final router = GoRouter(
       builder: (context, state) => const AboutPage(),
     ),
     GoRoute(
+      name: 'social',
       path: '/symbiosis-school-jabalpur/social',
       builder: (context, state) => const SocialMediaPage(),
     ),
     GoRoute(
+      name: 'contact',
       path: '/symbiosis-school-jabalpur/contact',
       builder: (context, state) => const ContactPage(),
     ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:schooll_website/layout/responsive.dart';
 
 class CustomCard extends StatelessWidget {
   final String imageUrl;
@@ -43,7 +44,7 @@ class CustomCard extends StatelessWidget {
               ),
             ),
           ),
-          width: 300,
+          width: ResponsiveLayout.isMobile(context) ? size.width / 1.8 : 300,
           child: Column(
             children: [
               ClipRRect(
@@ -65,7 +66,11 @@ class CustomCard extends StatelessWidget {
                 child: Text(
                   title,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 18, color: Colors.black),
+                  style: TextStyle(
+                      fontSize: ResponsiveLayout.isMobile(context)
+                          ? size.width / 30
+                          : size.width / 80,
+                      color: Colors.black),
                 ),
               ),
             ],

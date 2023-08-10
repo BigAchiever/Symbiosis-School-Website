@@ -11,7 +11,7 @@ class FooterTab extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: 300,
+          height: size.height / 2.5,
           width: size.width,
           decoration: const BoxDecoration(
             color: Color(0xffFFCD02),

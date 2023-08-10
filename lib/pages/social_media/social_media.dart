@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:schooll_website/layout/appbar_and_layout.dart';
 import 'package:schooll_website/layout/footer.dart';
 import 'package:schooll_website/pages/home/widgets/social_media_card.dart';
+import 'package:schooll_website/pages/social_media/mobile_social.dart';
 import 'package:schooll_website/widgets/bottom_picture_tab.dart';
 import 'package:schooll_website/widgets/button1_widget.dart';
 
@@ -13,7 +14,8 @@ class SocialMediaPage extends StatefulWidget {
   _SocialMediaPageState createState() => _SocialMediaPageState();
 }
 
-class _SocialMediaPageState extends State<SocialMediaPage> {
+class _SocialMediaPageState extends State<SocialMediaPage>
+    with TickerProviderStateMixin {
   bool showMoreCards = false;
 
   @override
@@ -22,6 +24,7 @@ class _SocialMediaPageState extends State<SocialMediaPage> {
     return Scaffold(
       backgroundColor: const Color(0xffFFCD02),
       body: AppbarWidget(
+        mobileBody: const MobileSocialMedia(),
         selectedIndex: 2,
         body: SingleChildScrollView(
           child: Column(
@@ -33,12 +36,11 @@ class _SocialMediaPageState extends State<SocialMediaPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    LottieBuilder.asset(
-                      'assets/image/like.json',
-                      fit: BoxFit.contain,
+                    Lottie.asset(
+                      "assets/image/love.json",
                       reverse: true,
-                      height: 200,
-                      width: 300,
+                      height: size.height / 3,
+                      width: size.width / 3,
                     ),
                     Text(
                       "WELCOME TO THE COMMUNITY OF X".toUpperCase(),
@@ -120,25 +122,52 @@ class _SocialMediaPageState extends State<SocialMediaPage> {
                         height: 30,
                       ),
                       if (showMoreCards)
-                        const Wrap(
+                        Wrap(
                           alignment: WrapAlignment.center,
                           spacing: 20.0,
                           runSpacing: 30.0,
                           children: [
-                            SocialMediaCard(
-                              description:
-                                  "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                              image: "assets/image/dads.png",
+                            FadeTransition(
+                              opacity: CurvedAnimation(
+                                parent: AnimationController(
+                                  vsync: this,
+                                  duration: const Duration(milliseconds: 500),
+                                )..forward(),
+                                curve: Curves.easeIn,
+                              ),
+                              child: const SocialMediaCard(
+                                description:
+                                    "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                image: "assets/image/dads.png",
+                              ),
                             ),
-                            SocialMediaCard(
-                              description:
-                                  "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                              image: "assets/image/dads.png",
+                            FadeTransition(
+                              opacity: CurvedAnimation(
+                                parent: AnimationController(
+                                  vsync: this,
+                                  duration: const Duration(milliseconds: 500),
+                                )..forward(),
+                                curve: Curves.easeIn,
+                              ),
+                              child: const SocialMediaCard(
+                                description:
+                                    "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                image: "assets/image/dads.png",
+                              ),
                             ),
-                            SocialMediaCard(
-                              description:
-                                  "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                              image: "assets/image/dads.png",
+                            FadeTransition(
+                              opacity: CurvedAnimation(
+                                parent: AnimationController(
+                                  vsync: this,
+                                  duration: const Duration(milliseconds: 500),
+                                )..forward(),
+                                curve: Curves.easeIn,
+                              ),
+                              child: const SocialMediaCard(
+                                description:
+                                    "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                image: "assets/image/dads.png",
+                              ),
                             ),
                           ],
                         ),

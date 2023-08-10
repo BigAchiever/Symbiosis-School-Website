@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
       title: 'School Website',
       debugShowCheckedModeBanner: false,
       routerConfig: router,
-     
     );
   }
 }

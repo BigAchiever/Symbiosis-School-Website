@@ -3,7 +3,7 @@
 
 <head>
   <!-- <base href="https://bigachiever.github.io/Flutter_School_Website/"> -->
-    <base href="$FLUTTER_BASE_HREF">
+  <base href="$FLUTTER_BASE_HREF">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
@@ -13,6 +13,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="app">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
@@ -27,7 +29,7 @@
   </script>
   <style>
     /* unminify.com */
-   
+
     #gif-background {
       position: fixed;
       top: 0;
@@ -46,19 +48,14 @@
 
 <body>
   <div id="gif-background"></div>
- 
-
 
   <script>
     window.addEventListener('load', function (ev) {
-      // Automatically Load Flutter App after 5 seconds
-      setTimeout(function () {
-        load();
-      },);
+      load();
     });
 
     function load() {
-      loadScript('flutter.js').then(() => {
+      loadScript('main.dart.js').then(() => {
         // Download main.dart.js
         _flutter.loader.loadEntrypoint({
           serviceWorker: {
@@ -67,8 +64,8 @@
           onEntrypointLoaded: async function (app) {
             let appRunner = await app.initializeEngine();
             await appRunner.runApp();
-            // Remove loading screen when App available: 
-            document.querySelector('#loading').remove();
+            // Remove loading screen when App available:
+            document.getElementById('gif-background').style.display = 'none';
           }
         });
       })

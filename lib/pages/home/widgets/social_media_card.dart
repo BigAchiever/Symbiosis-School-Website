@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:schooll_website/layout/responsive.dart';
 
 class SocialMediaCard extends StatefulWidget {
   final String description;
@@ -45,7 +46,7 @@ class _SocialMediaCardState extends State<SocialMediaCard> {
             ),
           ),
         ),
-        width: size.width / 5,
+        width: ResponsiveLayout.isMobile(context) ? 300 : size.width / 5,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

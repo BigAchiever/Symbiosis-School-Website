@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:schooll_website/layout/responsive.dart';
 
 class FeedbackCard extends StatelessWidget {
   final String title;
@@ -19,8 +20,12 @@ class FeedbackCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      width: size.width / 4.5,
-      height: size.height / 2.5,
+      width: ResponsiveLayout.isMobile(context)
+          ? size.width / 1.2
+          : size.width / 4.5,
+      height: ResponsiveLayout.isMobile(context)
+          ? size.height / 1.8
+          : size.height / 2.5,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
@@ -37,36 +42,40 @@ class FeedbackCard extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 'assets/image/rocket.svg',
-                width: 40,
-                height: 40,
+                width: ResponsiveLayout.isMobile(context) ? 60 : 40,
+                height: ResponsiveLayout.isMobile(context) ? 60 : 40,
               ),
               const SizedBox(
                 height: 10,
               ),
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: size.width / 80,
-                    fontWeight: FontWeight.normal,
-                    fontFamily: 'Magic Brush',
-                  ),
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize:
+                      ResponsiveLayout.isMobile(context) ? 24 : size.width / 80,
+                  fontWeight: FontWeight.normal,
+                  fontFamily: 'Magic Brush',
                 ),
               ),
               const SizedBox(
                 height: 20,
               ),
               SizedBox(
-                width: size.width / 5.5,
+                width: ResponsiveLayout.isMobile(context)
+                    ? size.width / 1.2
+                    : size.width / 5.5,
                 child: Text(
                   feedback,
                   style: TextStyle(
-                    fontSize: size.width / 85,
+                    fontSize: ResponsiveLayout.isMobile(context)
+                        ? 16
+                        : size.width / 85,
                   ),
                 ),
               ),
-              const Spacer(),
+              const SizedBox(
+                height: 20,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -74,7 +83,9 @@ class FeedbackCard extends StatelessWidget {
                     'By $authorName',
                     maxLines: 1,
                     style: TextStyle(
-                      fontSize: size.width / 90,
+                      fontSize: ResponsiveLayout.isMobile(context)
+                          ? 14
+                          : size.width / 90,
                       color: Colors.grey[700],
                     ),
                   ),
@@ -82,7 +93,9 @@ class FeedbackCard extends StatelessWidget {
                     date,
                     maxLines: 1,
                     style: TextStyle(
-                      fontSize: size.width / 90,
+                      fontSize: ResponsiveLayout.isMobile(context)
+                          ? 14
+                          : size.width / 90,
                       color: Colors.grey[700],
                     ),
                   ),

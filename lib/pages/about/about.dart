@@ -5,6 +5,7 @@ import 'package:schooll_website/pages/about/tabs/backstory_tab.dart';
 import 'package:schooll_website/pages/about/widgets/card_widget.dart';
 import 'package:schooll_website/widgets/bottom_picture_tab.dart';
 
+import 'mobile_about.dart';
 import 'models/values_model.dart';
 import 'widgets/values_card.dart';
 
@@ -15,7 +16,7 @@ class AboutPage extends StatefulWidget {
   State<AboutPage> createState() => _AboutPageState();
 }
 
-class _AboutPageState extends State<AboutPage> {
+class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
   late Image image1;
 
   // late Image image2;
@@ -202,13 +203,13 @@ class _AboutPageState extends State<AboutPage> {
               const BackstoryTab(),
               Container(
                   width: double.infinity,
-                  height: 200,
                   color: Colors.white,
                   child: const BottomPictureTab()),
               const FooterTab(),
             ],
           ),
         ),
+        mobileBody: const MobileAbout(),
       ),
     );
   }

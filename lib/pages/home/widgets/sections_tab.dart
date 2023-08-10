@@ -59,15 +59,12 @@ class _SectionsTabState extends State<SectionsTab> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        FittedBox(
-                          fit: BoxFit.scaleDown,
-                          child: Text(
-                            "Find your\nplace in the\nSchool of X",
-                            style: TextStyle(
-                              fontSize: size.width / 20,
-                              color: Colors.white,
-                              fontFamily: "Magic Brush",
-                            ),
+                        Text(
+                          "Find your\nplace in the\nSchool of X",
+                          style: TextStyle(
+                            fontSize: size.width / 24,
+                            color: Colors.white,
+                            fontFamily: "Magic Brush",
                           ),
                         ),
                         const SizedBox(

@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:schooll_website/layout/responsive.dart';
 
 Widget buildSchoolImageWithTriangularShape(
     String imagePath, String title, String location, BuildContext context) {
   final Size size = MediaQuery.of(context).size;
   return Stack(
+    alignment: Alignment.center,
     children: [
       Container(
-        height: size.height / 2.2,
-        width: size.width / 2.8,
+        height: ResponsiveLayout.isMobile(context)
+            ? size.height / 2.5
+            : size.height / 2.2,
+        width: ResponsiveLayout.isMobile(context) ? 300 : size.width / 2.8,
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(
             Radius.circular(10),
@@ -36,64 +40,69 @@ Widget buildSchoolImageWithTriangularShape(
           ),
         ),
       ),
-      Positioned(
-        right: 0,
-        bottom: 0,
-        child: ClipPath(
-          clipper: _TriangularClipper(),
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.blue.withOpacity(0.5),
-              borderRadius: const BorderRadius.only(
-                topRight: Radius.circular(10),
-                bottomRight: Radius.circular(10),
-              ),
-            ),
-            height: size.height / 1.5,
-            width: size.width / 4.8,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Padding(
-                padding: const EdgeInsets.all(4.0),
-                child: SizedBox(
-                  width: size.width / 2.8, // Same width as the image container
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      RichText(
-                        text: TextSpan(
+      ResponsiveLayout.isMobile(context)
+          ? Container()
+          : Positioned(
+              right: 0,
+              bottom: 0,
+              child: ClipPath(
+                clipper: ResponsiveLayout.isMobile(context)
+                    ? null
+                    : _TriangularClipper(),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.blue.withOpacity(0.5),
+                    borderRadius: const BorderRadius.only(
+                      topRight: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                    ),
+                  ),
+                  height: size.height / 1.5,
+                  width: size.width / 4.8,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: SizedBox(
+                        width: size.width /
+                            2.8, // Same width as the image container
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            TextSpan(
-                              text: title,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: "Magic Brush",
-                                fontSize: size.width / 55,
-                                fontWeight: FontWeight.normal,
+                            RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: title,
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontFamily: "Magic Brush",
+                                      fontSize: size.width / 55,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                  ),
+                                ],
                               ),
+                              textAlign: TextAlign.end,
+                            ),
+                            Text(
+                              location,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              textAlign: TextAlign.end,
                             ),
                           ],
                         ),
-                        textAlign: TextAlign.end,
                       ),
-                      Text(
-                        location,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.end,
-                      ),
-                    ],
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-        ),
-      ),
     ],
   );
 }
