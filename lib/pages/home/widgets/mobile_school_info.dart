@@ -9,7 +9,7 @@ class MobileSchoolInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 1.8,
+      height: size.height * 2,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Color(0xffFFCD02),

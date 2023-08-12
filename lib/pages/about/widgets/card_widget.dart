@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:schooll_website/layout/responsive.dart';
 
 class CardContainer extends StatelessWidget {
   final String title;
@@ -14,25 +15,36 @@ class CardContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height / 2,
-      width: size.width / 3.5,
+      clipBehavior: Clip.none,
+      height: ResponsiveLayout.isMobile(context)
+          ? size.height / 1.8
+          : size.height / 2,
+      width: ResponsiveLayout.isMobile(context) ? 300 : size.width / 3.5,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(8)),
         color: Colors.white,
         border: Border.all(
           color: Colors.black,
-          width: 2,
+          width: ResponsiveLayout.isMobile(context) ? 1 : 2,
         ),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black,
-            blurRadius: 0,
-            offset: Offset(-10, 10),
-          ),
+        boxShadow: [
+          ResponsiveLayout.isMobile(context)
+              ? const BoxShadow(
+                  color: Colors.transparent,
+                  blurRadius: 0,
+                  offset: Offset(-5, 5),
+                )
+              : const BoxShadow(
+                  color: Colors.black,
+                  blurRadius: 0,
+                  offset: Offset(-10, 10),
+                ),
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.all(40.0),
+        padding: ResponsiveLayout.isMobile(context)
+            ? const EdgeInsets.all(20)
+            : const EdgeInsets.all(40.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,9 +53,10 @@ class CardContainer extends StatelessWidget {
               fit: BoxFit.scaleDown,
               child: Text(
                 title.toUpperCase(),
-                style: const TextStyle(
+                style: TextStyle(
                   color: Colors.black,
-                  fontSize: 24,
+                  fontSize:
+                      ResponsiveLayout.isMobile(context) ? 30 : size.width / 60,
                   fontFamily: "Dan Sirf Bold",
                   fontWeight: FontWeight.w600,
                   backgroundColor: Colors.yellow,
@@ -52,40 +65,35 @@ class CardContainer extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                subtitle.toUpperCase(),
-                style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 28,
-                  fontFamily: "Dan Sirf Bold",
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.start,
+            Text(
+              subtitle.toUpperCase(),
+              style: TextStyle(
+                color: Colors.black,
+                fontSize:
+                    ResponsiveLayout.isMobile(context) ? 20 : size.width / 60,
+                fontFamily: "Dan Sirf Bold",
+                fontWeight: FontWeight.bold,
               ),
+              textAlign: TextAlign.start,
             ),
             const SizedBox(
               height: 10,
             ),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                discription,
-                style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 18,
-                  fontFamily: "Dan Sirf",
-                ),
-                textAlign: TextAlign.start,
+            Text(
+              discription,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize:
+                    ResponsiveLayout.isMobile(context) ? 14 : size.width / 90,
+                fontFamily: "Dan Sirf",
               ),
+              textAlign: TextAlign.start,
             ),
           ],
         ),
       ),
     );
-    
   }
 }

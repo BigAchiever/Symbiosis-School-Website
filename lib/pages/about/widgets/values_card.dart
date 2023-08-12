@@ -1,6 +1,6 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:schooll_website/layout/responsive.dart';
 
 class ContentCard extends StatelessWidget {
   final String iconPath;
@@ -18,22 +18,23 @@ class ContentCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return SizedBox(
-      width: size.width / 7,
+      width: ResponsiveLayout.isMobile(context) ? 120 : size.width / 7,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SvgPicture.asset(
             iconPath,
-            width: 50,
-            height: 50,
+            width: ResponsiveLayout.isMobile(context) ? 40 : size.width / 15,
+            height: ResponsiveLayout.isMobile(context) ? 40 : size.height / 15,
           ),
           const SizedBox(
             height: 20,
           ),
           Text(
             title,
-            style: const TextStyle(
-              fontSize: 20,
+            style: TextStyle(
+              fontSize:
+                  ResponsiveLayout.isMobile(context) ? 18 : size.width / 70,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -42,13 +43,11 @@ class ContentCard extends StatelessWidget {
           ),
           SizedBox(
             width: 200,
-            child: AutoSizeText(
+            child: Text(
               description,
-              maxFontSize: 18,
-              minFontSize: 12,
-              maxLines: 6,
-              style: const TextStyle(
-                fontSize: 18,
+              style: TextStyle(
+                fontSize:
+                    ResponsiveLayout.isMobile(context) ? 14 : size.width / 85,
               ),
             ),
           ),

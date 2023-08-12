@@ -15,7 +15,7 @@ class _MobileSocialMediaHomeState extends State<MobileSocialMediaHome> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 2.4,
+      height: size.height * 2.5,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Colors.white,

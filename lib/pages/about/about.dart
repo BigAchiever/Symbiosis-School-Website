@@ -53,35 +53,35 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                 decoration: const BoxDecoration(
                   color: Colors.transparent,
                 ),
-                child: const Column(
+                child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 50,
                       ),
                       Text(
                         'ABOUT THE SCHOOL',
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: size.width / 60,
                           fontWeight: FontWeight.w700,
                           color: Colors.black,
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Text(
                         "What's our\nDeal?",
                         style: TextStyle(
-                          fontSize: 80,
+                          fontSize: size.width / 18,
                           fontWeight: FontWeight.normal,
                           color: Colors.black,
                           fontFamily: "Magic Brush",
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       SizedBox(
@@ -89,7 +89,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                         child: Text(
                           "We teach people how to solve the challenges they care about, through design – our classroom is the world around us.",
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: size.width / 75,
                             fontWeight: FontWeight.normal,
                             color: Colors.black,
                           ),

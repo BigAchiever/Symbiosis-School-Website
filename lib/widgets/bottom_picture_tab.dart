@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:schooll_website/layout/responsive.dart';
 
 class BottomPictureTab extends StatelessWidget {
   const BottomPictureTab({super.key});
@@ -7,10 +8,12 @@ class BottomPictureTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.bottomCenter,
       children: [
         SvgPicture.asset(
-          
-          'assets/image/map.svg',
+          ResponsiveLayout.isMobile(context)
+              ? "assets/image/map-mobile.svg"
+              : 'assets/image/map.svg',
 
           alignment: Alignment.bottomCenter,
           width: double.infinity,

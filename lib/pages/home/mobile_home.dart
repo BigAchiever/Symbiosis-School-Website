@@ -5,6 +5,7 @@ import 'package:schooll_website/pages/home/widgets/mobile_school_info.dart';
 import 'package:schooll_website/pages/home/widgets/mobile_sections.dart';
 import 'package:schooll_website/pages/home/widgets/mobile_social_media.dart';
 
+import '../../widgets/bottom_picture_tab.dart';
 import 'widgets/hero_image_cards.dart';
 
 class MobileHome extends StatefulWidget {
@@ -143,6 +144,11 @@ class _MobileHomeState extends State<MobileHome> {
             const MobileFeedBack(),
             const MobileSchoolInfo(),
             const MobileSocialMediaHome(),
+            Container(
+                width: double.infinity,
+                height: 100,
+                color: Colors.white,
+                child: const BottomPictureTab()),
             const MobileFootertab()
           ],
         ),

@@ -37,7 +37,7 @@ class _SocialMediaPageState extends State<SocialMediaPage>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Lottie.asset(
-                      "assets/image/love.json",
+                      "assets/image/car.json",
                       reverse: true,
                       height: size.height / 3,
                       width: size.width / 3,
