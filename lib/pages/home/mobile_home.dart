@@ -102,65 +102,60 @@ class _MobileHomeState extends State<MobileHome> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Transform.rotate(
-                            angle: -0.1,
-                            child: const CustomCard(
-                              imageUrl: "assets/image/dads.png",
-                              title:
-                                  'Builing better bonds between dads and their kids, happily ever after',
-                              borderRadius: 20.0,
-                              padding: 12.0,
-                            ),
-                          )
-                              .animate(
-                                  onPlay: (controller) => controller.repeat())
-                              .shimmer(
-                                  delay: 2000.ms,
-                                  duration: 1800.ms) // shimmer +
-                              .shake(
-                                  hz: 1,
-                                  curve: Curves.easeInOutCubic) // shake +
-
-                              .then(delay: 600.ms),
+                              angle: -0.1,
+                              child: const CustomCard(
+                                imageUrl: "assets/image/dads.png",
+                                title:
+                                    'Builing better bonds between dads and their kids, happily ever after',
+                                borderRadius: 20.0,
+                                padding: 12.0,
+                              )
+                                  .animate(
+                                      onPlay: (controller) =>
+                                          controller.repeat())
+                                  .shake(
+                                      hz: 1,
+                                      delay: 2000.ms,
+                                      duration: const Duration(seconds: 2),
+                                      curve: Curves.ease) // shake +
+                              ),
                           Transform.rotate(
-                            angle: 0.1,
-                            child: const CustomCard(
-                              imageUrl: "assets/image/dads.png",
-                              title:
-                                  'Builing better bonds between dads and their kids',
-                              borderRadius: 20.0,
-                              padding: 12.0,
-                            ),
-                          )
-                              .animate(
-                                  onPlay: (controller) => controller.repeat())
-                              .shimmer(
-                                  delay: 4000.ms,
-                                  duration: 1800.ms) // shimmer +
-                              .shake(
-                                  hz: 1,
-                                  curve: Curves.easeInOutCubic) // shake +
+                              angle: 0.1,
+                              child: const CustomCard(
+                                imageUrl: "assets/image/dads.png",
+                                title:
+                                    'Builing better bonds between dads and their kids',
+                                borderRadius: 20.0,
+                                padding: 12.0,
+                              )
+                                  .animate(
+                                      onPlay: (controller) =>
+                                          controller.repeat())
+                                  .shake(
+                                      hz: 1,
+                                      delay: 2000.ms,
+                                      duration: const Duration(seconds: 2),
+                                      curve: Curves.ease) // shake +
 
-                              .then(delay: 600.ms),
+                              ),
                           Transform.rotate(
-                            angle: -0.1,
-                            child: const CustomCard(
-                              imageUrl: "assets/image/dads.png",
-                              title:
-                                  'Builing better bonds between dads and their kids',
-                              borderRadius: 20.0,
-                              padding: 12.0,
-                            ),
-                          )
-                              .animate(
-                                  onPlay: (controller) => controller.repeat())
-                              .shimmer(
-                                  delay: 6000.ms,
-                                  duration: 1800.ms) // shimmer +
-                              .shake(
-                                  hz: 1,
-                                  curve: Curves.easeInOutCubic) // shake +
-
-                              .then(delay: 600.ms),
+                              angle: -0.1,
+                              child: const CustomCard(
+                                imageUrl: "assets/image/dads.png",
+                                title:
+                                    'Builing better bonds between dads and their kids',
+                                borderRadius: 20.0,
+                                padding: 12.0,
+                              )
+                                  .animate(
+                                      onPlay: (controller) =>
+                                          controller.repeat())
+                                  .shake(
+                                      hz: 1,
+                                      delay: 2000.ms,
+                                      duration: const Duration(seconds: 2),
+                                      curve: Curves.ease) // shake +
+                              ),
                         ],
                       ),
                     ),
