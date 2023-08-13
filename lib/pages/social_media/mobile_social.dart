@@ -202,7 +202,7 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
             Visibility(
               visible: showMoreCards == true,
               child: Text(
-                "Visit us on Instagram for more!",
+                "Visit us on instagram for more!",
                 style: TextStyle(
                   fontSize: size.width / 20,
                   fontFamily: "Dan Sirf Bold",
