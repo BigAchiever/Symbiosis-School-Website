@@ -70,7 +70,7 @@ class MobileContact extends StatelessWidget {
             ),
             Container(
               color: const Color(0xfff8f8f8),
-              height: size.height * 2.2,
+              height: size.height * 2.0,
               width: double.infinity,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -164,13 +164,10 @@ class MobileContact extends StatelessWidget {
                           child: ContactUsCard())
                     ],
                   ),
-                  const SizedBox(
-                    height: 40,
-                  ),
-                  const BottomPictureTab()
                 ],
               ),
             ),
+            const BottomPictureTab(),
             const MobileFootertab()
           ],
         ),
