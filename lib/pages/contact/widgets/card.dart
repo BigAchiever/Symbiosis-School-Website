@@ -42,7 +42,7 @@ class ContactUsCard extends StatelessWidget {
       child: Padding(
         padding: ResponsiveLayout.isMobile(context)
             ? const EdgeInsets.all(20)
-            : const EdgeInsets.all(38.0),
+            : const EdgeInsets.all(35.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -50,7 +50,9 @@ class ContactUsCard extends StatelessWidget {
             Text(
               'Please complete this enquiry form and hit submit. We’ll get back to you in 48 hours, tops!',
               style: TextStyle(
-                fontSize: size.width / 20,
+                fontSize: ResponsiveLayout.isMobile(context)
+                    ? size.width / 20
+                    : size.width / 80,
                 fontWeight: FontWeight.normal,
               ),
             ),
@@ -122,7 +124,7 @@ class ContactUsCard extends StatelessWidget {
                               style: TextStyle(
                                 fontFamily: "Dan Sirf Bold",
                                 fontWeight: FontWeight.normal,
-                                fontSize: size.width / 20,
+                                fontSize: size.width / 80,
                               ),
                             ),
                             const SizedBox(height: 10),
@@ -150,7 +152,7 @@ class ContactUsCard extends StatelessWidget {
                               style: TextStyle(
                                 fontFamily: "Dan Sirf Bold",
                                 fontWeight: FontWeight.normal,
-                                fontSize: size.width / 20,
+                                fontSize: size.width / 80,
                               ),
                             ),
                             const SizedBox(height: 10),
@@ -176,7 +178,9 @@ class ContactUsCard extends StatelessWidget {
               style: TextStyle(
                 fontFamily: "Dan Sirf Bold",
                 fontWeight: FontWeight.normal,
-                fontSize: size.width / 20,
+                fontSize: ResponsiveLayout.isMobile(context)
+                    ? size.width / 20
+                    : size.width / 80,
               ),
             ),
             const SizedBox(height: 10),
@@ -197,7 +201,9 @@ class ContactUsCard extends StatelessWidget {
               style: TextStyle(
                 fontFamily: "Dan Sirf Bold",
                 fontWeight: FontWeight.normal,
-                fontSize: size.width / 20,
+                fontSize: ResponsiveLayout.isMobile(context)
+                    ? size.width / 20
+                    : size.width / 80,
               ),
             ),
             const SizedBox(height: 10),
@@ -224,7 +230,7 @@ class ContactUsCard extends StatelessWidget {
                 SizedBox(
                   width: ResponsiveLayout.isMobile(context)
                       ? size.width / 3
-                      : size.width / 14,
+                      : size.width / 13,
                   height: size.height / 18,
                   child: MouseRegion(
                     cursor: SystemMouseCursors.click,
@@ -266,7 +272,7 @@ class ContactUsCard extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontSize: ResponsiveLayout.isMobile(context)
                               ? size.width / 20
-                              : size.width / 18,
+                              : size.width / 80,
                         ),
                       ),
                     ),

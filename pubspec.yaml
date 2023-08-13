@@ -18,7 +18,7 @@ dependencies:
   video_player: ^2.1.5
   go_router:
   carousel_indicator:
-
+  flutter_animate: ^4.2.0+1
 dev_dependencies:
   flutter_test:
     sdk: flutter

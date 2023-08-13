@@ -14,6 +14,11 @@ class ResponsiveLayout extends StatelessWidget {
     return size.width < mobileWidth;
   }
 
+  static bool isSmall(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+    return size.width < 320;
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(

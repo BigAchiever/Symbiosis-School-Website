@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:schooll_website/layout/mobile_footer.dart';
 import 'package:schooll_website/pages/home/widgets/mobile_feedback.dart';
 import 'package:schooll_website/pages/home/widgets/mobile_school_info.dart';
@@ -77,9 +78,9 @@ class _MobileHomeState extends State<MobileHome> {
                         SizedBox(
                           width: size.width / 1.2,
                           child: Text(
-                            "School of X uses design to help you make a difference.\nTap to see how we’ve helped people like you bring positive change to their communities.",
+                            "School of X uses design to help you make a difference. Tap to see how we’ve helped people like you bring positive change to their\ncommunities.",
                             style: TextStyle(
-                              fontSize: size.width / 30,
+                              fontSize: size.width / 20,
                               color: Colors.black,
                               fontFamily: "Sans Serif",
                             ),
@@ -109,7 +110,17 @@ class _MobileHomeState extends State<MobileHome> {
                               borderRadius: 20.0,
                               padding: 12.0,
                             ),
-                          ),
+                          )
+                              .animate(
+                                  onPlay: (controller) => controller.repeat())
+                              .shimmer(
+                                  delay: 2000.ms,
+                                  duration: 1800.ms) // shimmer +
+                              .shake(
+                                  hz: 1,
+                                  curve: Curves.easeInOutCubic) // shake +
+
+                              .then(delay: 600.ms),
                           Transform.rotate(
                             angle: 0.1,
                             child: const CustomCard(
@@ -119,7 +130,17 @@ class _MobileHomeState extends State<MobileHome> {
                               borderRadius: 20.0,
                               padding: 12.0,
                             ),
-                          ),
+                          )
+                              .animate(
+                                  onPlay: (controller) => controller.repeat())
+                              .shimmer(
+                                  delay: 4000.ms,
+                                  duration: 1800.ms) // shimmer +
+                              .shake(
+                                  hz: 1,
+                                  curve: Curves.easeInOutCubic) // shake +
+
+                              .then(delay: 600.ms),
                           Transform.rotate(
                             angle: -0.1,
                             child: const CustomCard(
@@ -129,7 +150,17 @@ class _MobileHomeState extends State<MobileHome> {
                               borderRadius: 20.0,
                               padding: 12.0,
                             ),
-                          ),
+                          )
+                              .animate(
+                                  onPlay: (controller) => controller.repeat())
+                              .shimmer(
+                                  delay: 6000.ms,
+                                  duration: 1800.ms) // shimmer +
+                              .shake(
+                                  hz: 1,
+                                  curve: Curves.easeInOutCubic) // shake +
+
+                              .then(delay: 600.ms),
                         ],
                       ),
                     ),

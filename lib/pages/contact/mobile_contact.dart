@@ -60,7 +60,7 @@ class MobileContact extends StatelessWidget {
                     ),
                   ),
                   LottieBuilder.asset(
-                    "assets/image/contactus.json",
+                    "assets/image/ani2.json",
                     // fit: BoxFit.contain,
                     height: 300,
                     width: 300,

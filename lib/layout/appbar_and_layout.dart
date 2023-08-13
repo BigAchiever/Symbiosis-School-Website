@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:schooll_website/layout/responsive.dart';
+import 'package:schooll_website/pages/about/about.dart';
+import 'package:schooll_website/pages/contact/contact.dart';
+import 'package:schooll_website/pages/social_media/social_media.dart';
 import 'package:schooll_website/utils/constants/dimension.dart';
 
+import '../pages/home/home_ui.dart';
 import '../widgets/button_widget2.dart';
 
 class AppbarWidget extends StatefulWidget {
-  final Widget body;
-  final Widget mobileBody;
-  final int selectedIndex;
-  const AppbarWidget(
-      {super.key,
-      required this.body,
-      required this.selectedIndex,
-      required this.mobileBody});
+  // final Widget body;
+  // final Widget mobileBody;
+  // final int selectedIndex;
+  const AppbarWidget({
+    super.key,
+  });
 
   @override
   State<AppbarWidget> createState() => _AppbarWidgetState();
@@ -21,6 +23,21 @@ class AppbarWidget extends StatefulWidget {
 
 class _AppbarWidgetState extends State<AppbarWidget> {
   bool menuOpened = false;
+  int _selectedIndex = 0;
+
+  final List<Widget> _pages = [
+    const HomePageContent(),
+    const AboutPage(),
+    const SocialMediaPage(),
+    const ContactPage(),
+  ];
+
+  void _onTabChanged(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -37,8 +54,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                   backgroundColor: const Color(0xffFFCD02),
                   title: InkWell(
                       hoverColor: Colors.transparent,
-                      onTap: () => GoRouter.of(context)
-                          .go('/symbiosis-school-jabalpur/home'),
+                      onTap: () => _onTabChanged(0),
                       child: const SizedBox(
                         width: 330,
                         child: Row(
@@ -78,14 +94,13 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                         children: [
                           InkWell(
                             hoverColor: Colors.transparent,
-                            onTap: () => GoRouter.of(context)
-                                .go('/symbiosis-school-jabalpur/about'),
+                            onTap: () => _onTabChanged(1),
                             child: Text(
                               'About',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,
-                                fontWeight: widget.selectedIndex == 1
+                                fontWeight: _selectedIndex == 1
                                     ? FontWeight.w600
                                     : FontWeight.normal,
                               ),
@@ -96,14 +111,13 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                           ),
                           InkWell(
                             hoverColor: Colors.transparent,
-                            onTap: () => GoRouter.of(context)
-                                .go('/symbiosis-school-jabalpur/social'),
+                            onTap: () => _onTabChanged(2),
                             child: Text(
                               'Social Media',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,
-                                fontWeight: widget.selectedIndex == 2
+                                fontWeight: _selectedIndex == 2
                                     ? FontWeight.w600
                                     : FontWeight.normal,
                               ),
@@ -114,14 +128,13 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                           ),
                           InkWell(
                             hoverColor: Colors.transparent,
-                            onTap: () => GoRouter.of(context)
-                                .go('/symbiosis-school-jabalpur/contact'),
+                            onTap: () => _onTabChanged(3),
                             child: Text(
                               'Contact',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,
-                                fontWeight: widget.selectedIndex == 3
+                                fontWeight: _selectedIndex == 3
                                     ? FontWeight.w600
                                     : FontWeight.normal,
                               ),
@@ -175,16 +188,20 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                             const SizedBox(
                               width: 20,
                             ),
-                            const CircleAvatar(
-                              backgroundColor: Color.fromARGB(255, 23, 23, 23),
-                              radius: 22,
-                              child: Padding(
-                                padding: EdgeInsets.all(4.0),
-                                child: Image(
-                                  image: AssetImage('assets/image/logo.png'),
-                                ),
-                              ),
-                            ),
+                            ResponsiveLayout.isSmall(context)
+                                ? const SizedBox()
+                                : const CircleAvatar(
+                                    backgroundColor:
+                                        Color.fromARGB(255, 23, 23, 23),
+                                    radius: 22,
+                                    child: Padding(
+                                      padding: EdgeInsets.all(4.0),
+                                      child: Image(
+                                        image:
+                                            AssetImage('assets/image/logo.png'),
+                                      ),
+                                    ),
+                                  ),
                           ],
                         )),
                   ),
@@ -335,16 +352,21 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                             ],
                             onSelected: (String tab) {
                               if (tab == 'about') {
-                                GoRouter.of(context)
-                                    .go('/symbiosis-school-jabalpur/about');
+                                _onTabChanged(1);
+                                setState(() {
+                                  menuOpened = false;
+                                });
                               } else if (tab == 'social_media') {
-                                GoRouter.of(context)
-                                    .go('/symbiosis-school-jabalpur/social');
+                                _onTabChanged(2);
+                                setState(() {
+                                  menuOpened = false;
+                                });
                               } else if (tab == 'contact') {
-                                GoRouter.of(context)
-                                    .go('/symbiosis-school-jabalpur/contact');
+                                _onTabChanged(3);
+                                setState(() {
+                                  menuOpened = false;
+                                });
                               }
-                              // Add more conditions for other tabs
                             },
                           ),
                         ),
@@ -352,10 +374,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                     ),
                   ],
                 ),
-          body: ResponsiveLayout(
-            mobileBody: widget.mobileBody,
-            desktopBody: widget.body,
-          ),
+          body: _pages[_selectedIndex],
         );
       },
     );
