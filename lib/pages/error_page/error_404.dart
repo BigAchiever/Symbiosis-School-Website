@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 import 'package:schooll_website/widgets/button1_widget.dart';
 
 class NotFoundPage extends StatelessWidget {
-  const NotFoundPage({Key? key}) : super(key: key);
+  const NotFoundPage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class NotFoundPage extends StatelessWidget {
               ButtonWidget1(
                 text: "Return to Home Page",
                 onpressed: () {
-                  GoRouter.of(context).go('/symbiosis-school-jabalpur/home');
+                  Navigator.pushNamed(context, '/');
                 },
               ),
             ],

@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:schooll_website/utils/nav_utils.dart';
 
 import 'school_pics.dart';
 
-class SchoolInformationTab extends StatelessWidget {
+class SchoolInformationTab extends StatefulWidget {
   const SchoolInformationTab({Key? key}) : super(key: key);
 
+  @override
+  State<SchoolInformationTab> createState() => _SchoolInformationTabState();
+}
+
+class _SchoolInformationTabState extends State<SchoolInformationTab> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -89,7 +95,15 @@ class SchoolInformationTab extends StatelessWidget {
                           },
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        NavUtils.onTabChanged(
+                          1,
+                          (p0) {
+                            Navigator.pushNamed(
+                                context, '/symbiosis_school_jabalpur/about');
+                          },
+                        );
+                      },
                       child: const Text(
                         "Learn More",
                         style: TextStyle(

@@ -29,17 +29,15 @@ class MyApp extends StatelessWidget {
       title: 'School Website',
       debugShowCheckedModeBanner: false,
 
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
-        '/': (context) => const AppbarWidget(),
-        '/symbiosis_school_jabalpur/about': (context) => const AboutPage(),
-        '/symbiosis_school_jabalpur/social_media': (context) =>
-            const SocialMediaPage(),
-        '/symbiosis_school_jabalpur/contact_us': (context) =>
-            const ContactPage(),
-        '/symbiosis_school_jabalpur/error404': (context) =>
-            const NotFoundPage(),
+        '/home': (context) => const AppbarWidget(),
+        '/about': (context) => const AboutPage(),
+        '/social_media': (context) => const SocialMediaPage(),
+        '/contact_us': (context) => const ContactPage(),
+        '/error404': (context) => const NotFoundPage(),
       },
+
       onUnknownRoute: (settings) {
         return MaterialPageRoute(builder: (context) => const NotFoundPage());
       },

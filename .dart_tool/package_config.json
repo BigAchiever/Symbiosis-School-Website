@@ -284,6 +284,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "url_strategy",
+      "rootUri": "file:///C:/Users/DELL/AppData/Local/Pub/Cache/hosted/pub.dev/url_strategy-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_graphics",
       "rootUri": "file:///C:/Users/DELL/AppData/Local/Pub/Cache/hosted/pub.dev/vector_graphics-1.1.7",
       "packageUri": "lib/",
@@ -350,7 +356,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-08-13T18:05:54.474128Z",
+  "generated": "2023-08-14T10:02:07.890827Z",
   "generator": "pub",
   "generatorVersion": "3.0.6"
 }

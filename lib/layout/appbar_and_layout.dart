@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:schooll_website/layout/responsive.dart';
-import 'package:schooll_website/pages/about/about.dart';
-import 'package:schooll_website/pages/contact/contact.dart';
-import 'package:schooll_website/pages/social_media/social_media.dart';
 import 'package:schooll_website/utils/constants/dimension.dart';
+import 'dart:html' as html;
 
-import '../pages/home/home_ui.dart';
+import '../utils/nav_utils.dart';
 import '../widgets/button_widget2.dart';
 
 class AppbarWidget extends StatefulWidget {
-  // final Widget body;
-  // final Widget mobileBody;
-  // final int selectedIndex;
   const AppbarWidget({
     super.key,
   });
@@ -23,19 +17,30 @@ class AppbarWidget extends StatefulWidget {
 
 class _AppbarWidgetState extends State<AppbarWidget> {
   bool menuOpened = false;
+
   int _selectedIndex = 0;
-
-  final List<Widget> _pages = [
-    const HomePageContent(),
-    const AboutPage(),
-    const SocialMediaPage(),
-    const ContactPage(),
-  ];
-
-  void _onTabChanged(int index) {
+  void _handleTabChange(int index) {
     setState(() {
       _selectedIndex = index;
     });
+
+    // Construct the updated URL
+    String newPath = '/home';
+    switch (index) {
+      case 1:
+        newPath = '/about';
+        break;
+      case 2:
+        newPath = '/social_media';
+        break;
+      case 3:
+        newPath = '/contact_us';
+        break;
+    }
+
+    // Update the browser's URL
+    final newUri = Uri(path: newPath);
+    html.window.history.pushState({}, '', newUri.toString());
   }
 
   @override
@@ -54,7 +59,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                   backgroundColor: const Color(0xffFFCD02),
                   title: InkWell(
                       hoverColor: Colors.transparent,
-                      onTap: () => _onTabChanged(0),
+                      onTap: () => NavUtils.onTabChanged(0, _handleTabChange),
                       child: const SizedBox(
                         width: 330,
                         child: Row(
@@ -94,7 +99,8 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                         children: [
                           InkWell(
                             hoverColor: Colors.transparent,
-                            onTap: () => _onTabChanged(1),
+                            onTap: () =>
+                                NavUtils.onTabChanged(1, _handleTabChange),
                             child: Text(
                               'About',
                               style: TextStyle(
@@ -111,7 +117,8 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                           ),
                           InkWell(
                             hoverColor: Colors.transparent,
-                            onTap: () => _onTabChanged(2),
+                            onTap: () =>
+                                NavUtils.onTabChanged(2, _handleTabChange),
                             child: Text(
                               'Social Media',
                               style: TextStyle(
@@ -128,7 +135,8 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                           ),
                           InkWell(
                             hoverColor: Colors.transparent,
-                            onTap: () => _onTabChanged(3),
+                            onTap: () =>
+                                NavUtils.onTabChanged(3, _handleTabChange),
                             child: Text(
                               'Contact',
                               style: TextStyle(
@@ -171,8 +179,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                     padding: const EdgeInsets.all(8.0),
                     child: InkWell(
                         hoverColor: Colors.transparent,
-                        onTap: () => GoRouter.of(context)
-                            .go('/symbiosis-school-jabalpur/home'),
+                        onTap: () => NavUtils.onTabChanged(0, _handleTabChange),
                         child: Row(
                           children: [
                             Text(
@@ -352,17 +359,17 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                             ],
                             onSelected: (String tab) {
                               if (tab == 'about') {
-                                _onTabChanged(1);
+                                NavUtils.onTabChanged(1, _handleTabChange);
                                 setState(() {
                                   menuOpened = false;
                                 });
                               } else if (tab == 'social_media') {
-                                _onTabChanged(2);
+                                NavUtils.onTabChanged(2, _handleTabChange);
                                 setState(() {
                                   menuOpened = false;
                                 });
                               } else if (tab == 'contact') {
-                                _onTabChanged(3);
+                                NavUtils.onTabChanged(3, _handleTabChange);
                                 setState(() {
                                   menuOpened = false;
                                 });
@@ -374,7 +381,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                     ),
                   ],
                 ),
-          body: _pages[_selectedIndex],
+          body: pages[_selectedIndex],
         );
       },
     );
