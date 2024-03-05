@@ -1,32 +1,32 @@
 {
-    "name": "schooll_website",
-    "short_name": "schooll_website",
+    "name": "Symbiosis School Jabalpur",
+    "short_name": "Symbiosis School Jabalpur",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": " We are a school that prides itself not only in fostering academic excellence but also in making our learners spend at school, satisfying, fulfilling and joyous moments. These formative years should be remembered by our children throughout their lives. It is one of the Best School in Jabalpur.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "icons/Icon-192.png",
+            "src": "icons/logo.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-512.png",
+            "src": "icons/logo.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-maskable-192.png",
+            "src": "icons/logo.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "icons/Icon-maskable-512.png",
+            "src": "icons/logo.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
