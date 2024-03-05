@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'school_pics.dart';
 
@@ -98,7 +99,10 @@ class MobileSchoolInfo extends StatelessWidget {
                           Colors.white,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        GoRouter.of(context).go(
+                            '/symbiosis-higher-secondary-school/learn-more');
+                      },
                       child: Text(
                         "Learn More".toUpperCase(),
                         style: const TextStyle(
@@ -160,7 +164,10 @@ class MobileSchoolInfo extends StatelessWidget {
                           Colors.white,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        GoRouter.of(context).go(
+                            '/symbiosis-senior-secondary-school/learn-more');
+                      },
                       child: Text(
                         "Learn More".toUpperCase(),
                         style: const TextStyle(

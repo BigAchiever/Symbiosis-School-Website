@@ -1,13 +1,13 @@
 {
-   "checksum": "b19c8556eaf972190602ed3b1e055327",
+   "checksum": "eb0f10adabb76c0d8dd3efebd2adf5de",
    "roots": {
       "bookmark_bar": {
          "children": [ {
             "children": [ {
                "date_added": "13280860790379193",
                "date_last_used": "0",
-               "guid": "60a1117e-f611-4526-8b20-10eb68e792af",
-               "id": "20",
+               "guid": "e02f58ae-1735-4d5e-8b7d-cedfac5f25db",
+               "id": "22",
                "name": "Dell Auction",
                "show_icon": false,
                "source": "import_fre",
@@ -16,8 +16,8 @@
             }, {
                "date_added": "13280860790379193",
                "date_last_used": "0",
-               "guid": "ed877848-a92a-49e8-936a-f177a8e09d0b",
-               "id": "21",
+               "guid": "90ff4383-8287-4a92-beeb-d63f2be3fdce",
+               "id": "23",
                "name": "Dell",
                "show_icon": false,
                "source": "import_fre",
@@ -26,24 +26,24 @@
             }, {
                "date_added": "13280860790379193",
                "date_last_used": "0",
-               "guid": "79bb7096-ba3f-4a82-939d-2174a7b13aac",
-               "id": "22",
+               "guid": "ad7f6dae-2085-4100-ae51-d5c5d561968a",
+               "id": "24",
                "name": "Support.Dell.Com",
                "show_icon": false,
                "source": "import_fre",
                "type": "url",
                "url": "http://www.dell.com/support/home"
             } ],
-            "date_added": "13335223700009906",
+            "date_added": "13353606275409108",
             "date_last_used": "0",
             "date_modified": "0",
-            "guid": "116c87c0-4c24-4116-9104-3281d0f24c13",
-            "id": "19",
+            "guid": "738c6908-cf13-40d0-83bf-90df7e172bf7",
+            "id": "21",
             "name": "Dell",
             "source": "import_fre",
             "type": "folder"
          } ],
-         "date_added": "13335223697201691",
+         "date_added": "13353606270899234",
          "date_last_used": "0",
          "date_modified": "0",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
@@ -54,7 +54,7 @@
       },
       "other": {
          "children": [  ],
-         "date_added": "13335223697201692",
+         "date_added": "13353606270899237",
          "date_last_used": "0",
          "date_modified": "0",
          "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
@@ -65,7 +65,7 @@
       },
       "synced": {
          "children": [  ],
-         "date_added": "13335223697201697",
+         "date_added": "13353606270899238",
          "date_last_used": "0",
          "date_modified": "0",
          "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
@@ -75,6 +75,6 @@
          "type": "folder"
       }
    },
-   "sync_metadata": "CjEKDgiIgQISCB4aVPCJAQAAEgAgASoYTzE2eVJQaDNxL29XYURnbXNGNHAvQT09oAYMEqgBCBYSowEKHHRDOC9pOFlaK1FVVWhWZmR0UmxMRUtCY1hzWT0SJDc5YmI3MDk2LWJhM2YtNGE4Mi05MzlkLTIxNzRhN2IxM2FhYxgAIAAoADDyhbuK5TA48oe7iuUwQPKHu4rlMEocNHZXTWVBVm1KTFZlMkVPanY2a1ljMVEyeEtFPVofIh3ZUDEydHpxQzUzQzYrNjFURG1vbGtaTW5iRHVnPWUAAAAAEqcBCBMSogEKHExobDBocG0zcFY5bTdsZXZyOUYvNUtQNTZYST0SJDExNmM4N2MwLTRjMjQtNDExNi05MTA0LTMyODFkMGYyNGMxMxgAIAAoADDvhbuK5TA49Ya7iuUwQPWGu4rlMEocRXc0NDNDNTd0SERhYk1meXNudFIxUndSekRrPVoeIhxEQThFVE5ORXFUVmNMbzRrMXlMS2U0Ymh2R1k9ZQAAAAASpwEIFBKiAQoceFNBUGlZai9zWUxQRkRaNGNHMmlWZGxTMEJFPRIkNjBhMTExN2UtZjYxMS00NTI2LThiMjAtMTBlYjY4ZTc5MmFmGAAgACgAMPCFu4rlMDi0h7uK5TBAtIe7iuUwShw4ckk3VXd5eW1JWGJnT25pVkZYNUVjSVVGL1U9Wh4iHGdtazhJMmlxQU5tczVuVjNHV1BFM2U2Ti9rUT1lAAAAABKoAQgVEqMBChxXTmJmNVI1aVJQNS91amtKMWVuamlGdmFUWU09EiRlZDg3Nzg0OC1hOTJhLTQ5ZTgtOTM2YS1mMTc3YThlMDlkMGIYACAAKAAw8YW7iuUwONOHu4rlMEDTh7uK5TBKHE5KUjFvRDhKYmYreUd5ajdiU2ZyNklUN3hlOD1aHyIds1NJd0RJQU56NXN2RndzcTVrSldCWHZORU8yND1lAAAAABKJAQgBEoQBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiRlMTA1ODVlYy02NThmLTVmMmQtYjQyMS0zMWU5Yzk5Y2ZlYTQYACAAKAAwjZWV99YwOPmalffWMED5mpX31jBKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAEokBCAIShAEKHFljU1RvbnZFU1B3cUNzNEwyY3JWaHY2OEw5OD0SJGIzZjBjZTA0LTFiYTgtNWM4OS1hMmJiLTg1N2ZlNzhiMDdjZBgAIAAoADCOlZX31jA4mJuV99YwQJiblffWMEocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAAASiQEIAxKEAQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRIkODg1MTgwZTEtYmMwYi01NjU4LThiZTktMjRiODVmMzQxZTE5GAAgACgAMJOVlffWMDiGnJX31jBAhpyV99YwShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAADAAOAA=",
+   "sync_metadata": "CpsBCh4IiIECEgiT/8IPjgEAACoOEAAYASAAKAAwADgAQAASABpYMnh3RFFldUR3TWVRdE9Wbi9WTFV4dWxuN0I5T3JtZjZiWWxwdTJhMUdOUFVkVG85Njc1d0lqNTRrTWZ5YTdBY25vRkpyZDJNY2F2VnlBa1NVZVF3Znc9PSoYRGdTeHlhKzhhZXl0Vi9nUGtQRjVwQT09SAOgBgwSqAEIGBKjAQocdUNHSy8xZVBxcWYxblFBWGVaR1lWZ3RzbDRRPRIkYWQ3ZjZkYWUtMjA4NS00MTAwLWFlNTEtZDVjNWQ1NjE5NjhhGAAgACgAMNLfm6PnMDiF4Zuj5zBAheGbo+cwShxqRTBqMjFWbmZOZnpVQXlzWkZHd2EzVnVYaWM9Wh8iHdxmUjd5MElsRjE5SkwwdjFoeXBZRllyQXNUNTA9ZQAAAAASqAEIFxKjAQocRkwzcnh3U2NnSmJ2OERHdW4rOCtBS0tBOUwwPRIkOTBmZjQzODMtODI4Ny00YTkyLWJlZWItZDYzZjJiZTNmZGNlGAAgACgAMNHfm6PnMDjl4Juj5zBA5eCbo+cwShxwcm1SMDl4d0pnanBXSjBvVittbUlpZzE0NDg9Wh8iHbg1M3dITEc1Z3dzY1RRUGoyZjA5WFZjdWtLOGs9ZQAAAAASpwEIFhKiAQocdlFJUVZ3eXNhTGhWUy9lVU91eW9LdGtMQ2JzPRIkZTAyZjU4YWUtMTczNS00ZDVlLThiN2QtY2VkZmFjNWYyNWRiGAAgACgAMNDfm6PnMDjW4Juj5zBA1uCbo+cwShxGR1FKNEVWNFBLOUpOcXQwY3doeXFWVytrTHc9Wh4iHHBMSml4RGhmVGNtQ0F1QlRUaEc0MlV5Z04yZz1lAAAAABKJAQgDEoQBChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EiQyMWEzYjc4MS02MzVkLTVjNGYtYjBjMy1lMWZiMTA1OWYxMjcYACAAKAAwhsfUiuUwOMDK1IrlMEDAytSK5TBKHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1aAGUAAAAAEqcBCBUSogEKHDdXaVBzNXY1dEVOQzl0TGVDVVhTVWRaOGhXaz0SJDczOGM2OTA4LWNmMTMtNDBkMC04M2JmLTkwZGY3ZTE3MmJmNxgAIAAoADDP35uj5zA4tuCbo+cwQLbgm6PnMEocTXVKWkJNZkRCNkcrclU0dHo3Vm9GSXNiQkRRPVoeIhxzSm8yT0hsY1NWdWgwWUN5NXdGVVduZnNzNkE9ZQAAAAASiQEIAhKEAQocWWNTVG9udkVTUHdxQ3M0TDJjclZodjY4TDk4PRIkYWVjZDcwNjUtNjBlOC01YWVkLWE3NzktMTc3NzU2NGU0MGVlGAAgACgAMIHH1IrlMDikydSK5TBApMnUiuUwShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAABKJAQgBEoQBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiQxYmVmNzFhZC1lOGVmLTUyOGYtYTcyMi00NWU3OWY1OGVlNzUYACAAKAAwgMfUiuUwOITJ1IrlMECEydSK5TBKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAMAA4AA==",
    "version": 1
 }

@@ -77,7 +77,7 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
               ),
             ),
             Container(
-              height: showMoreCards ? size.height * 2 : size.height * 1.5,
+              height: showMoreCards ? size.height * 2 : size.height ,
               width: double.infinity,
               decoration: const BoxDecoration(
                 color: Color(0xfff8f8f8),
@@ -87,7 +87,6 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
                 ),
               ),
               child: SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

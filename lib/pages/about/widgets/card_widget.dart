@@ -18,7 +18,7 @@ class CardContainer extends StatelessWidget {
       clipBehavior: Clip.none,
       height: ResponsiveLayout.isMobile(context)
           ? size.height / 1.8
-          : size.height / 2,
+          : size.height / 1.6,
       width: ResponsiveLayout.isMobile(context) ? 300 : size.width / 3.5,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(8)),

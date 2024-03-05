@@ -230,7 +230,7 @@ class ContactUsCard extends StatelessWidget {
                 SizedBox(
                   width: ResponsiveLayout.isMobile(context)
                       ? size.width / 3
-                      : size.width / 13,
+                      : size.width / 12,
                   height: size.height / 18,
                   child: MouseRegion(
                     cursor: SystemMouseCursors.click,
@@ -271,7 +271,7 @@ class ContactUsCard extends StatelessWidget {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: ResponsiveLayout.isMobile(context)
-                              ? size.width / 20
+                              ? size.width / 22
                               : size.width / 80,
                         ),
                       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:schooll_website/utils/nav_utils.dart';
 
 import 'school_pics.dart';
@@ -96,13 +97,8 @@ class _SchoolInformationTabState extends State<SchoolInformationTab> {
                         ),
                       ),
                       onPressed: () {
-                        NavUtils.onTabChanged(
-                          1,
-                          (p0) {
-                            Navigator.pushNamed(
-                                context, '/symbiosis_school_jabalpur/about');
-                          },
-                        );
+                        GoRouter.of(context).go(
+                            '/symbiosis-higher-secondary-school/learn-more');
                       },
                       child: const Text(
                         "Learn More",
@@ -154,7 +150,10 @@ class _SchoolInformationTabState extends State<SchoolInformationTab> {
                           },
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        GoRouter.of(context).go(
+                            '/symbiosis-senior-secondary-school/learn-more');
+                      },
                       child: const Text(
                         "Learn More",
                         style: TextStyle(

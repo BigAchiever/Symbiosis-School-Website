@@ -29,9 +29,9 @@ Widget sectionButtonsWidget(
         onSectionButtonPressed(index);
       },
       child: Text(
-        title.toUpperCase(),
+        title,
         style: TextStyle(
-          fontSize: size.width / 90,
+          fontSize: size.width / 80,
           color: isSelected ? Colors.black : Colors.black,
           fontWeight: FontWeight.bold,
         ),

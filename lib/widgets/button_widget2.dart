@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:schooll_website/layout/appbar_and_layout.dart';
 
 class ButtonWidget2 extends StatelessWidget {
   final String text;
   final VoidCallback onpressed;
-  const ButtonWidget2({super.key, required this.text, required this.onpressed});
+
+  const ButtonWidget2({
+    super.key,
+    required this.text,
+    required this.onpressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +26,7 @@ class ButtonWidget2 extends StatelessWidget {
         style: ButtonStyle(
           elevation: MaterialStateProperty.all<double>(0.0),
           backgroundColor: MaterialStateProperty.all<Color>(
-            const Color(0xffFFCD02),
+            Colors.white,
           ),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(

@@ -20,6 +20,8 @@ dependencies:
   carousel_indicator:
   flutter_animate: ^4.2.0+1
   url_strategy: ^0.2.0
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

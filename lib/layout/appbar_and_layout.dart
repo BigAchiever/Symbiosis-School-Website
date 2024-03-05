@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:schooll_website/layout/responsive.dart';
 import 'package:schooll_website/utils/constants/dimension.dart';
-import 'dart:html' as html;
 
-import '../utils/nav_utils.dart';
 import '../widgets/button_widget2.dart';
 
 class AppbarWidget extends StatefulWidget {
+  final Widget body;
+  final Widget mobileBody;
+  final int selectedIndex;
+  final Color? color;
   const AppbarWidget({
     super.key,
+    required this.body,
+    required this.mobileBody,
+    required this.selectedIndex,
+    this.color,
   });
 
   @override
@@ -18,48 +25,24 @@ class AppbarWidget extends StatefulWidget {
 class _AppbarWidgetState extends State<AppbarWidget> {
   bool menuOpened = false;
 
-  int _selectedIndex = 0;
-  void _handleTabChange(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-
-    // Construct the updated URL
-    String newPath = '/home';
-    switch (index) {
-      case 1:
-        newPath = '/about';
-        break;
-      case 2:
-        newPath = '/social_media';
-        break;
-      case 3:
-        newPath = '/contact_us';
-        break;
-    }
-
-    // Update the browser's URL
-    final newUri = Uri(path: newPath);
-    html.window.history.pushState({}, '', newUri.toString());
-  }
-
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return LayoutBuilder(
       builder: (context, constraints) {
         return Scaffold(
-          backgroundColor: const Color(0xffFFCD02),
+          backgroundColor: widget.color ?? const Color(0xffFFCD02),
           appBar: constraints.maxWidth > mobileWidth
               ? AppBar(
                   automaticallyImplyLeading: false,
                   leading: null,
                   toolbarHeight: 100,
                   elevation: 0,
-                  backgroundColor: const Color(0xffFFCD02),
+                  backgroundColor: widget.color ?? const Color(0xffFFCD02),
                   title: InkWell(
                       hoverColor: Colors.transparent,
-                      onTap: () => NavUtils.onTabChanged(0, _handleTabChange),
+                      onTap: () => GoRouter.of(context)
+                          .go('/symbiosis-school-jabalpur/home'),
                       child: const SizedBox(
                         width: 330,
                         child: Row(
@@ -99,14 +82,14 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                         children: [
                           InkWell(
                             hoverColor: Colors.transparent,
-                            onTap: () =>
-                                NavUtils.onTabChanged(1, _handleTabChange),
+                            onTap: () => GoRouter.of(context)
+                                .go('/symbiosis-school-jabalpur/about-us'),
                             child: Text(
                               'About',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,
-                                fontWeight: _selectedIndex == 1
+                                fontWeight: widget.selectedIndex == 1
                                     ? FontWeight.w600
                                     : FontWeight.normal,
                               ),
@@ -117,14 +100,14 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                           ),
                           InkWell(
                             hoverColor: Colors.transparent,
-                            onTap: () =>
-                                NavUtils.onTabChanged(2, _handleTabChange),
+                            onTap: () => GoRouter.of(context)
+                                .go('/symbiosis-school-jabalpur/social-media'),
                             child: Text(
                               'Social Media',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,
-                                fontWeight: _selectedIndex == 2
+                                fontWeight: widget.selectedIndex == 2
                                     ? FontWeight.w600
                                     : FontWeight.normal,
                               ),
@@ -135,14 +118,14 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                           ),
                           InkWell(
                             hoverColor: Colors.transparent,
-                            onTap: () =>
-                                NavUtils.onTabChanged(3, _handleTabChange),
+                            onTap: () => GoRouter.of(context)
+                                .go('/symbiosis-school-jabalpur/contact-us'),
                             child: Text(
                               'Contact',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,
-                                fontWeight: _selectedIndex == 3
+                                fontWeight: widget.selectedIndex == 3
                                     ? FontWeight.w600
                                     : FontWeight.normal,
                               ),
@@ -179,7 +162,8 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                     padding: const EdgeInsets.all(8.0),
                     child: InkWell(
                         hoverColor: Colors.transparent,
-                        onTap: () => NavUtils.onTabChanged(0, _handleTabChange),
+                        onTap: () => GoRouter.of(context)
+                            .go('/symbiosis-school-jabalpur/home'),
                         child: Row(
                           children: [
                             Text(
@@ -359,17 +343,20 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                             ],
                             onSelected: (String tab) {
                               if (tab == 'about') {
-                                NavUtils.onTabChanged(1, _handleTabChange);
+                                GoRouter.of(context)
+                                    .go('/symbiosis-school-jabalpur/about-us');
                                 setState(() {
                                   menuOpened = false;
                                 });
                               } else if (tab == 'social_media') {
-                                NavUtils.onTabChanged(2, _handleTabChange);
+                                GoRouter.of(context).go(
+                                    '/symbiosis-school-jabalpur/social-media');
                                 setState(() {
                                   menuOpened = false;
                                 });
                               } else if (tab == 'contact') {
-                                NavUtils.onTabChanged(3, _handleTabChange);
+                                GoRouter.of(context).go(
+                                    '/symbiosis-school-jabalpur/contact-us');
                                 setState(() {
                                   menuOpened = false;
                                 });
@@ -381,7 +368,10 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                     ),
                   ],
                 ),
-          body: pages[_selectedIndex],
+          body: ResponsiveLayout(
+            mobileBody: widget.mobileBody,
+            desktopBody: widget.body,
+          ),
         );
       },
     );
