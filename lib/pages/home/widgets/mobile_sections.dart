@@ -29,7 +29,7 @@ class _MobileSectionState extends State<MobileSection> {
     final currentSection = sections[_selectedIndex];
     final Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 2,
+      // height: size.height * 2,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Colors.black,
@@ -43,6 +43,9 @@ class _MobileSectionState extends State<MobileSection> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(
+            height: 70,
+          ),
           SizedBox(
             width: size.width / 1.2,
             child: Text(
@@ -76,46 +79,52 @@ class _MobileSectionState extends State<MobileSection> {
             height: 30,
           ),
           Container(
-            height: size.height / 1.3,
+            height: size.height / 1.7,
             width: size.width / 1.1,
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(12)),
               color: Colors.white,
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    currentSection.imageUrl,
+                  ),
+                  colorFilter: ColorFilter.mode(
+                    Colors.cyan,
+                    BlendMode.modulate,
+                  )),
               border: Border.all(
-                color: Colors.black,
-                width: 4.0,
+                color: Colors.white,
+                width: 1.0,
               ),
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // SvgPicture.asset(
-                //   currentSection.imageUrl,
-                //   height: 100,
-                //   width: size.width / 3,
-                // ),
                 const SizedBox(height: 40),
                 SizedBox(
                   width: size.width / 1.3,
                   child: Text(
                     currentSection.title,
                     style: const TextStyle(
-                      fontSize: 34,
-                      color: Colors.black,
+                      fontSize: 31,
+                      color: Colors.white,
                       fontFamily: "Magic Brush",
                     ),
                     textAlign: TextAlign.center,
                   ),
                 ),
-                const SizedBox(height: 20),
-                Text(
-                  currentSection.description,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    color: Colors.black,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
+                // const SizedBox(height: 20),
+                // Text(
+                //   currentSection.description,
+                //   style: const TextStyle(
+                //       fontSize: 18,
+                //       color: Colors.white,
+                //       fontWeight: FontWeight.bold),
+                //   textAlign: TextAlign.center,
+                // ),
+                const SizedBox(height: 60),
               ],
             ),
           ),
@@ -123,7 +132,7 @@ class _MobileSectionState extends State<MobileSection> {
             height: 30,
           ),
           Container(
-            height: size.height / 1.3,
+            // height: size.height / 1.3,
             width: size.width / 1.1,
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(
@@ -154,6 +163,9 @@ class _MobileSectionState extends State<MobileSection> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  SizedBox(
+                    height: 70,
+                  ),
                   SvgPicture.asset(
                     "assets/image/iti.svg",
                     fit: BoxFit.contain,
@@ -196,10 +208,16 @@ class _MobileSectionState extends State<MobileSection> {
                     children: [
                       ButtonWidget1(text: "Join Us", onpressed: () {}),
                     ],
-                  )
+                  ),
+                  SizedBox(
+                    height: 70,
+                  ),
                 ],
               ),
             ),
+          ),
+          SizedBox(
+            height: 70,
           ),
         ],
       ),

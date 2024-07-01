@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:schooll_website/layout/mobile_footer.dart';
 
 import '../../widgets/bottom_picture_tab.dart';
+import '../../widgets/dialog.dart';
 import 'widgets/card.dart';
 
 class MobileContact extends StatelessWidget {
@@ -10,6 +11,25 @@ class MobileContact extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void showCustomDialog(BuildContext context) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return CustomDialogBox(
+            title: 'Select any one',
+            description:
+                'Select the school which you want to see on the google maps.',
+            leftButtonText: 'Symbiosis Higher Secondary school',
+            rightButtonText: 'Symbiosis Senior Secondary school',
+            leftButtonLink: 'https://maps.app.goo.gl/zxwPE52aQn78GN4R9',
+            onRightButtonPressed: () {
+              Navigator.of(context).pop();
+            },
+          );
+        },
+      );
+    }
+
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
@@ -17,11 +37,13 @@ class MobileContact extends StatelessWidget {
           children: [
             Container(
               color: const Color(0xffFFCD02),
-              height: size.height,
               width: double.infinity,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  SizedBox(
+                    height: 80,
+                  ),
                   SizedBox(
                     width: size.width / 1.5,
                     child: Column(
@@ -53,8 +75,8 @@ class MobileContact extends StatelessWidget {
                         Text(
                           "Got a suggestion? Maybe a question? Don't be shy – go ahead and reach out to us, we're happy to converse!",
                           style: TextStyle(
-                            fontSize: size.width / 20,
-                          ),
+                              fontSize: size.width / 20,
+                              fontFamily: " Dan Sirf"),
                         ),
                       ],
                     ),
@@ -64,17 +86,23 @@ class MobileContact extends StatelessWidget {
                     // fit: BoxFit.contain,
                     height: 300,
                     width: 300,
-                  )
+                  ),
+                  SizedBox(
+                    height: 70,
+                  ),
                 ],
               ),
             ),
             Container(
               color: const Color(0xfff8f8f8),
-              height: size.height * 2.0,
+              // height: size.height * 2.0,
               width: double.infinity,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  SizedBox(
+                    height: 100,
+                  ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -96,7 +124,7 @@ class MobileContact extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              "If you'd like to take part in our programmes, or have any questions about the School of X, go ahead and ask away!",
+                              "If you'd like to take part in our programmes, or have any questions about the Schools, go ahead and ask away!",
                               style: TextStyle(
                                 fontSize: size.width / 20,
                                 fontWeight: FontWeight.normal,
@@ -106,24 +134,22 @@ class MobileContact extends StatelessWidget {
                               height: 20,
                             ),
                             Text(
-                              "School of X\n(DesignSingapore Council)",
+                              "Symbiosis Higher Secondary School\n(Adhartal,Jabalpur)\n\nSymbiosis Senior Secondary School\n(Maharajpur,Jabalpur)",
                               style: TextStyle(
                                 fontSize: size.width / 20,
                                 fontFamily: "Dan Sirf Bold",
                                 fontWeight: FontWeight.normal,
                               ),
                             ),
+
+                            // Text(
+                            //   "National Design Centre\n111 Middle Road #04-01\nSingapore 188969",
+                            //   style: TextStyle(
+                            //     fontSize: size.width / 20,
+                            //   ),
+                            // ),
                             const SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              "National Design Centre\n111 Middle Road #04-01\nSingapore 188969",
-                              style: TextStyle(
-                                fontSize: size.width / 20,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 20,
+                              height: 30,
                             ),
                             SizedBox(
                               height: 50,
@@ -141,7 +167,9 @@ class MobileContact extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  showCustomDialog(context);
+                                },
                                 child: Text(
                                   "View on google maps".toUpperCase(),
                                   style: TextStyle(
@@ -154,9 +182,6 @@ class MobileContact extends StatelessWidget {
                             ),
                           ],
                         ),
-                      ),
-                      const SizedBox(
-                        height: 40,
                       ),
                       SizedBox(
                           width: size.width / 1.1,

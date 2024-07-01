@@ -19,7 +19,7 @@ class _MobileFeedBackState extends State<MobileFeedBack> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 1.2,
+      // height: size.height * 1.2,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Color(0xffF8F8F8),
@@ -106,6 +106,9 @@ class _MobileFeedBackState extends State<MobileFeedBack> {
               height: 12,
               cornerRadius: 100,
             ),
+            const SizedBox(
+              height: 40,
+            )
           ],
         ),
       ),

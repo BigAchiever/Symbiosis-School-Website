@@ -10,22 +10,23 @@ class BackstoryTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      height: ResponsiveLayout.isMobile(context)
-          ? size.height * 1.4
-          : size.height * 1.1,
+      // height: ResponsiveLayout.isMobile(context)
+      //     ? size.height * 1.41
+      //     : size.height * 1.1,
       width: double.infinity,
       color: Colors.white,
-      child: Padding(
-        padding: ResponsiveLayout.isMobile(context)
-            ? const EdgeInsets.all(12)
-            : const EdgeInsets.all(0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: ResponsiveLayout.isMobile(context)
-              ? CrossAxisAlignment.start
-              : CrossAxisAlignment.center,
-          children: [
-            AutoSizeText(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: ResponsiveLayout.isMobile(context)
+            ? CrossAxisAlignment.start
+            : CrossAxisAlignment.center,
+        children: [
+          SizedBox(
+            height: 50,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 26.0),
+            child: AutoSizeText(
               "Our backstory".toUpperCase(),
               maxFontSize: 24,
               minFontSize: 20,
@@ -35,10 +36,13 @@ class BackstoryTab extends StatelessWidget {
                   // fontFamily: "Dan Sirf Bold",
                   fontWeight: FontWeight.bold),
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            AutoSizeText(
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 26.0),
+            child: AutoSizeText(
               "BRINGING DESIGN IMPACT TO YOUR COMMUNITY".toUpperCase(),
               maxFontSize: 48,
               minFontSize: 30,
@@ -52,62 +56,79 @@ class BackstoryTab extends StatelessWidget {
                   ? TextAlign.start
                   : TextAlign.center,
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            SizedBox(
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 26.0),
+            child: SizedBox(
               width: size.width / 1.2,
               child: AutoSizeText(
                 "School of X was established by DesignSingapore Council in 2020, to equip Singaporeans with the design thinking skills to co-create better living experiences. School of X supports three of the strategic thrusts set out in “Design 2025”, the design masterplan for Singapore:",
                 maxFontSize: 22,
                 minFontSize: 14,
                 style: TextStyle(
-                  fontSize: ResponsiveLayout.isMobile(context) ? 18 : 18,
-                ),
+                    fontSize: ResponsiveLayout.isMobile(context) ? 18 : 18,
+                    fontFamily: " Dan Sirf"),
                 textAlign: ResponsiveLayout.isMobile(context)
                     ? TextAlign.start
                     : TextAlign.center,
               ),
             ),
-            SizedBox(
-              height: ResponsiveLayout.isMobile(context) ? 80 : 40,
+          ),
+          SizedBox(
+            height: ResponsiveLayout.isMobile(context) ? 80 : 40,
+          ),
+          // Carousel Slider
+          CarouselSlider(
+            options: CarouselOptions(
+              height: ResponsiveLayout.isMobile(context) ? 300 : 400,
+              autoPlay: true,
+              autoPlayInterval: const Duration(seconds: 3),
+              autoPlayAnimationDuration: const Duration(milliseconds: 800),
+              autoPlayCurve: Curves.easeInOut,
+              viewportFraction: ResponsiveLayout.isMobile(context) ? 0.8 : 0.3,
+              pauseAutoPlayOnTouch: true,
+              enlargeCenterPage: true,
             ),
-            // Carousel Slider
-            CarouselSlider(
-              options: CarouselOptions(
-                height: ResponsiveLayout.isMobile(context) ? 300 : 400,
-                autoPlay: true,
-                autoPlayInterval: const Duration(seconds: 3),
-                autoPlayAnimationDuration: const Duration(milliseconds: 800),
-                autoPlayCurve: Curves.easeInOut,
-                viewportFraction:
-                    ResponsiveLayout.isMobile(context) ? 0.8 : 0.3,
-                pauseAutoPlayOnTouch: true,
-                enlargeCenterPage: true,
+            items: [
+              Container(
+                width: 500,
+                decoration: BoxDecoration(
+                    image: const DecorationImage(
+                      image: AssetImage("assets/image/comingsoon.png"),
+                    ),
+                    border: Border.all(color: Colors.black, width: 1),
+                    color: const Color(0xffFFCD02),
+                    borderRadius: BorderRadius.circular(10)),
               ),
-              items: [
-                Container(
-                  decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.circular(10)),
-                  width: 500,
-                ),
-                Container(
-                  width: 500,
-                  decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.circular(10)),
-                ),
-                Container(
-                  width: 500,
-                  decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.circular(10)),
-                ),
-              ],
-            ),
-          ],
-        ),
+              Container(
+                width: 500,
+                decoration: BoxDecoration(
+                    image: const DecorationImage(
+                      image: AssetImage("assets/image/comingsoon.png"),
+                    ),
+                    border: Border.all(color: Colors.black, width: 1),
+                    color: const Color(0xffFFCD02),
+                    borderRadius: BorderRadius.circular(10)),
+              ),
+              Container(
+                width: 500,
+                decoration: BoxDecoration(
+                    image: const DecorationImage(
+                      image: AssetImage("assets/image/comingsoon.png"),
+                    ),
+                    border: Border.all(color: Colors.black, width: 1),
+                    color: const Color(0xffFFCD02),
+                    borderRadius: BorderRadius.circular(10)),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 70,
+          ),
+        ],
       ),
     );
   }

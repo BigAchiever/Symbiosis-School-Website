@@ -18,14 +18,14 @@ class ContentCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return SizedBox(
-      width: ResponsiveLayout.isMobile(context) ? 120 : size.width / 7,
+      width: ResponsiveLayout.isMobile(context) ? 160 : size.width / 7,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SvgPicture.asset(
             iconPath,
-            width: ResponsiveLayout.isMobile(context) ? 40 : size.width / 15,
-            height: ResponsiveLayout.isMobile(context) ? 40 : size.height / 15,
+            width: ResponsiveLayout.isMobile(context) ? 50 : size.width / 15,
+            height: ResponsiveLayout.isMobile(context) ? 50 : size.height / 15,
           ),
           const SizedBox(
             height: 20,
@@ -33,10 +33,10 @@ class ContentCard extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-              fontSize:
-                  ResponsiveLayout.isMobile(context) ? 18 : size.width / 70,
-              fontWeight: FontWeight.w700,
-            ),
+                fontSize:
+                    ResponsiveLayout.isMobile(context) ? 18 : size.width / 70,
+                fontWeight: FontWeight.w700,
+                decoration: TextDecoration.underline),
           ),
           const SizedBox(
             height: 10,
@@ -46,8 +46,9 @@ class ContentCard extends StatelessWidget {
             child: Text(
               description,
               style: TextStyle(
+                fontFamily: "Dan Sirf",
                 fontSize:
-                    ResponsiveLayout.isMobile(context) ? 14 : size.width / 85,
+                    ResponsiveLayout.isMobile(context) ? 16 : size.width / 85,
               ),
             ),
           ),

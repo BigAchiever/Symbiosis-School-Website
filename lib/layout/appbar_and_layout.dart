@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:schooll_website/layout/responsive.dart';
 import 'package:schooll_website/utils/constants/dimension.dart';
+import 'package:schooll_website/widgets/button1_widget.dart';
 
 import '../widgets/button_widget2.dart';
 
@@ -134,7 +135,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                           const SizedBox(
                             width: 40,
                           ),
-                          ButtonWidget2(
+                          ButtonWidget1(
                             text: "Admin Login",
                             onpressed: () {},
                           )

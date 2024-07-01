@@ -15,7 +15,6 @@ class _MobileSocialMediaHomeState extends State<MobileSocialMediaHome> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 2.5,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -23,6 +22,9 @@ class _MobileSocialMediaHomeState extends State<MobileSocialMediaHome> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const SizedBox(
+            height: 70,
+          ),
           SvgPicture.asset(
             "assets/image/plane.svg",
             height: 100,
@@ -56,7 +58,7 @@ class _MobileSocialMediaHomeState extends State<MobileSocialMediaHome> {
           const SizedBox(
             height: 30,
           ),
-          const Wrap(
+          Wrap(
             spacing: 30,
             runSpacing: 30,
             alignment: WrapAlignment.center,
@@ -64,12 +66,12 @@ class _MobileSocialMediaHomeState extends State<MobileSocialMediaHome> {
               SocialMediaCard(
                 image: "assets/image/dads.png",
                 description:
-                    "facebook is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
+                    "Facebook is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
               ),
               SocialMediaCard(
                 image: "assets/image/dads.png",
                 description:
-                    "youtube is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
+                    "YouTube is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
               ),
               SocialMediaCard(
                 image: "assets/image/dads.png",
@@ -95,7 +97,10 @@ class _MobileSocialMediaHomeState extends State<MobileSocialMediaHome> {
           const SizedBox(
             height: 10,
           ),
-          ButtonWidget1(text: "View More", onpressed: () {})
+          ButtonWidget1(text: "View More", onpressed: () {}),
+          const SizedBox(
+            height: 70,
+          ),
         ],
       ),
     );

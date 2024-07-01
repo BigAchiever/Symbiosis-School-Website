@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:schooll_website/layout/mobile_footer.dart';
+import 'package:schooll_website/layout/responsive.dart';
 
 import '../../widgets/bottom_picture_tab.dart';
 import '../../widgets/button1_widget.dart';
@@ -24,11 +25,13 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
         child: Column(
           children: [
             Container(
-              height: size.height / 1.5,
+              // height: size.height / 1.3,
               width: double.infinity,
-              color: const Color(0xffFFCD02),
+              decoration: const BoxDecoration(
+                color: const Color(0xffFFCD02),
+              ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Lottie.asset(
                     "assets/image/car.json",
@@ -37,11 +40,15 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
                     height: size.height / 4,
                   ),
                   SizedBox(
+                    height: 30,
+                  ),
+                  SizedBox(
                     width: size.width / 1.4,
                     child: Text(
-                      "WELCOME TO THE COMMUNITY OF X".toUpperCase(),
+                      "WELCOME TO THE COMMUNITY OF SYMBIOSIANS".toUpperCase(),
                       style: TextStyle(
                         fontSize: size.width / 18,
+                        color: Colors.black,
                         fontFamily: "Dan Sirf Bold",
                         fontWeight: FontWeight.bold,
                       ),
@@ -55,29 +62,32 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
                     "#SCHOOLOFSYMBIOSIS".toUpperCase(),
                     style: TextStyle(
                       fontSize: size.width / 10,
+                      color: Colors.black,
                       fontFamily: "Magic Brush",
                       fontWeight: FontWeight.normal,
                     ),
                   ),
-                  const SizedBox(
-                    height: 12,
-                  ),
+                  // Spacer(),
                   SizedBox(
                     width: size.width / 1.4,
                     child: Text(
                       "We do good with others, by others.",
                       style: TextStyle(
-                        fontSize: size.width / 20,
-                        fontWeight: FontWeight.normal,
-                      ),
+                          fontSize: size.width / 20,
+                          color: Colors.black,
+                          fontWeight: FontWeight.normal,
+                          fontFamily: " Dan Sirf"),
                       textAlign: TextAlign.center,
                     ),
                   ),
+                  SizedBox(
+                    height: 30,
+                  )
                 ],
               ),
             ),
             Container(
-              height: showMoreCards ? size.height * 2 : size.height ,
+              // height: showMoreCards ? size.height * 2 : size.height,
               width: double.infinity,
               decoration: const BoxDecoration(
                 color: Color(0xfff8f8f8),

@@ -135,7 +135,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                       title: 'understanding',
                       subtitle:
                           "Taking messy, complex\nchallenges and making\nsense of them",
-                      discription:
+                      description:
                           "Those wicked problems that feel impossible to\nresolve are perfect for School of X!\nWe help youbuild the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
                     ),
                   ),
@@ -146,7 +146,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                       title: 'understanding',
                       subtitle:
                           "Taking messy, complex\nchallenges and making\nsense of them",
-                      discription:
+                      description:
                           "Those wicked problems that feel impossible to\nresolve are perfect for School of X!\nWe help youbuild the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
                     ),
                   ),
@@ -157,7 +157,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                       title: 'understanding',
                       subtitle:
                           "Taking messy, complex\nchallenges and making\nsense of them",
-                      discription:
+                      description:
                           "Those wicked problems that feel impossible to\nresolve are perfect for School of X!\nWe help youbuild the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
                     ),
                   ),

@@ -39,8 +39,8 @@ class _MobileAboutState extends State<MobileAbout> {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xffFFCD02),
-      body: SingleChildScrollView(
-        child: Stack(children: [
+      body: ListView(physics: BouncingScrollPhysics(), children: [
+        Stack(children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -132,84 +132,96 @@ class _MobileAboutState extends State<MobileAbout> {
                     bottom: 150,
                     left: 0,
                     right: 0,
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      physics: BouncingScrollPhysics(),
-                      reverse: true,
-                      child: Row(
-                        children: [
-                          CardContainer(
-                            title: 'understanding',
-                            subtitle:
-                                "Taking messy, complex\nchallenges and making\nsense of them",
-                            discription:
-                                "Those wicked problems that feel impossible to\nresolve are perfect for School of X!\nWe help youbuild the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
-                          ),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          CardContainer(
-                            title: 'understanding',
-                            subtitle:
-                                "Taking messy, complex\nchallenges and making\nsense of them",
-                            discription:
-                                "Those wicked problems that feel impossible to\nresolve are perfect for School of X!\nWe help youbuild the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
-                          ),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          CardContainer(
-                            title: 'understanding',
-                            subtitle:
-                                "Taking messy, complex\nchallenges and making\nsense of them",
-                            discription:
-                                "Those wicked problems that feel impossible to\nresolve are perfect for School of X!\nWe help youbuild the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
-                          ),
-                        ],
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        physics: BouncingScrollPhysics(),
+                        reverse: false,
+                        child: Row(
+                          children: [
+                            CardContainer(
+                              title: 'understanding',
+                              subtitle:
+                                  "Taking messy, complex\nchallenges and making\nsense of them",
+                              description:
+                                  "Those wicked problems that feel impossible to resolve are perfect for School of X! We help you build the skills you need to see your challenges with fresh eyes, and unlock new ways forward, through simple tools and activities.",
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            CardContainer(
+                              title: 'understanding',
+                              subtitle:
+                                  "Taking messy, complex\nchallenges and making\nsense of them",
+                              description:
+                                  "Those wicked problems that feel impossible to resolve are perfect for School of X! We help you build the skills you need to see your challenges with fresh eyes, and unlock new ways forward, through simple tools and activities.",
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            CardContainer(
+                              title: 'understanding',
+                              subtitle:
+                                  "Taking messy, complex\nchallenges and making\nsense of them",
+                              description:
+                                  "Those wicked problems that feel impossible to resolve are perfect for School of X! We help you build the skills you need to see your challenges with fresh eyes, and unlock new ways forward, through simple tools and activities.",
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ],
               ),
-              Container(
-                height: size.height * 1.6,
-                width: size.width / 1.2,
-                decoration: const BoxDecoration(
-                  color: Colors.transparent,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "What we Teach".toUpperCase(),
-                      style: const TextStyle(
-                        fontFamily: "Magic Brush",
-                        fontSize: 40,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Container(
+                  // height: size.height * 1.6,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    color: Colors.transparent,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 70,
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(
-                      height: 80,
-                    ),
-                    Wrap(
-                      alignment: WrapAlignment.spaceEvenly,
-                      crossAxisAlignment: WrapCrossAlignment.start,
-                      runSpacing: 40,
-                      spacing: 20,
-                      children: List.generate(
-                        contentList.length,
-                        (index) {
-                          final contentData = contentList[index];
-                          return ContentCard(
-                            iconPath: contentData.iconPath,
-                            title: contentData.title,
-                            description: contentData.description,
-                          );
-                        },
+                      Text(
+                        "Values and Philosophy".toUpperCase(),
+                        style: const TextStyle(
+                          fontFamily: "Magic Brush",
+                          fontSize: 40,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                    ),
-                  ],
+                      const SizedBox(
+                        height: 80,
+                      ),
+                      Wrap(
+                        alignment: WrapAlignment.spaceEvenly,
+                        crossAxisAlignment: WrapCrossAlignment.start,
+                        runSpacing: 30,
+                        spacing: 20,
+                        children: List.generate(
+                          contentList.length,
+                          (index) {
+                            final contentData = contentList[index];
+                            return ContentCard(
+                              iconPath: contentData.iconPath,
+                              title: contentData.title,
+                              description: contentData.description,
+                            );
+                          },
+                        ),
+                      ),
+                      SizedBox(
+                        height: 70,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               const BackstoryTab(),
@@ -222,7 +234,7 @@ class _MobileAboutState extends State<MobileAbout> {
             ],
           ),
         ]),
-      ),
+      ]),
     );
   }
 }

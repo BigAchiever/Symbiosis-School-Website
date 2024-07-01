@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:schooll_website/widgets/button1_widget.dart';
 
 import 'school_pics.dart';
 
@@ -10,7 +11,7 @@ class MobileSchoolInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height * 2,
+      // height: size.height * 2.1,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Color(0xffFFCD02),
@@ -28,6 +29,9 @@ class MobileSchoolInfo extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(
+            height: 70,
+          ),
           Text(
             "Our branches in Jabalpur",
             style: TextStyle(
@@ -82,46 +86,48 @@ class MobileSchoolInfo extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 15,
+                    height: 20,
                   ),
                   Container(
                     height: 45,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: Colors.black,
-                        width: 2,
-                      ),
-                    ),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white,
-                        ),
-                      ),
-                      onPressed: () {
+
+                    child: ButtonWidget1(
+                      text: "Learn More".toUpperCase(),
+                      onpressed: () {
                         GoRouter.of(context).go(
                             '/symbiosis-higher-secondary-school/learn-more');
                       },
-                      child: Text(
-                        "Learn More".toUpperCase(),
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontFamily: "Sans Sirf Bold",
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
                     ),
+
+                    //  ElevatedButton(
+                    //   style: ButtonStyle(
+                    //     backgroundColor: MaterialStateProperty.all<Color>(
+                    //       Colors.white,
+                    //     ),
+                    //   ),
+                    //   onPressed: () {
+                    //     GoRouter.of(context).go(
+                    //         '/symbiosis-higher-secondary-school/learn-more');
+                    //   },
+                    //   child: Text(
+                    //     "Learn More".toUpperCase(),
+                    //     style: const TextStyle(
+                    //       color: Colors.black,
+                    //       fontFamily: "Sans Sirf Bold",
+                    //       fontSize: 12,
+                    //       fontWeight: FontWeight.bold,
+                    //     ),
+                    //   ),
+                    // ),
                   ),
                   const SizedBox(
-                    height: 50,
+                    height: 60,
                   )
                 ],
               ),
-              const SizedBox(
-                width: 100,
-              ),
+              // const SizedBox(
+              //   width: 100,
+              // ),
               Column(
                 children: [
                   buildSchoolImageWithTriangularShape(
@@ -147,40 +153,24 @@ class MobileSchoolInfo extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 15,
+                    height: 20,
                   ),
                   Container(
                     height: 45,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: Colors.black,
-                        width: 2,
-                      ),
-                    ),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                          Colors.white,
-                        ),
-                      ),
-                      onPressed: () {
+                    child: ButtonWidget1(
+                      text: "Learn More".toUpperCase(),
+                      onpressed: () {
                         GoRouter.of(context).go(
                             '/symbiosis-senior-secondary-school/learn-more');
                       },
-                      child: Text(
-                        "Learn More".toUpperCase(),
-                        style: const TextStyle(
-                            color: Colors.black,
-                            fontFamily: "Sans Sirf Bold",
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold),
-                      ),
                     ),
                   ),
                 ],
               ),
             ],
+          ),
+          SizedBox(
+            height: 70,
           ),
         ],
       ),
