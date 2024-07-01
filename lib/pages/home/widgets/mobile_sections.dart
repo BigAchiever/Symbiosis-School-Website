@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:schooll_website/pages/home/widgets/text_slider.dart';
@@ -81,51 +83,66 @@ class _MobileSectionState extends State<MobileSection> {
           Container(
             height: size.height / 1.7,
             width: size.width / 1.1,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(12)),
-              color: Colors.white,
-              image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(
-                    currentSection.imageUrl,
-                  ),
-                  colorFilter: ColorFilter.mode(
-                    Colors.cyan,
-                    BlendMode.modulate,
-                  )),
-              border: Border.all(
-                color: Colors.white,
-                width: 1.0,
-              ),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const SizedBox(height: 40),
-                SizedBox(
-                  width: size.width / 1.3,
-                  child: Text(
-                    currentSection.title,
-                    style: const TextStyle(
-                      fontSize: 31,
-                      color: Colors.white,
-                      fontFamily: "Magic Brush",
+            // decoration: BoxDecoration(
+            //   borderRadius: BorderRadius.all(Radius.circular(12)),
+            //   color: Colors.white,
+            //   border: Border.all(
+            //     color: Colors.white,
+            //     width: 1.0,
+            //   ),
+            // ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  //blured image as placeholder
+                  ImageFiltered(
+                    imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                    child: Image.asset(
+                      currentSection.imageUrl,
+                      fit: BoxFit.cover,
+                      color: Colors.cyan.withOpacity(0.5),
+                      colorBlendMode: BlendMode.modulate,
                     ),
-                    textAlign: TextAlign.center,
                   ),
-                ),
-                // const SizedBox(height: 20),
-                // Text(
-                //   currentSection.description,
-                //   style: const TextStyle(
-                //       fontSize: 18,
-                //       color: Colors.white,
-                //       fontWeight: FontWeight.bold),
-                //   textAlign: TextAlign.center,
-                // ),
-                const SizedBox(height: 60),
-              ],
+                  // Actual image with FadeInImage
+                  FadeInImage.assetNetwork(
+                    placeholder:
+                        currentSection.imageUrl, // Same image as placeholder
+                    image: currentSection.imageUrl,
+                    fit: BoxFit.cover,
+                    fadeInDuration: Duration(milliseconds: 500),
+                    placeholderErrorBuilder: (context, error, stackTrace) {
+                      return Container(color: Colors.cyan.withOpacity(0.5));
+                    },
+                    imageErrorBuilder: (context, error, stackTrace) {
+                      return Container(color: Colors.cyan.withOpacity(0.5));
+                    },
+                  ),
+                  // Column with text
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const SizedBox(height: 40),
+                      SizedBox(
+                        width: size.width / 1.3,
+                        child: Text(
+                          currentSection.title,
+                          style: const TextStyle(
+                            fontSize: 31,
+                            color: Colors.white,
+                            fontFamily: "Magic Brush",
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      const SizedBox(height: 60),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
           const SizedBox(
