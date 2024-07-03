@@ -21,224 +21,243 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
+      backgroundColor: const Color(0xffFFCD02),
+      body: ListView(
+          physics: BouncingScrollPhysics(
+              decelerationRate: ScrollDecelerationRate.normal),
           children: [
-            Container(
-              // height: size.height / 1.3,
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                color: const Color(0xffFFCD02),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Lottie.asset(
-                    "assets/image/car.json",
-                    reverse: true,
-                    fit: BoxFit.contain,
-                    height: size.height / 4,
+            Column(
+              children: [
+                Container(
+                  // height: size.height / 1.3,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    color: const Color(0xffFFCD02),
                   ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SizedBox(
-                    width: size.width / 1.4,
-                    child: Text(
-                      "WELCOME TO THE COMMUNITY OF SYMBIOSIANS".toUpperCase(),
-                      style: TextStyle(
-                        fontSize: size.width / 18,
-                        color: Colors.black,
-                        fontFamily: "Dan Sirf Bold",
-                        fontWeight: FontWeight.bold,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Lottie.asset(
+                        "assets/image/car.json",
+                        reverse: true,
+                        fit: BoxFit.contain,
+                        height: size.height / 4,
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    "#SCHOOLOFSYMBIOSIS".toUpperCase(),
-                    style: TextStyle(
-                      fontSize: size.width / 10,
-                      color: Colors.black,
-                      fontFamily: "Magic Brush",
-                      fontWeight: FontWeight.normal,
-                    ),
-                  ),
-                  // Spacer(),
-                  SizedBox(
-                    width: size.width / 1.4,
-                    child: Text(
-                      "We do good with others, by others.",
-                      style: TextStyle(
-                          fontSize: size.width / 20,
+                      SizedBox(
+                        height: 30,
+                      ),
+                      SizedBox(
+                        width: size.width / 1.4,
+                        child: Text(
+                          "WELCOME TO THE COMMUNITY OF SYMBIOSIANS"
+                              .toUpperCase(),
+                          style: TextStyle(
+                            fontSize: size.width / 18,
+                            color: Colors.black,
+                            fontFamily: "Dan Sirf Bold",
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        "#SCHOOLOFSYMBIOSIS".toUpperCase(),
+                        style: TextStyle(
+                          fontSize: size.width / 10,
                           color: Colors.black,
+                          fontFamily: "Magic Brush",
                           fontWeight: FontWeight.normal,
-                          fontFamily: " Dan Sirf"),
-                      textAlign: TextAlign.center,
+                        ),
+                      ),
+                      // Spacer(),
+                      SizedBox(
+                        width: size.width / 1.4,
+                        child: Text(
+                          "We do good with others, by others.",
+                          style: TextStyle(
+                              fontSize: size.width / 20,
+                              color: Colors.black,
+                              fontWeight: FontWeight.normal,
+                              fontFamily: " Dan Sirf"),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  // height: showMoreCards ? size.height * 2 : size.height,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    color: Color(0xfff8f8f8),
+                    image: DecorationImage(
+                      image: AssetImage("assets/image/dot.png"),
+                      repeat: ImageRepeat.repeat,
                     ),
                   ),
-                  SizedBox(
-                    height: 30,
-                  )
-                ],
-              ),
-            ),
-            Container(
-              // height: showMoreCards ? size.height * 2 : size.height,
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Color(0xfff8f8f8),
-                image: DecorationImage(
-                  image: AssetImage("assets/image/dot.png"),
-                  repeat: ImageRepeat.repeat,
-                ),
-              ),
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const SizedBox(
-                      height: 50,
-                    ),
-                    const AnimatedSize(
-                      duration: Duration(milliseconds: 500),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 30,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const SizedBox(
+                          height: 50,
                         ),
-                        child: Wrap(
-                          spacing: 10.0,
-                          alignment: WrapAlignment.center,
-                          runSpacing: 30.0,
-                          children: [
-                            SocialMediaCard(
-                              description:
-                                  "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                              image: "assets/image/dads.png",
+                        const AnimatedSize(
+                          duration: Duration(milliseconds: 800),
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: 30,
                             ),
-                            SocialMediaCard(
-                              description:
-                                  "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                              image: "assets/image/dads.png",
+                            child: Wrap(
+                              spacing: 10.0,
+                              alignment: WrapAlignment.center,
+                              runSpacing: 30.0,
+                              children: [
+                                SocialMediaCard(
+                                  description:
+                                      "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                  image: "assets/image/dads.png",
+                                ),
+                                SocialMediaCard(
+                                  description:
+                                      "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                  image: "assets/image/dads.png",
+                                ),
+                                SocialMediaCard(
+                                  description:
+                                      "the moments that matter. Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                  image: "assets/image/dads.png",
+                                ),
+                                SocialMediaCard(
+                                  description:
+                                      "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                  image: "assets/image/dads.png",
+                                ),
+                                SocialMediaCard(
+                                  description:
+                                      "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                  image: "assets/image/dads.png",
+                                ),
+                              ],
                             ),
-                            SocialMediaCard(
-                              description:
-                                  "the moments that matter. Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                              image: "assets/image/dads.png",
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        if (showMoreCards)
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 30,
                             ),
-                            SocialMediaCard(
-                              description:
-                                  "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                              image: "assets/image/dads.png",
+                            child: Wrap(
+                              alignment: WrapAlignment.center,
+                              spacing: 20.0,
+                              runSpacing: 30.0,
+                              children: [
+                                FadeTransition(
+                                  opacity: CurvedAnimation(
+                                    parent: AnimationController(
+                                      vsync: this,
+                                      duration:
+                                          const Duration(milliseconds: 500),
+                                    )..forward(),
+                                    curve: Curves.easeIn,
+                                  ),
+                                  child: const SocialMediaCard(
+                                    description:
+                                        "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                    image: "assets/image/dads.png",
+                                  ),
+                                ),
+                                FadeTransition(
+                                  opacity: CurvedAnimation(
+                                    parent: AnimationController(
+                                      vsync: this,
+                                      duration:
+                                          const Duration(milliseconds: 500),
+                                    )..forward(),
+                                    curve: Curves.easeIn,
+                                  ),
+                                  child: const SocialMediaCard(
+                                    description:
+                                        "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                    image: "assets/image/dads.png",
+                                  ),
+                                ),
+                                FadeTransition(
+                                  opacity: CurvedAnimation(
+                                    parent: AnimationController(
+                                      vsync: this,
+                                      duration:
+                                          const Duration(milliseconds: 500),
+                                    )..forward(),
+                                    curve: Curves.easeIn,
+                                  ),
+                                  child: const SocialMediaCard(
+                                    description:
+                                        "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                    image: "assets/image/dads.png",
+                                  ),
+                                ),
+                              ],
                             ),
-                            SocialMediaCard(
-                              description:
-                                  "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                              image: "assets/image/dads.png",
-                            ),
-                          ],
+                          ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  color: const Color(0xfff8f8f8),
+                ),
+                Container(
+                  width: double.infinity,
+                  color: const Color(0xfff8f8f8),
+                  child: Column(
+                    children: [
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      Visibility(
+                        visible: showMoreCards == true,
+                        child: Text(
+                          "Visit us on instagram for more!",
+                          style: TextStyle(
+                            fontSize: size.width / 20,
+                            fontFamily: "Dan Sirf Bold",
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    if (showMoreCards)
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 30,
-                        ),
-                        child: Wrap(
-                          alignment: WrapAlignment.center,
-                          spacing: 20.0,
-                          runSpacing: 30.0,
-                          children: [
-                            FadeTransition(
-                              opacity: CurvedAnimation(
-                                parent: AnimationController(
-                                  vsync: this,
-                                  duration: const Duration(milliseconds: 500),
-                                )..forward(),
-                                curve: Curves.easeIn,
-                              ),
-                              child: const SocialMediaCard(
-                                description:
-                                    "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                image: "assets/image/dads.png",
-                              ),
-                            ),
-                            FadeTransition(
-                              opacity: CurvedAnimation(
-                                parent: AnimationController(
-                                  vsync: this,
-                                  duration: const Duration(milliseconds: 500),
-                                )..forward(),
-                                curve: Curves.easeIn,
-                              ),
-                              child: const SocialMediaCard(
-                                description:
-                                    "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                image: "assets/image/dads.png",
-                              ),
-                            ),
-                            FadeTransition(
-                              opacity: CurvedAnimation(
-                                parent: AnimationController(
-                                  vsync: this,
-                                  duration: const Duration(milliseconds: 500),
-                                )..forward(),
-                                curve: Curves.easeIn,
-                              ),
-                              child: const SocialMediaCard(
-                                description:
-                                    "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                image: "assets/image/dads.png",
-                              ),
-                            ),
-                          ],
-                        ),
+                      const SizedBox(
+                        height: 20,
                       ),
-                  ],
+                      ButtonWidget1(
+                        text: showMoreCards == true ? "Visit Us" : "Load More!",
+                        onpressed: () {
+                          setState(() {
+                            showMoreCards = !showMoreCards;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            Visibility(
-              visible: showMoreCards == true,
-              child: Text(
-                "Visit us on instagram for more!",
-                style: TextStyle(
-                  fontSize: size.width / 20,
-                  fontFamily: "Dan Sirf Bold",
-                  fontWeight: FontWeight.normal,
+                Container(
+                  width: double.infinity,
+                  color: const Color(0xfff8f8f8),
+                  child: const BottomPictureTab(),
                 ),
-              ),
+                const MobileFootertab()
+              ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            ButtonWidget1(
-              text: showMoreCards == true ? "Visit Us" : "Load More!",
-              onpressed: () {
-                setState(() {
-                  showMoreCards = !showMoreCards;
-                });
-              },
-            ),
-            Container(
-              width: double.infinity,
-              color: const Color(0xfff8f8f8),
-              child: const BottomPictureTab(),
-            ),
-            const MobileFootertab()
-          ],
-        ),
-      ),
+          ]),
     );
   }
 }

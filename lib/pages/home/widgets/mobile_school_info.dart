@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:schooll_website/pages/learn_more/learn_more1.dart';
+import 'package:schooll_website/pages/learn_more/learn_more2.dart';
 import 'package:schooll_website/widgets/button1_widget.dart';
 
 import 'school_pics.dart';
@@ -94,8 +96,11 @@ class MobileSchoolInfo extends StatelessWidget {
                     child: ButtonWidget1(
                       text: "Learn More".toUpperCase(),
                       onpressed: () {
-                        GoRouter.of(context).go(
-                            '/symbiosis-higher-secondary-school/learn-more');
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return LearnMorePage2();
+                          },
+                        ));
                       },
                     ),
 

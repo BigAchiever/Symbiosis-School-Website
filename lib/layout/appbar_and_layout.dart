@@ -152,7 +152,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                       style: BorderStyle.solid,
                     ),
                     borderRadius: BorderRadius.vertical(
-                      bottom: Radius.circular(20),
+                      bottom: Radius.circular(0),
                     ),
                   ),
                   backgroundColor: Colors.white,
@@ -162,40 +162,41 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                   title: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: InkWell(
-                        hoverColor: Colors.transparent,
-                        onTap: () => GoRouter.of(context)
-                            .go('/symbiosis-school-jabalpur/home'),
-                        child: Row(
-                          children: [
-                            Text(
-                              'Symbiosis School\nJabalpur',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: constraints.maxWidth > 400 ? 20 : 16,
-                                fontFamily: "Magic Brush",
-                                fontWeight: FontWeight.normal,
-                                color: Colors.black,
-                              ),
+                      hoverColor: Colors.transparent,
+                      onTap: () => GoRouter.of(context)
+                          .go('/symbiosis-school-jabalpur/home'),
+                      child: Row(
+                        children: [
+                          Text(
+                            'Symbiosis School\nJabalpur',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: constraints.maxWidth > 400 ? 20 : 16,
+                              fontFamily: "Magic Brush",
+                              fontWeight: FontWeight.normal,
+                              color: Colors.black,
                             ),
-                            const SizedBox(
-                              width: 20,
-                            ),
-                            ResponsiveLayout.isSmall(context)
-                                ? const SizedBox()
-                                : const CircleAvatar(
-                                    backgroundColor:
-                                        Color.fromARGB(255, 23, 23, 23),
-                                    radius: 22,
-                                    child: Padding(
-                                      padding: EdgeInsets.all(4.0),
-                                      child: Image(
-                                        image:
-                                            AssetImage('assets/image/logo.png'),
-                                      ),
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          ResponsiveLayout.isSmall(context)
+                              ? const SizedBox()
+                              : const CircleAvatar(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 23, 23, 23),
+                                  radius: 22,
+                                  child: Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: Image(
+                                      image:
+                                          AssetImage('assets/image/logo.png'),
                                     ),
                                   ),
-                          ],
-                        )),
+                                ),
+                        ],
+                      ),
+                    ),
                   ),
                   actions: [
                     Padding(
@@ -253,7 +254,6 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                                     color: const Color(0xfff8f8f8),
                                     alignment: Alignment.centerLeft,
                                     height: 40,
-                                    width: size.width,
                                     child: const Row(
                                       children: [
                                         Icon(

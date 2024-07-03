@@ -16,9 +16,7 @@ class ContactUsCard extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Container(
       decoration: BoxDecoration(
-        color: ResponsiveLayout.isMobile(context)
-            ? Colors.transparent
-            : Colors.white,
+        color: const Color(0xfff8f8f8),
         borderRadius: const BorderRadius.all(Radius.circular(10)),
         border: ResponsiveLayout.isMobile(context)
             ? null

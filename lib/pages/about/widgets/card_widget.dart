@@ -54,7 +54,7 @@ class CardContainer extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: ResponsiveLayout.isMobile(context)
-                          ? size.width / 30
+                          ? size.width / 20
                           : size.width / 60,
                       fontFamily: "Dan Sirf Bold",
                       fontWeight: FontWeight.w600,
@@ -66,21 +66,26 @@ class CardContainer extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                Text(
-                  subtitle.toUpperCase(),
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: ResponsiveLayout.isMobile(context)
-                        ? 18
-                        : size.width / 60,
-                    fontFamily: "Dan Sirf Bold",
-                    fontWeight: FontWeight.bold,
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    subtitle.toUpperCase(),
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: ResponsiveLayout.isMobile(context)
+                          ? 18
+                          : size.width / 60,
+                      fontFamily: "Dan Sirf Bold",
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.start,
                   ),
-                  textAlign: TextAlign.start,
                 ),
                 const SizedBox(
                   height: 10,
                 ),
+
+                // does nto works well for some small devices
                 Text(
                   description,
                   style: TextStyle(

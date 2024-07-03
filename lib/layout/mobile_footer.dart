@@ -10,7 +10,7 @@ class MobileFootertab extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          // height: size.height / 1.4,
+          // height: size.height / 1.3,
           width: size.width,
           decoration: const BoxDecoration(
             color: Color(0xffFFCD02),

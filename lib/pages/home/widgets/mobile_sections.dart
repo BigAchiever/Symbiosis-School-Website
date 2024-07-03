@@ -6,6 +6,7 @@ import 'package:schooll_website/pages/home/widgets/text_slider.dart';
 
 import '../../../widgets/button1_widget.dart';
 import '../models/content_model.dart';
+import 'image_text_overlay.dart';
 
 class MobileSection extends StatefulWidget {
   const MobileSection({super.key});
@@ -80,70 +81,10 @@ class _MobileSectionState extends State<MobileSection> {
           const SizedBox(
             height: 30,
           ),
-          Container(
-            height: size.height / 1.7,
-            width: size.width / 1.1,
-            // decoration: BoxDecoration(
-            //   borderRadius: BorderRadius.all(Radius.circular(12)),
-            //   color: Colors.white,
-            //   border: Border.all(
-            //     color: Colors.white,
-            //     width: 1.0,
-            //   ),
-            // ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(12),
-              child: Stack(
-                fit: StackFit.expand,
-                children: [
-                  //blured image as placeholder
-                  ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-                    child: Image.asset(
-                      currentSection.imageUrl,
-                      fit: BoxFit.cover,
-                      color: Colors.cyan.withOpacity(0.5),
-                      colorBlendMode: BlendMode.modulate,
-                    ),
-                  ),
-                  // Actual image with FadeInImage
-                  FadeInImage.assetNetwork(
-                    placeholder:
-                        currentSection.imageUrl, // Same image as placeholder
-                    image: currentSection.imageUrl,
-                    fit: BoxFit.cover,
-                    fadeInDuration: Duration(milliseconds: 500),
-                    placeholderErrorBuilder: (context, error, stackTrace) {
-                      return Container(color: Colors.cyan.withOpacity(0.5));
-                    },
-                    imageErrorBuilder: (context, error, stackTrace) {
-                      return Container(color: Colors.cyan.withOpacity(0.5));
-                    },
-                  ),
-                  // Column with text
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const SizedBox(height: 40),
-                      SizedBox(
-                        width: size.width / 1.3,
-                        child: Text(
-                          currentSection.title,
-                          style: const TextStyle(
-                            fontSize: 31,
-                            color: Colors.white,
-                            fontFamily: "Magic Brush",
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      const SizedBox(height: 60),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+          ImageWithTextOverlay(
+            title: currentSection.title,
+            size: size,
+            imageUrl: currentSection.imageUrl,
           ),
           const SizedBox(
             height: 30,
