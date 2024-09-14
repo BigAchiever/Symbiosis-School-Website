@@ -179,9 +179,9 @@ class _MobileHomeState extends State<MobileHome> {
               ],
             ),
           ),
-          const MobileSection(),
           const MobileFeedBack(),
           const MobileSchoolInfo(),
+          const MobileSection(),
           const MobileSocialMediaHome(),
           Container(
             width: double.infinity,

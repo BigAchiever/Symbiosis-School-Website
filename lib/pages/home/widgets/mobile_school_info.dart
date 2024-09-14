@@ -96,11 +96,8 @@ class MobileSchoolInfo extends StatelessWidget {
                     child: ButtonWidget1(
                       text: "Learn More".toUpperCase(),
                       onpressed: () {
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) {
-                            return LearnMorePage2();
-                          },
-                        ));
+                        GoRouter.of(context).go(
+                            '/learn-more-symbiosis-senior-secondary-school');
                       },
                     ),
 
@@ -166,7 +163,7 @@ class MobileSchoolInfo extends StatelessWidget {
                       text: "Learn More".toUpperCase(),
                       onpressed: () {
                         GoRouter.of(context).go(
-                            '/symbiosis-senior-secondary-school/learn-more');
+                            '/learn-more-symbiosis-higher-secondary-school');
                       },
                     ),
                   ),

@@ -10,35 +10,37 @@ import '../pages/social_media/social_media.dart';
 
 // GoRouter configuration
 final router = GoRouter(
-  initialLocation: '/symbiosis-school-jabalpur/home',
+  initialLocation: '/home',
   errorBuilder: (context, state) => const NotFoundPage(),
   routes: [
     GoRoute(
       name: 'home',
-      path: '/symbiosis-school-jabalpur/home',
+      path: '/home',
       builder: (context, state) => const HomePageContent(),
     ),
     GoRoute(
       name: 'about',
-      path: '/symbiosis-school-jabalpur/about-us',
+      path: '/about-us',
       builder: (context, state) => const AboutPage(),
     ),
     GoRoute(
       name: 'social',
-      path: '/symbiosis-school-jabalpur/social-media',
+      path: '/social-media',
       builder: (context, state) => const SocialMediaPage(),
     ),
     GoRoute(
       name: 'contact',
-      path: '/symbiosis-school-jabalpur/contact-us',
+      path: '/contact-us',
       builder: (context, state) => const ContactPage(),
     ),
     GoRoute(
-      path: '/symbiosis-higher-secondary-school/learn-more',
+      name: 'learnmore1',
+      path: '/learn-more-symbiosis-higher-secondary-school',
       builder: (context, state) => const LearnMorePage(),
     ),
     GoRoute(
-      path: '/symbiosis-senior-secondary-school/learn-more',
+      name: 'learnmore2',
+      path: '/learn-more-symbiosis-senior-secondary-school',
       builder: (context, state) => const LearnMorePage2(),
     ),
   ],

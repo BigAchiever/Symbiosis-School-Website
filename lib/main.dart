@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           child: child!,
         );
       },
-      title: 'School Website',
+      title: 'Symbiosis Group of School, Jabalpur, M.P',
       debugShowCheckedModeBanner: false,
       routerConfig: router,
     );

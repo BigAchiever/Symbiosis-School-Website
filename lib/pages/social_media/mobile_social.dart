@@ -29,37 +29,45 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
             Column(
               children: [
                 Container(
-                  // height: size.height / 1.3,
+                  // height: size.height / 1.6,
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     color: const Color(0xffFFCD02),
+                    // image: DecorationImage(
+                    //     fit: BoxFit.cover,
+                    //     // scale: 1.0,
+                    //     image: AssetImage("assets/image/social-media.png"))
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Lottie.asset(
-                        "assets/image/car.json",
-                        reverse: true,
-                        fit: BoxFit.contain,
-                        height: size.height / 4,
+                      // Lottie.asset(
+                      //   "assets/image/car.json",
+                      //   reverse: true,
+                      //   fit: BoxFit.contain,
+                      //   height: size.height / 4,
+                      // ),
+                      Image.asset(
+                        "assets/image/social-media.png",
+                        fit: BoxFit.cover,
                       ),
                       SizedBox(
-                        height: 30,
+                        height: 20,
                       ),
-                      SizedBox(
-                        width: size.width / 1.4,
-                        child: Text(
-                          "WELCOME TO THE COMMUNITY OF SYMBIOSIANS"
-                              .toUpperCase(),
-                          style: TextStyle(
-                            fontSize: size.width / 18,
-                            color: Colors.black,
-                            fontFamily: "Dan Sirf Bold",
-                            fontWeight: FontWeight.bold,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
+                      // SizedBox(
+                      //   width: size.width / 1.4,
+                      //   child: Text(
+                      //     "WELCOME TO THE COMMUNITY OF SYMBIOSIANS"
+                      //         .toUpperCase(),
+                      //     style: TextStyle(
+                      //       fontSize: size.width / 18,
+                      //       color: Colors.black,
+                      //       fontFamily: "Dan Sirf Bold",
+                      //       fontWeight: FontWeight.bold,
+                      //     ),
+                      //     textAlign: TextAlign.center,
+                      //   ),
+                      // ),
                       const SizedBox(
                         height: 15,
                       ),

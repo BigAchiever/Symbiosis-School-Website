@@ -31,7 +31,7 @@ class ImageWithTextOverlay extends StatelessWidget {
           children: [
             // Blurred image as placeholder
             ImageFiltered(
-              imageFilter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+              imageFilter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
               child: Image.asset(
                 imageUrl,
                 fit: BoxFit.cover,
@@ -40,18 +40,18 @@ class ImageWithTextOverlay extends StatelessWidget {
               ),
             ),
             // Actual image with FadeInImage
-            FadeInImage(
-              placeholder: AssetImage(imageUrl), // Same image as placeholder
-              image: AssetImage(imageUrl),
-              fit: BoxFit.cover,
-              fadeInDuration: const Duration(milliseconds: 500),
-              placeholderErrorBuilder: (context, error, stackTrace) {
-                return Container(color: Colors.cyan.withOpacity(0.5));
-              },
-              imageErrorBuilder: (context, error, stackTrace) {
-                return Container(color: Colors.cyan.withOpacity(0.5));
-              },
-            ),
+            // FadeInImage(
+            //   placeholder: AssetImage(imageUrl), // Same image as placeholder
+            //   image: AssetImage(imageUrl),
+            //   fit: BoxFit.cover,
+            //   fadeInDuration: const Duration(milliseconds: 500),
+            //   placeholderErrorBuilder: (context, error, stackTrace) {
+            //     return Container(color: Colors.cyan.withOpacity(0.5));
+            //   },
+            //   imageErrorBuilder: (context, error, stackTrace) {
+            //     return Container(color: Colors.cyan.withOpacity(0.5));
+            //   },
+            // ),
             // Column with text
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
