@@ -1,4 +1,4 @@
-package com.example.schooll_website
+package com.example.symbiosis_school_jabalpur
 
 import io.flutter.embedding.android.FlutterActivity
 

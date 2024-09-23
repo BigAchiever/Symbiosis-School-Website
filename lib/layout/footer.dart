@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:schooll_website/widgets/contact_details.dart';
+import 'package:symbiosis_school_jabalpur/widgets/contact_details.dart';
 
 class FooterTab extends StatelessWidget {
   const FooterTab({Key? key}) : super(key: key);

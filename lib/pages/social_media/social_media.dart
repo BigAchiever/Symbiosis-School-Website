@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:schooll_website/layout/appbar_and_layout.dart';
-import 'package:schooll_website/layout/footer.dart';
-import 'package:schooll_website/pages/home/widgets/social_media_card.dart';
-import 'package:schooll_website/pages/social_media/mobile_social.dart';
-import 'package:schooll_website/widgets/bottom_picture_tab.dart';
-import 'package:schooll_website/widgets/button1_widget.dart';
+import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
+import 'package:symbiosis_school_jabalpur/layout/footer.dart';
+import 'package:symbiosis_school_jabalpur/pages/home/widgets/social_media_card.dart';
+import 'package:symbiosis_school_jabalpur/pages/social_media/mobile_social.dart';
+import 'package:symbiosis_school_jabalpur/widgets/bottom_picture_tab.dart';
+import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 
 import '../../layout/responsive.dart';
 

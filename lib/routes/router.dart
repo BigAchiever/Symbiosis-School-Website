@@ -1,8 +1,8 @@
 import 'package:go_router/go_router.dart';
-import 'package:schooll_website/pages/about/about.dart';
-import 'package:schooll_website/pages/contact/contact.dart';
-import 'package:schooll_website/pages/error_page/error_404.dart';
-import 'package:schooll_website/pages/home/home_ui.dart';
+import 'package:symbiosis_school_jabalpur/pages/about/about.dart';
+import 'package:symbiosis_school_jabalpur/pages/contact/contact.dart';
+import 'package:symbiosis_school_jabalpur/pages/error_page/error_404.dart';
+import 'package:symbiosis_school_jabalpur/pages/home/home_ui.dart';
 
 import '../pages/learn_more/learn_more1.dart';
 import '../pages/learn_more/learn_more2.dart';

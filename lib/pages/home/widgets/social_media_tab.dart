@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:schooll_website/pages/home/widgets/social_media_card.dart';
-import 'package:schooll_website/widgets/button1_widget.dart';
+import 'package:symbiosis_school_jabalpur/pages/home/widgets/social_media_card.dart';
+import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 
 class SocialMediaTab extends StatefulWidget {
   const SocialMediaTab({super.key});

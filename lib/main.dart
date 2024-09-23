@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:schooll_website/routes/router.dart';
+import 'package:symbiosis_school_jabalpur/routes/router.dart';
 
 void main() {
   runApp(const MyApp());

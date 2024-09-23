@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:schooll_website/pages/learn_more/learn_more1.dart';
-import 'package:schooll_website/pages/learn_more/learn_more2.dart';
-import 'package:schooll_website/widgets/button1_widget.dart';
+import 'package:symbiosis_school_jabalpur/pages/learn_more/learn_more1.dart';
+import 'package:symbiosis_school_jabalpur/pages/learn_more/learn_more2.dart';
+import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 
 import 'school_pics.dart';
 

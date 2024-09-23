@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:schooll_website/layout/appbar_and_layout.dart';
-import 'package:schooll_website/pages/learn_more/mobile_learn_more.dart';
-import 'package:schooll_website/widgets/button1_widget.dart';
+import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
+import 'package:symbiosis_school_jabalpur/pages/learn_more/mobile_learn_more.dart';
+import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 
 class LearnMorePage extends StatefulWidget {
   const LearnMorePage({super.key});

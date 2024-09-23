@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:schooll_website/layout/responsive.dart';
+import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 
 Widget buildSchoolImageWithTriangularShape(
     String imagePath, String title, String location, BuildContext context) {

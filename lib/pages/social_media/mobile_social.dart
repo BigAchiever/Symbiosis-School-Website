@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:schooll_website/layout/mobile_footer.dart';
-import 'package:schooll_website/layout/responsive.dart';
+import 'package:symbiosis_school_jabalpur/layout/mobile_footer.dart';
+import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 
 import '../../widgets/bottom_picture_tab.dart';
 import '../../widgets/button1_widget.dart';

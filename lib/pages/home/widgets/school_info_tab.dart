@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:schooll_website/utils/nav_utils.dart';
+import 'package:symbiosis_school_jabalpur/utils/nav_utils.dart';
 
 import 'school_pics.dart';
 

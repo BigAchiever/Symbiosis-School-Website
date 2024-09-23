@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:schooll_website/layout/responsive.dart';
+import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 
 class CardContainer extends StatelessWidget {
   final String title;

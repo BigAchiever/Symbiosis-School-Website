@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:schooll_website/layout/responsive.dart';
+import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 
 class ContentCard extends StatelessWidget {
   final String iconPath;

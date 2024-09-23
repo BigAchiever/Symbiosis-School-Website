@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:schooll_website/layout/mobile_footer.dart';
-import 'package:schooll_website/pages/about/tabs/backstory_tab.dart';
+import 'package:symbiosis_school_jabalpur/layout/mobile_footer.dart';
+import 'package:symbiosis_school_jabalpur/pages/about/tabs/backstory_tab.dart';
 
 import '../../widgets/bottom_picture_tab.dart';
 import 'models/values_model.dart';

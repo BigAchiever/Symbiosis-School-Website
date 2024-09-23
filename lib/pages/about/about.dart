@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:schooll_website/layout/appbar_and_layout.dart';
-import 'package:schooll_website/layout/footer.dart';
-import 'package:schooll_website/pages/about/tabs/backstory_tab.dart';
-import 'package:schooll_website/pages/about/widgets/card_widget.dart';
-import 'package:schooll_website/widgets/bottom_picture_tab.dart';
+import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
+import 'package:symbiosis_school_jabalpur/layout/footer.dart';
+import 'package:symbiosis_school_jabalpur/pages/about/tabs/backstory_tab.dart';
+import 'package:symbiosis_school_jabalpur/pages/about/widgets/card_widget.dart';
+import 'package:symbiosis_school_jabalpur/widgets/bottom_picture_tab.dart';
 
 import 'mobile_about.dart';
 import 'models/values_model.dart';

@@ -1,5 +1,5 @@
 // import 'package:flutter/material.dart';
-// import 'package:schooll_website/layout/appbar_and_layout.dart';
+// import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
 
 // class ButtonWidget2 extends StatelessWidget {
 //   final String text;

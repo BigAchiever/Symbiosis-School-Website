@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:schooll_website/layout/responsive.dart';
+import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 
 class FeedbackCard extends StatelessWidget {
   final String title;

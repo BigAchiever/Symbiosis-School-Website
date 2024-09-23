@@ -428,13 +428,13 @@
       "languageVersion": "3.2"
     },
     {
-      "name": "Symbiosis_Group_of_School_Jabalpur_M.P",
+      "name": "symbiosis_school_jabalpur",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-09-23T04:43:59.473576Z",
+  "generated": "2024-09-23T05:07:04.599661Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///C:/flutter",
