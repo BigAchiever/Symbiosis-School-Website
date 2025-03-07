@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:symbiosis_school_jabalpur/layout/mobile_footer.dart';
-import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 
 import '../../widgets/bottom_picture_tab.dart';
 import '../../widgets/button1_widget.dart';
@@ -23,7 +21,7 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
     return Scaffold(
       backgroundColor: const Color(0xffFFCD02),
       body: ListView(
-          physics: BouncingScrollPhysics(
+          physics: const BouncingScrollPhysics(
               decelerationRate: ScrollDecelerationRate.normal),
           children: [
             Column(
@@ -32,7 +30,7 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
                   // height: size.height / 1.6,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    color: const Color(0xffFFCD02),
+                    color: Color(0xffFFCD02),
                     // image: DecorationImage(
                     //     fit: BoxFit.cover,
                     //     // scale: 1.0,
@@ -51,7 +49,7 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
                         "assets/image/social-media.png",
                         fit: BoxFit.cover,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       // SizedBox(
@@ -93,7 +91,7 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
                           textAlign: TextAlign.center,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       )
                     ],

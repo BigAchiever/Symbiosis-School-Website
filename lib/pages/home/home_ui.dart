@@ -9,6 +9,7 @@ import 'package:symbiosis_school_jabalpur/pages/home/widgets/social_media_tab.da
 import 'package:symbiosis_school_jabalpur/widgets/bottom_picture_tab.dart';
 
 import '../../layout/footer.dart';
+import '../../layout/responsive.dart';
 import 'widgets/hero_image_cards.dart';
 
 class HomePageContent extends StatefulWidget {
@@ -41,10 +42,9 @@ class _HomePageContentState extends State<HomePageContent> {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: AppbarWidget(
-        selectedIndex: 0,
+      body: ResponsiveLayout(
         mobileBody: const MobileHome(),
-        body: ListView(
+        desktopBody: ListView(
             physics: BouncingScrollPhysics(
                 decelerationRate: ScrollDecelerationRate.normal),
             children: [

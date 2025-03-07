@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:symbiosis_school_jabalpur/widgets/contact_details.dart';
 
 class FooterTab extends StatelessWidget {
-  const FooterTab({Key? key}) : super(key: key);
+  const FooterTab({super.key});
 
   @override
   Widget build(BuildContext context) {

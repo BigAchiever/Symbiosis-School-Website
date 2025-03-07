@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
 import 'package:symbiosis_school_jabalpur/layout/footer.dart';
+import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 import 'package:symbiosis_school_jabalpur/pages/about/tabs/backstory_tab.dart';
 import 'package:symbiosis_school_jabalpur/pages/about/widgets/card_widget.dart';
 import 'package:symbiosis_school_jabalpur/widgets/bottom_picture_tab.dart';
@@ -41,10 +42,9 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xffFFCD02),
-      body: AppbarWidget(
-        selectedIndex: 1,
+      body: ResponsiveLayout(
         mobileBody: const MobileAbout(),
-        body: ListView(
+        desktopBody: ListView(
             physics: BouncingScrollPhysics(
                 decelerationRate: ScrollDecelerationRate.normal),
             children: [

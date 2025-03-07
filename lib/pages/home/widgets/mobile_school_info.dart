@@ -31,7 +31,7 @@ class MobileSchoolInfo extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 70,
           ),
           Text(
@@ -171,7 +171,7 @@ class MobileSchoolInfo extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 70,
           ),
         ],

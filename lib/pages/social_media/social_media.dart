@@ -25,10 +25,9 @@ class _SocialMediaPageState extends State<SocialMediaPage>
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xffFFCD02),
-      body: AppbarWidget(
-        selectedIndex: 2,
+      body: ResponsiveLayout(
         mobileBody: const MobileSocialMedia(),
-        body: ListView(
+        desktopBody: ListView(
             physics: BouncingScrollPhysics(
                 decelerationRate: ScrollDecelerationRate.normal),
             children: [

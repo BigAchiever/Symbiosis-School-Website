@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
+import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 import 'package:symbiosis_school_jabalpur/pages/learn_more/mobile_learn_more.dart';
 import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 
@@ -19,11 +20,9 @@ class _LearnMorePageState extends State<LearnMorePage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
-      body: AppbarWidget(
-          color: Colors.white,
-          selectedIndex: -1,
+      body: ResponsiveLayout(
           mobileBody: const MobileLearnMore(),
-          body: SingleChildScrollView(
+          desktopBody: SingleChildScrollView(
             child: Column(children: [
               SizedBox(
                 height: size.height / 1.3,

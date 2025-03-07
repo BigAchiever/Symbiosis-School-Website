@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
 import 'package:symbiosis_school_jabalpur/layout/footer.dart';
+import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 import 'package:symbiosis_school_jabalpur/pages/contact/mobile_contact.dart';
 import 'package:symbiosis_school_jabalpur/pages/contact/widgets/card.dart';
 
@@ -15,10 +16,9 @@ class ContactPage extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xffFFCD02),
-      body: AppbarWidget(
-        selectedIndex: 3,
+      body: ResponsiveLayout(
         mobileBody: const MobileContact(),
-        body: ListView(
+        desktopBody: ListView(
             physics: BouncingScrollPhysics(
                 decelerationRate: ScrollDecelerationRate.normal),
             children: [

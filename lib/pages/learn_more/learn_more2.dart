@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
+import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 
 class LearnMorePage2 extends StatefulWidget {
@@ -17,11 +18,9 @@ class _LearnMorePageState extends State<LearnMorePage2> {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: AppbarWidget(
-          color: Colors.white,
-          selectedIndex: -1,
+      body: ResponsiveLayout(
           mobileBody: Container(),
-          body: SingleChildScrollView(
+          desktopBody: SingleChildScrollView(
             child: Column(children: [
               SizedBox(
                 height: size.height / 1.3,

@@ -5,7 +5,7 @@ import 'package:symbiosis_school_jabalpur/utils/nav_utils.dart';
 import 'school_pics.dart';
 
 class SchoolInformationTab extends StatefulWidget {
-  const SchoolInformationTab({Key? key}) : super(key: key);
+  const SchoolInformationTab({super.key});
 
   @override
   State<SchoolInformationTab> createState() => _SchoolInformationTabState();
@@ -84,12 +84,12 @@ class _SchoolInformationTabState extends State<SchoolInformationTab> {
                     ),
                     child: ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(
+                        backgroundColor: WidgetStateProperty.all<Color>(
                           Colors.white,
                         ),
-                        overlayColor: MaterialStateProperty.resolveWith<Color>(
-                          (Set<MaterialState> states) {
-                            if (states.contains(MaterialState.hovered)) {
+                        overlayColor: WidgetStateProperty.resolveWith<Color>(
+                          (Set<WidgetState> states) {
+                            if (states.contains(WidgetState.hovered)) {
                               return Colors.yellow;
                             }
                             return Colors.white;
@@ -137,13 +137,13 @@ class _SchoolInformationTabState extends State<SchoolInformationTab> {
                     ),
                     child: ElevatedButton(
                       style: ButtonStyle(
-                        elevation: MaterialStateProperty.all<double>(0),
-                        backgroundColor: MaterialStateProperty.all<Color>(
+                        elevation: WidgetStateProperty.all<double>(0),
+                        backgroundColor: WidgetStateProperty.all<Color>(
                           Colors.white,
                         ),
-                        overlayColor: MaterialStateProperty.resolveWith<Color>(
-                          (Set<MaterialState> states) {
-                            if (states.contains(MaterialState.hovered)) {
+                        overlayColor: WidgetStateProperty.resolveWith<Color>(
+                          (Set<WidgetState> states) {
+                            if (states.contains(WidgetState.hovered)) {
                               return Colors.yellow;
                             }
                             return Colors.white;

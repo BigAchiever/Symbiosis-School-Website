@@ -1,7 +1,7 @@
 name: symbiosis_school_jabalpur
 description: Official Website of Symbiosis Higher and Senior Secondary school
 publish_to: "none"
-version: 0.1.0
+version: 0.1.1
 
 environment:
   sdk: ">=3.0.2 <4.0.0"
