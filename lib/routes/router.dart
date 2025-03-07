@@ -33,6 +33,12 @@ class ScaffoldWithNavBar extends StatelessWidget {
 final router = GoRouter(
   initialLocation: '/home',
   errorBuilder: (context, state) => const NotFoundPage(),
+  redirect: (context, state) {
+    if (state.uri.toString().startsWith('/')) {
+      return null; // Let go_router handle valid paths
+    }
+    return '/home'; // Redirect invalid paths to home
+  },
   routes: [
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {

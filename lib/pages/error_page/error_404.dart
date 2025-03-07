@@ -5,8 +5,8 @@ import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 
 class NotFoundPage extends StatelessWidget {
   const NotFoundPage({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
