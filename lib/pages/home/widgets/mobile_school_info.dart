@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:symbiosis_school_jabalpur/pages/learn_more/learn_more1.dart';
-import 'package:symbiosis_school_jabalpur/pages/learn_more/learn_more2.dart';
 import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 
 import 'school_pics.dart';
@@ -90,7 +88,7 @@ class MobileSchoolInfo extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Container(
+                  SizedBox(
                     height: 45,
 
                     child: ButtonWidget1(
@@ -157,7 +155,7 @@ class MobileSchoolInfo extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Container(
+                  SizedBox(
                     height: 45,
                     child: ButtonWidget1(
                       text: "Learn More".toUpperCase(),

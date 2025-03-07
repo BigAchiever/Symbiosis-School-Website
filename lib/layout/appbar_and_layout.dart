@@ -4,8 +4,6 @@ import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 import 'package:symbiosis_school_jabalpur/utils/constants/dimension.dart';
 import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 
-import '../widgets/button_widget2.dart';
-
 class AppbarWidget extends StatefulWidget {
   final Widget body;
   final Widget mobileBody;

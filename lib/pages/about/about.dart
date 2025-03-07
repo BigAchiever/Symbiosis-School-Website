@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
 import 'package:symbiosis_school_jabalpur/layout/footer.dart';
 import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 import 'package:symbiosis_school_jabalpur/pages/about/tabs/backstory_tab.dart';
@@ -11,7 +10,7 @@ import 'models/values_model.dart';
 import 'widgets/values_card.dart';
 
 class AboutPage extends StatefulWidget {
-  const AboutPage({Key? key}) : super(key: key);
+  const AboutPage({super.key});
 
   @override
   State<AboutPage> createState() => _AboutPageState();
@@ -45,7 +44,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
       body: ResponsiveLayout(
         mobileBody: const MobileAbout(),
         desktopBody: ListView(
-            physics: BouncingScrollPhysics(
+            physics: const BouncingScrollPhysics(
                 decelerationRate: ScrollDecelerationRate.normal),
             children: [
               Column(

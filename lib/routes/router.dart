@@ -7,6 +7,7 @@ import 'package:symbiosis_school_jabalpur/pages/home/home_ui.dart';
 import 'package:symbiosis_school_jabalpur/pages/learn_more/learn_more1.dart';
 import 'package:symbiosis_school_jabalpur/pages/learn_more/learn_more2.dart';
 import 'package:symbiosis_school_jabalpur/pages/social_media/social_media.dart';
+import 'package:symbiosis_school_jabalpur/routes/getpagebuilder.dart';
 
 import '../layout/appbar_and_layout.dart';
 
@@ -43,7 +44,8 @@ final router = GoRouter(
             GoRoute(
               name: 'home',
               path: '/home',
-              builder: (context, state) => const HomePageContent(),
+              pageBuilder: (context, state) =>
+                  getPageBuilder(const HomePageContent()),
             ),
           ],
         ),
@@ -52,7 +54,8 @@ final router = GoRouter(
             GoRoute(
               name: 'about',
               path: '/about-us',
-              builder: (context, state) => const AboutPage(),
+              pageBuilder: (context, state) =>
+                  getPageBuilder(const AboutPage()),
             ),
           ],
         ),
@@ -61,7 +64,8 @@ final router = GoRouter(
             GoRoute(
               name: 'social',
               path: '/social-media',
-              builder: (context, state) => const SocialMediaPage(),
+              pageBuilder: (context, state) =>
+                  getPageBuilder(const SocialMediaPage()),
             ),
           ],
         ),
@@ -70,7 +74,8 @@ final router = GoRouter(
             GoRoute(
               name: 'contact',
               path: '/contact-us',
-              builder: (context, state) => const ContactPage(),
+              pageBuilder: (context, state) =>
+                  getPageBuilder(const ContactPage()),
             ),
           ],
         ),
@@ -79,7 +84,8 @@ final router = GoRouter(
             GoRoute(
               name: 'learnmore1',
               path: '/learn-more-symbiosis-higher-secondary-school',
-              builder: (context, state) => const LearnMorePage(),
+              pageBuilder: (context, state) =>
+                  getPageBuilder(const LearnMorePage()),
             ),
           ],
         ),
@@ -88,7 +94,8 @@ final router = GoRouter(
             GoRoute(
               name: 'learnmore2',
               path: '/learn-more-symbiosis-senior-secondary-school',
-              builder: (context, state) => const LearnMorePage2(),
+              pageBuilder: (context, state) =>
+                  getPageBuilder(const LearnMorePage2()),
             ),
           ],
         ),

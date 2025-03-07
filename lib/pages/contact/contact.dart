@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
 import 'package:symbiosis_school_jabalpur/layout/footer.dart';
 import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 import 'package:symbiosis_school_jabalpur/pages/contact/mobile_contact.dart';
@@ -19,7 +18,7 @@ class ContactPage extends StatelessWidget {
       body: ResponsiveLayout(
         mobileBody: const MobileContact(),
         desktopBody: ListView(
-            physics: BouncingScrollPhysics(
+            physics: const BouncingScrollPhysics(
                 decelerationRate: ScrollDecelerationRate.normal),
             children: [
               Column(

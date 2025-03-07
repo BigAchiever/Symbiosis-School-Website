@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
 import 'package:symbiosis_school_jabalpur/layout/footer.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/widgets/social_media_card.dart';
 import 'package:symbiosis_school_jabalpur/pages/social_media/mobile_social.dart';
@@ -28,7 +27,7 @@ class _SocialMediaPageState extends State<SocialMediaPage>
       body: ResponsiveLayout(
         mobileBody: const MobileSocialMedia(),
         desktopBody: ListView(
-            physics: BouncingScrollPhysics(
+            physics: const BouncingScrollPhysics(
                 decelerationRate: ScrollDecelerationRate.normal),
             children: [
               Column(

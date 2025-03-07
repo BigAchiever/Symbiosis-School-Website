@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:symbiosis_school_jabalpur/layout/appbar_and_layout.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/mobile_home.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/widgets/feedback_tab.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/widgets/school_info_tab.dart';
@@ -45,7 +44,7 @@ class _HomePageContentState extends State<HomePageContent> {
       body: ResponsiveLayout(
         mobileBody: const MobileHome(),
         desktopBody: ListView(
-            physics: BouncingScrollPhysics(
+            physics: const BouncingScrollPhysics(
                 decelerationRate: ScrollDecelerationRate.normal),
             children: [
               Stack(children: [

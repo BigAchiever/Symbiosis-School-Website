@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MobileFootertab extends StatelessWidget {
-  const MobileFootertab({Key? key}) : super(key: key);
+  const MobileFootertab({super.key});
 
   @override
   Widget build(BuildContext context) {

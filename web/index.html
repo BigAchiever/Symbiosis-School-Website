@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-  <!-- <base href="https://www.symbiosisschooljabalpur.in/"> -->
+  <base href="https://www.symbiosisschooljabalpur.in/">
   <!-- <base href="https://bigachiever.github.io/deployment_of_school_web/"> -->
-  <base href="$FLUTTER_BASE_HREF">
+  <!-- <base href="$FLUTTER_BASE_HREF"> -->
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <title>Symbiosis Group of Schools, Jabalpur, Madhya Pradesh</title>
   <meta name="description" content="Symbiosis Group of Schools in Jabalpur, Madhya Pradesh provides top-quality education with a focus on holistic development. Visit our website to learn more.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <link rel="preload" href="main.dart.js" as="script">
+  <link rel="preload" href="loading.gif" as="image">
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -29,8 +30,24 @@
     // Version injected by flutter build, do not touch.
     var serviceWorkerVersion = "3382377831";
   </script>
+  <script>
+    window.addEventListener('load', function () {
+      if (window.location.pathname !== '/' && !window.location.pathname.match(/\/(robots\.txt|sitemap\.xml)$/)) {
+        history.pushState({}, document.title, window.location.pathname);
+      }
+    });
+  </script>
+
+  <!-- reducing subsequent loads. -->
+  <script> 
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/flutter_service_worker.js?v=3382377831');
+      });
+    }
+  </script>
   <style>
-    /* unminify.com */
+   
 
     #gif-background {
       position: fixed;

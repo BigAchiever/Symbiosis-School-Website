@@ -39,7 +39,7 @@ class _MobileAboutState extends State<MobileAbout> {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: const Color(0xffFFCD02),
-      body: ListView(physics: BouncingScrollPhysics(), children: [
+      body: ListView(physics: const BouncingScrollPhysics(), children: [
         Stack(children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -186,7 +186,7 @@ class _MobileAboutState extends State<MobileAbout> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 70,
                       ),
                       Text(
@@ -217,7 +217,7 @@ class _MobileAboutState extends State<MobileAbout> {
                           },
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 70,
                       ),
                     ],
