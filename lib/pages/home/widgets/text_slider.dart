@@ -16,9 +16,9 @@ class TextSlider extends StatefulWidget {
 
 class _TextSliderState extends State<TextSlider> {
   final List<String> texts = [
-    'Text 1',
-    'Text 2',
-    'Text 3',
+    'The Future',
+    'Childrens',
+    'Team Work',
   ];
   int currentIndex = 0;
   bool slideToLeft = false;

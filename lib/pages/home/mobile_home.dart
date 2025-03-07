@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:symbiosis_school_jabalpur/layout/mobile_footer.dart';
+import 'package:symbiosis_school_jabalpur/layout/footer/mobile_footer.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/widgets/mobile_feedback.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/widgets/mobile_school_info.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/widgets/mobile_sections.dart';
@@ -73,17 +73,31 @@ class _MobileHomeState extends State<MobileHome> {
                         height: 20,
                       ),
                       SizedBox(
-                        width: size.width / 1.2,
-                        child: Text(
-                          "School of X uses design to help you make a difference. Tap to see how we’ve helped people like you bring positive change to their\ncommunities.",
-                          style: TextStyle(
-                            fontSize: size.width / 20,
-                            color: Colors.black,
-                            fontFamily: "Sans Serif",
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
+                          width: size.width / 1.2,
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text:
+                                      "Symbiosis Group of Schools, Jabalpur – Nurturing Future Leaders",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontFamily: "Sans Serif",
+                                      fontSize: size.width / 20,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                TextSpan(
+                                  text: " Since 2003",
+                                  style: TextStyle(
+                                      fontSize: size.width / 20,
+                                      color: Colors.black,
+                                      fontFamily: "Sans Serif",
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          )),
                     ],
                   ),
                 ),

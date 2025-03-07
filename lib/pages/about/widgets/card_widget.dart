@@ -90,10 +90,11 @@ class CardContainer extends StatelessWidget {
                   description,
                   style: TextStyle(
                     color: Colors.black,
+
                     fontSize: ResponsiveLayout.isMobile(context)
-                        ? 16
+                        ? size.width / 30
                         : size.width / 90,
-                    fontFamily: "Dan Sirf",
+                    // fontFamily: "Dan Sirf",
                   ),
                   textAlign: TextAlign.start,
                 ),

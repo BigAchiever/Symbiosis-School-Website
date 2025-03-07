@@ -1,13 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Page Not Found</title>
-    <meta http-equiv="refresh" content="0; url=/index.html">
+  <base href="https://www.symbiosisschooljabalpur.in/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <title>Page Not Found</title> <!-- Retain for SEO, but app will override -->
+  <meta name="description" content="Symbiosis Group of Schools in Jabalpur, Madhya Pradesh provides top-quality education with a focus on holistic development. Visit our website to learn more.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preload" href="main.dart.js" as="script">
+  <link rel="preload" href="loading.gif" as="image">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="app">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <link rel="apple-touch-icon" href="icons/logo.png">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <script>
+    var serviceWorkerVersion = "3382377831";
+  </script>
+  <script>
+    window.addEventListener('load', function () {
+      if (window.location.pathname !== '/' && !window.location.pathname.match(/\/(robots\.txt|sitemap\.xml)$/)) {
+        history.pushState({}, document.title, window.location.pathname);
+      }
+    });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/flutter_service_worker.js?v=3382377831');
+      });
+    }
+  </script>
+  <style>
+    #gif-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image: url("loading.gif");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+  </style>
 </head>
 
 <body>
-    Redirecting...
-</body>
+  <div id="gif-background"></div>
+  
 
+  <script>
+    window.addEventListener('load', function (ev) {
+      load();
+    });
+
+    function load() {
+      loadScript('main.dart.js').then(() => {
+        _flutter.loader.load({
+          serviceWorker: {
+            serviceWorkerVersion: serviceWorkerVersion,
+          },
+          onEntrypointLoaded: async function (app) {
+            let appRunner = await app.initializeEngine();
+            await appRunner.runApp();
+            document.getElementById('gif-background').style.display = 'none';
+            
+          }
+        });
+      }).catch(error => {
+        console.error('Failed to load main.dart.js:', error);
+      });
+    }
+
+    function loadScript(src) {
+      return new Promise(function (resolve, reject) {
+        var script = document.createElement('script');
+        script.src = src;
+        script.onload = function () { resolve(); };
+        script.onerror = function () { reject(new Error('Script load failed for ' + src)); };
+        document.body.appendChild(script);
+      });
+    }
+  </script>
+</body>
 </html>

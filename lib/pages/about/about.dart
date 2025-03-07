@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:symbiosis_school_jabalpur/layout/footer.dart';
+import 'package:symbiosis_school_jabalpur/layout/footer/footer.dart';
 import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 import 'package:symbiosis_school_jabalpur/pages/about/tabs/backstory_tab.dart';
 import 'package:symbiosis_school_jabalpur/pages/about/widgets/card_widget.dart';
@@ -138,7 +138,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                           subtitle:
                               "Taking messy, complex\nchallenges and making\nsense of them",
                           description:
-                              "Those wicked problems that feel impossible to\nresolve are perfect for School of X!\nWe help youbuild the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
+                              "Those wicked problems that feel impossible to resolve are perfect for Symbiosis Group of schools!\nWe help you build the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
                         ),
                       ),
                       const Positioned(
@@ -149,7 +149,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                           subtitle:
                               "Taking messy, complex\nchallenges and making\nsense of them",
                           description:
-                              "Those wicked problems that feel impossible to\nresolve are perfect for School of X!\nWe help youbuild the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
+                              "Those wicked problems that feel impossible to resolve are perfect for Symbiosis Group of schools!\nWe help you build the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
                         ),
                       ),
                       const Positioned(
@@ -160,13 +160,13 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                           subtitle:
                               "Taking messy, complex\nchallenges and making\nsense of them",
                           description:
-                              "Those wicked problems that feel impossible to\nresolve are perfect for School of X!\nWe help youbuild the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
+                              "Those wicked problems that feel impossible to resolve are perfect for Symbiosis Group of schools!\nWe help you build the skills you need\nto see your challenges with fresh eyes,\nand unlock new ways forward, through\nsimple tools and activities.",
                         ),
                       ),
                     ],
                   ),
                   Container(
-                    height: size.height / 1.5,
+                    height: size.height / 1.2,
                     width: size.width / 1.2,
                     decoration: const BoxDecoration(
                       color: Colors.transparent,

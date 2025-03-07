@@ -21,7 +21,7 @@ class BackstoryTab extends StatelessWidget {
             ? CrossAxisAlignment.start
             : CrossAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Padding(
@@ -65,7 +65,7 @@ class BackstoryTab extends StatelessWidget {
             child: SizedBox(
               width: size.width / 1.2,
               child: AutoSizeText(
-                "School of X was established by DesignSingapore Council in 2020, to equip Singaporeans with the design thinking skills to co-create better living experiences. School of X supports three of the strategic thrusts set out in “Design 2025”, the design masterplan for Singapore:",
+                "Symbiosis Group of Schools, Jabalpur, was founded in 2003, with a vision to empower students with critical thinking, creativity, and life skills to shape a better future. As a leading educational institution, Symbiosis aligns with national educational goals by fostering innovation, holistic development, and community engagement in Madhya Pradesh:",
                 maxFontSize: 22,
                 minFontSize: 14,
                 style: TextStyle(
@@ -125,7 +125,7 @@ class BackstoryTab extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 70,
           ),
         ],

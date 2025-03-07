@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:symbiosis_school_jabalpur/layout/footer.dart';
+import 'package:symbiosis_school_jabalpur/layout/footer/footer.dart';
 import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 import 'package:symbiosis_school_jabalpur/pages/contact/mobile_contact.dart';
 import 'package:symbiosis_school_jabalpur/pages/contact/widgets/card.dart';
@@ -104,7 +104,7 @@ class ContactPage extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "If you'd like to take part in our programmes, or have any questions about the School of X, go ahead and ask away!",
+                                    "If you'd like to take part in our programmes, or have any questions about the School of Symbiosis, go ahead and ask away!",
                                     style: TextStyle(
                                       fontSize: size.width / 80,
                                       fontWeight: FontWeight.normal,
@@ -114,7 +114,7 @@ class ContactPage extends StatelessWidget {
                                     height: 20,
                                   ),
                                   Text(
-                                    "School of X\n(DesignSingapore Council)",
+                                    "Symbiosis School Jabalpur\n(India, Madhya Pradesh)",
                                     style: TextStyle(
                                       fontSize: size.width / 78,
                                       fontFamily: "Dan Sirf Bold",
@@ -125,7 +125,7 @@ class ContactPage extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "National Design Centre\n111 Middle Road #04-01\nSingapore 188969",
+                                    "Affiliated with MP Board and CBSE under the Ministry of Education, Government of India",
                                     style: TextStyle(
                                       fontSize: size.width / 80,
                                     ),

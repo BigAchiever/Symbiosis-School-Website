@@ -86,7 +86,7 @@ class _MobileSocialMediaHomeState extends State<MobileSocialMediaHome> {
           SizedBox(
             width: size.width / 1.2,
             child: const Text(
-              "See our feed for more School of X magic!",
+              "See our feed for more Symbiosis School magic!",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 18,

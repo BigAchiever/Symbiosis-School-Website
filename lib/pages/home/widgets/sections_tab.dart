@@ -64,7 +64,7 @@ class _SectionsTabState extends State<SectionsTab> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Find your\nplace in the\nSchool of X",
+                          "Find your\nplace in the\nSymbiosis",
                           style: TextStyle(
                             fontSize: size.width / 24,
                             color: Colors.white,

@@ -93,7 +93,7 @@ class _SocialMediaTabState extends State<SocialMediaTab> {
             height: 30,
           ),
           Text(
-            "See our feed for more School of X magic!",
+            "See our feed for more Symbiosis Group of schools magic!",
             style: TextStyle(
               color: Colors.black,
               fontSize: size.width / 80,

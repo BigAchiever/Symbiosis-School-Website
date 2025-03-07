@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:symbiosis_school_jabalpur/layout/mobile_footer.dart';
+import 'package:symbiosis_school_jabalpur/layout/footer/mobile_footer.dart';
 import 'package:symbiosis_school_jabalpur/pages/about/tabs/backstory_tab.dart';
 
 import '../../widgets/bottom_picture_tab.dart';

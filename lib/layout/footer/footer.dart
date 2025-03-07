@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:symbiosis_school_jabalpur/layout/footer/hoverlinks.dart';
 import 'package:symbiosis_school_jabalpur/widgets/contact_details.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FooterTab extends StatelessWidget {
   const FooterTab({super.key});
@@ -66,25 +68,62 @@ class FooterTab extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        SvgPicture.asset(
-                          'assets/image/ig.svg',
-                          height: 30,
-                          width: 30,
+                        MouseRegion(
+                          cursor: SystemMouseCursors
+                              .click, // Pointer cursor on hover
+                          child: GestureDetector(
+                            onTap: () {
+                              launchUrl(Uri.parse(
+                                  'https://www.instagram.com/symbiosis_school_jabalpur/'));
+                            },
+                            child: SvgPicture.asset(
+                              'assets/image/ig.svg',
+                              height: 30,
+                              width: 30,
+                            ),
+                          ),
                         ),
-                        SvgPicture.asset(
-                          'assets/image/yt.svg',
-                          height: 30,
-                          width: 30,
+                        MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: GestureDetector(
+                            onTap: () {
+                              launchUrl(Uri.parse(
+                                  'https://www.youtube.com/@symbiosis.group.of.schools'));
+                            },
+                            child: SvgPicture.asset(
+                              'assets/image/yt.svg',
+                              height: 30,
+                              width: 30,
+                            ),
+                          ),
                         ),
-                        SvgPicture.asset(
-                          'assets/image/ln.svg',
-                          height: 30,
-                          width: 30,
+                        MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: GestureDetector(
+                            onTap: () {
+                              launchUrl(Uri.parse(
+                                  'https://www.linkedin.com/company/symbiosis-higher-secondary-school/'));
+                            },
+                            child: SvgPicture.asset(
+                              'assets/image/ln.svg',
+                              height: 30,
+                              width: 30,
+                            ),
+                          ),
                         ),
-                        SvgPicture.asset(
-                          'assets/image/fb.svg',
-                          height: 30,
-                          width: 30,
+                        MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: GestureDetector(
+                            onTap: () {
+                              launchUrl(Uri.parse(
+                                  'https://www.facebook.com/Symbiosis.school.jabalpur/'));
+                            },
+                            child: SvgPicture.asset(
+                              'assets/image/fb.svg',
+                              height: 30,
+                              width: 30,
+                            ),
+                          ),
                         ),
                       ],
                     ),
@@ -105,64 +144,23 @@ class FooterTab extends StatelessWidget {
                       textAlign: TextAlign.start,
                     ),
                     SizedBox(height: 10),
-                    Text(
-                      "Home",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
+                    FooterLinkItem(title: "Home", route: "/home"),
                     SizedBox(height: 10),
-                    Text(
-                      "About Us",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
+                    FooterLinkItem(title: "About Us", route: "/about-us"),
                     SizedBox(height: 10),
-                    Text(
-                      "Resources",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
+                    FooterLinkItem(title: "Resources", route: "/resources"),
                     SizedBox(height: 10),
-                    Text(
-                      "Social Media",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
+                    FooterLinkItem(
+                        title: "Social Media", route: "/social-media"),
                     SizedBox(height: 10),
-                    Text(
-                      "Contact Us",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
+                    FooterLinkItem(title: "Contact Us", route: "/contact-us"),
                     SizedBox(height: 10),
-                    Text(
-                      "Feedback",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
+                    FooterLinkItem(title: "Feedback", route: "/feedback"),
                     SizedBox(height: 10),
                   ],
                 ),
                 SizedBox(width: size.width / 10),
-                const ContactDetails()
+                const ContactDetails(),
               ],
             ),
           ),

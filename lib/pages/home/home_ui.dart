@@ -7,7 +7,7 @@ import 'package:symbiosis_school_jabalpur/pages/home/widgets/sections_tab.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/widgets/social_media_tab.dart';
 import 'package:symbiosis_school_jabalpur/widgets/bottom_picture_tab.dart';
 
-import '../../layout/footer.dart';
+import '../../layout/footer/footer.dart';
 import '../../layout/responsive.dart';
 import 'widgets/hero_image_cards.dart';
 
@@ -101,15 +101,39 @@ class _HomePageContentState extends State<HomePageContent> {
                                   const SizedBox(
                                     height: 20,
                                   ),
-                                  Text(
-                                    "School of X uses design to help you make a difference.\nTap to see how we’ve helped people like you bring positive change to their\ncommunities.",
-                                    style: TextStyle(
-                                      fontSize: size.width / 80,
-                                      color: Colors.black,
-                                      fontFamily: "Sans Serif",
-                                    ),
+                                  RichText(
                                     textAlign: TextAlign.center,
-                                  ),
+                                    text: TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text:
+                                              "Symbiosis Group of Schools, Jabalpur – Nurturing Future Leaders",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontFamily: "Sans Serif",
+                                              fontSize: size.width / 80,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                        TextSpan(
+                                          text: " Since 2003",
+                                          style: TextStyle(
+                                              fontSize: size.width / 80,
+                                              color: Colors.black,
+                                              fontFamily: "Sans Serif",
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        TextSpan(
+                                          text:
+                                              "\nDiscover how we empower students with holistic education, innovative learning, and a passion for excellence.",
+                                          style: TextStyle(
+                                            fontSize: size.width / 80,
+                                            color: Colors.black,
+                                            fontFamily: "Sans Serif",
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  )
                                 ],
                               ),
                             ),

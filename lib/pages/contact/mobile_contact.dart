@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:symbiosis_school_jabalpur/layout/mobile_footer.dart';
+import 'package:symbiosis_school_jabalpur/layout/footer/mobile_footer.dart';
 
 import '../../widgets/bottom_picture_tab.dart';
 import '../../widgets/dialog.dart';
@@ -34,7 +34,7 @@ class MobileContact extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffFFCD02),
       body: ListView(
-          physics: BouncingScrollPhysics(
+          physics: const BouncingScrollPhysics(
               decelerationRate: ScrollDecelerationRate.normal),
           children: [
             Column(
@@ -45,7 +45,7 @@ class MobileContact extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 80,
                       ),
                       SizedBox(
@@ -91,7 +91,7 @@ class MobileContact extends StatelessWidget {
                         height: 300,
                         width: 300,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 70,
                       ),
                     ],
@@ -104,7 +104,7 @@ class MobileContact extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 100,
                       ),
                       Column(

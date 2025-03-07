@@ -30,13 +30,33 @@ class ContentCard extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Text(
-            title,
-            style: TextStyle(
-                fontSize:
-                    ResponsiveLayout.isMobile(context) ? 18 : size.width / 70,
-                fontWeight: FontWeight.w700,
-                decoration: TextDecoration.underline),
+          Stack(
+            children: [
+              // Black stroke (border) text
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize:
+                      ResponsiveLayout.isMobile(context) ? 18 : size.width / 60,
+                  fontWeight: FontWeight.w900,
+                  foreground: Paint()
+                    ..style = PaintingStyle.stroke
+                    ..strokeWidth = 1.5 // Adjust stroke thickness as needed
+                    ..color = Colors.white,
+                  // decoration: TextDecoration.underline,
+                ),
+              ),
+              // Yellow fill text
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize:
+                      ResponsiveLayout.isMobile(context) ? 18 : size.width / 60,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.black, // Yellow text color
+                ),
+              ),
+            ],
           ),
           const SizedBox(
             height: 10,
@@ -46,7 +66,9 @@ class ContentCard extends StatelessWidget {
             child: Text(
               description,
               style: TextStyle(
-                fontFamily: "Dan Sirf",
+                // fontFamily: "Dan Sirf", // Uncomment if needed
+                fontWeight: FontWeight.w800,
+                color: const Color(0xFF1A1A1A), // Dark gray for readability
                 fontSize:
                     ResponsiveLayout.isMobile(context) ? 16 : size.width / 85,
               ),

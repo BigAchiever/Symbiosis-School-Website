@@ -47,7 +47,7 @@ class _SchoolInformationTabState extends State<SchoolInformationTab> {
           SizedBox(
             width: size.width / 2,
             child: Text(
-              "The School of X, an initiative of DesignSingapore Council,strives to be a classroom without walls for communities and businesses to solve challenges through design thinking.",
+              "Symbiosis Group of Schools, Jabalpur, an initiative dedicated to innovative education, strives to be a dynamic learning environment where students, families, and communities come together to address real-world challenges through creativity, critical thinking, and holistic development.",
               style: TextStyle(
                 fontSize: size.width / 80,
                 fontWeight: FontWeight.normal,
