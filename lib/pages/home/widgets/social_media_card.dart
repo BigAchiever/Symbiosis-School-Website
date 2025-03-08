@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:symbiosis_school_jabalpur/layout/responsive.dart';
 
 class SocialMediaCard extends StatefulWidget {
   final String description;
-  final String image;
+  final String image; // Now a network URL
   const SocialMediaCard({
     Key? key,
     required this.description,
@@ -57,9 +58,17 @@ class _SocialMediaCardState extends State<SocialMediaCard> {
                     const EdgeInsets.only(left: 12.0, right: 12.0, top: 12.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12.0),
-                  child: Image(
+                  child: CachedNetworkImage(
+                    imageUrl: widget.image,
                     fit: BoxFit.cover,
-                    image: AssetImage(widget.image),
+                    height: 200, // Fixed height for consistency
+                    width: double.infinity,
+                    placeholder: (context, url) =>
+                        const Center(child: CircularProgressIndicator()),
+                    errorWidget: (context, url, error) {
+                      print('Image load error for ${widget.image}: $error');
+                      return const Icon(Icons.error);
+                    },
                   ),
                 ),
               ),

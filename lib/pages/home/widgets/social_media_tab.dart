@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/widgets/social_media_card.dart';
+import 'package:symbiosis_school_jabalpur/utils/API/fetch.dart';
 import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SocialMediaTab extends StatefulWidget {
   const SocialMediaTab({super.key});
@@ -52,42 +54,9 @@ class _SocialMediaTabState extends State<SocialMediaTab> {
           const SizedBox(
             height: 30,
           ),
-          const Wrap(
-            spacing: 30,
-            runSpacing: 30,
-            alignment: WrapAlignment.center,
-            children: [
-              SocialMediaCard(
-                image: "assets/image/dads.png",
-                description:
-                    "facebook is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
-              ),
-              SocialMediaCard(
-                image: "assets/image/dads.png",
-                description:
-                    "youtube is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
-              ),
-              SocialMediaCard(
-                image: "assets/image/dads.png",
-                description:
-                    "Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
-              ),
-              SocialMediaCard(
-                image: "assets/image/dads.png",
-                description:
-                    "Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
-              ),
-              SocialMediaCard(
-                image: "assets/image/dads.png",
-                description:
-                    "Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
-              ),
-              SocialMediaCard(
-                image: "assets/image/dads.png",
-                description:
-                    "Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
-              ),
-            ],
+          SizedBox(
+            width: size.width * 0.9,
+            child: const InstagramPosts(),
           ),
           const SizedBox(
             height: 30,
@@ -102,7 +71,13 @@ class _SocialMediaTabState extends State<SocialMediaTab> {
           const SizedBox(
             height: 10,
           ),
-          ButtonWidget1(text: "View More", onpressed: () {})
+          ButtonWidget1(
+            text: "View More",
+            onpressed: () {
+              launchUrl(Uri.parse(
+                  'https://www.instagram.com/symbiosis_school_jabalpur/'));
+            },
+          )
         ],
       ),
     );

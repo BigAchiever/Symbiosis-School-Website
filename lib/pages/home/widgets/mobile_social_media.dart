@@ -58,7 +58,7 @@ class _MobileSocialMediaHomeState extends State<MobileSocialMediaHome> {
           const SizedBox(
             height: 30,
           ),
-          Wrap(
+          const Wrap(
             spacing: 30,
             runSpacing: 30,
             alignment: WrapAlignment.center,
