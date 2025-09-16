@@ -91,8 +91,6 @@ extension ColorSchemeBuilder on AppColorsExtension {
       onSecondary: onSecondary,
       error: error,
       onError: onError,
-      background: background,
-      onBackground: onBackground,
       surface: surface,
       onSurface: onSurface,
     );

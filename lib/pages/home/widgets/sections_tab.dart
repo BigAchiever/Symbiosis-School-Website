@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:symbiosis_school_jabalpur/pages/home/widgets/Sections_button.dart';
+import 'package:symbiosis_school_jabalpur/pages/home/widgets/sections_button.dart';
 import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 
 import '../models/content_model.dart';

@@ -4,8 +4,10 @@ import 'package:symbiosis_school_jabalpur/pages/about/about.dart';
 import 'package:symbiosis_school_jabalpur/pages/contact/contact.dart';
 import 'package:symbiosis_school_jabalpur/pages/error_page/error_404.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/home_ui.dart';
+import 'package:symbiosis_school_jabalpur/pages/notifications/notification_model.dart';
 import 'package:symbiosis_school_jabalpur/pages/learn_more/learn_more1.dart';
 import 'package:symbiosis_school_jabalpur/pages/learn_more/learn_more2.dart';
+import 'package:symbiosis_school_jabalpur/pages/notifications/notification_mobile_page.dart';
 import 'package:symbiosis_school_jabalpur/pages/social_media/social_media.dart';
 import 'package:symbiosis_school_jabalpur/routes/getpagebuilder.dart';
 
@@ -31,13 +33,13 @@ class ScaffoldWithNavBar extends StatelessWidget {
 
 // GoRouter configuration
 final router = GoRouter(
-  initialLocation: '/home',
+  initialLocation: '/',
   errorBuilder: (context, state) => const NotFoundPage(),
   redirect: (context, state) {
     if (state.uri.toString().startsWith('/')) {
       return null; // Let go_router handle valid paths
     }
-    return '/home'; // Redirect invalid paths to home
+    return '/'; // Redirect invalid paths to home
   },
   routes: [
     StatefulShellRoute.indexedStack(
@@ -49,7 +51,7 @@ final router = GoRouter(
           routes: [
             GoRoute(
               name: 'home',
-              path: '/home',
+              path: '/',
               pageBuilder: (context, state) =>
                   getPageBuilder(const HomePageContent()),
             ),
@@ -105,6 +107,18 @@ final router = GoRouter(
             ),
           ],
         ),
+        StatefulShellBranch(routes: [
+          GoRoute(
+            name: 'notifications',
+            path: '/notifications',
+            pageBuilder: (context, state) {
+              final notices = state.extra as List<NotificationModel>?;
+              return MaterialPage(
+                child: NotificationsPage(notices: notices),
+              );
+            },
+          ),
+        ])
       ],
     ),
   ],

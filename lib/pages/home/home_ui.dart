@@ -5,6 +5,7 @@ import 'package:symbiosis_school_jabalpur/pages/home/widgets/feedback_tab.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/widgets/school_info_tab.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/widgets/sections_tab.dart';
 import 'package:symbiosis_school_jabalpur/pages/home/widgets/social_media_tab.dart';
+
 import 'package:symbiosis_school_jabalpur/widgets/bottom_picture_tab.dart';
 
 import '../../layout/footer/footer.dart';

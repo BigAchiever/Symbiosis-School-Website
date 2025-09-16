@@ -5,10 +5,10 @@ class TextSlider extends StatefulWidget {
   final int selectedIndex;
 
   const TextSlider({
-    Key? key,
+    super.key,
     required this.onSectionSelected,
     required this.selectedIndex,
-  }) : super(key: key);
+  });
 
   @override
   _TextSliderState createState() => _TextSliderState();

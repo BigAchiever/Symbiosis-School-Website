@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:symbiosis_school_jabalpur/pages/home/home_ui.dart';
 
 import '../pages/about/about.dart';
 import '../pages/contact/contact.dart';
-import '../pages/home/home_ui.dart';
 import '../pages/social_media/social_media.dart';
 
 int selectedIndex = 0;
- final List<Widget> pages = [
+final List<Widget> pages = [
   const HomePageContent(),
   const AboutPage(),
   const SocialMediaPage(),

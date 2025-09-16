@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ContactDetails extends StatelessWidget {
-  const ContactDetails({Key? key}) : super(key: key);
+  const ContactDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,14 +15,14 @@ class ContactDetails extends StatelessWidget {
             _buildBranchDetails(
               branchName: "Symbiosis Higher Secondary School",
               address: "Adhartal, Jabalpur - 482004",
-              phone: "+91 20 2655 0800",
+              phone: "0761 404 2089, 930 012 6308",
               email: "symbiosis.h.s.school@gmail.com",
             ),
             const SizedBox(width: 30),
             _buildBranchDetails(
               branchName: "Symbiosis Senior Secondary School",
               address: "Maharajpur, Jabalpur - 482004",
-              phone: "+91 20 2655 0800",
+              phone: "0797 474 6744, 930 259 7884",
               email: "symbiosis.s.s.school@gmail.com",
             ),
           ],

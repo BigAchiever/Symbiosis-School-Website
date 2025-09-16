@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:symbiosis_school_jabalpur/pages/home/widgets/social_media_card.dart';
+import 'package:symbiosis_school_jabalpur/utils/API/fetch.dart';
 import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 
 class MobileSocialMediaHome extends StatefulWidget {
@@ -58,27 +58,9 @@ class _MobileSocialMediaHomeState extends State<MobileSocialMediaHome> {
           const SizedBox(
             height: 30,
           ),
-          const Wrap(
-            spacing: 30,
-            runSpacing: 30,
-            alignment: WrapAlignment.center,
-            children: [
-              SocialMediaCard(
-                image: "assets/image/dads.png",
-                description:
-                    "Facebook is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
-              ),
-              SocialMediaCard(
-                image: "assets/image/dads.png",
-                description:
-                    "YouTube is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
-              ),
-              SocialMediaCard(
-                image: "assets/image/dads.png",
-                description:
-                    "Instagram is a photo and video-sharing social networking service owned by Facebook, Inc. It was created by Kevin Systrom and Mike Krieger",
-              ),
-            ],
+          InstagramPosts(
+            limit: 3,
+            showOnlyImages: true,
           ),
           const SizedBox(
             height: 30,

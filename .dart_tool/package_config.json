@@ -104,6 +104,12 @@
       "languageVersion": "3.1"
     },
     {
+      "name": "fading_edge_scrollview",
+      "rootUri": "file:///C:/Users/danis/AppData/Local/Pub/Cache/hosted/pub.dev/fading_edge_scrollview-4.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///C:/Users/danis/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.2",
       "packageUri": "lib/",
@@ -240,6 +246,12 @@
       "rootUri": "file:///C:/Users/danis/AppData/Local/Pub/Cache/hosted/pub.dev/lottie-3.3.1",
       "packageUri": "lib/",
       "languageVersion": "3.6"
+    },
+    {
+      "name": "marquee",
+      "rootUri": "file:///C:/Users/danis/AppData/Local/Pub/Cache/hosted/pub.dev/marquee-2.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
     },
     {
       "name": "matcher",
@@ -590,7 +602,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2025-03-08T01:56:42.635180Z",
+  "generated": "2025-03-14T19:01:23.988214Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///C:/flutter",

@@ -237,27 +237,25 @@ class ContactUsCard extends StatelessWidget {
                         print('Submitted!');
                       },
                       style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.resolveWith<Color>(
+                        backgroundColor: WidgetStateProperty.resolveWith<Color>(
                           (states) {
-                            if (states.contains(MaterialState.hovered)) {
+                            if (states.contains(WidgetState.hovered)) {
                               return Colors
                                   .black; // Change to black when hovered
                             }
-                            return const Color(0xffFFCD02); // color (green)
+                            return const Color(0xffFFCD02);
                           },
                         ),
-                        foregroundColor:
-                            MaterialStateProperty.resolveWith<Color>(
+                        foregroundColor: WidgetStateProperty.resolveWith<Color>(
                           (states) {
-                            if (states.contains(MaterialState.hovered)) {
+                            if (states.contains(WidgetState.hovered)) {
                               return const Color(
                                   0xffFFCD02); //  green when hovered
                             }
                             return Colors.black;
                           },
                         ),
-                        side: MaterialStateProperty.all<BorderSide>(
+                        side: WidgetStateProperty.all<BorderSide>(
                           const BorderSide(
                             color: Colors.black,
                             width: 1,

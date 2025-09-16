@@ -7,11 +7,11 @@ class ImageWithTextOverlay extends StatelessWidget {
   final String title;
 
   const ImageWithTextOverlay({
-    Key? key,
+    super.key,
     required this.size,
     required this.imageUrl,
     required this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

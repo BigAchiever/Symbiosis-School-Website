@@ -7,12 +7,12 @@ class StyledTextFormField extends StatefulWidget {
   final int? maxLines;
 
   const StyledTextFormField({
-    Key? key,
+    super.key,
     required this.controller,
     required this.hintText,
     this.validator,
     this.maxLines,
-  }) : super(key: key);
+  });
 
   @override
   _StyledTextFormFieldState createState() => _StyledTextFormFieldState();

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:symbiosis_school_jabalpur/pages/home/widgets/social_media_card.dart';
 import 'package:symbiosis_school_jabalpur/utils/API/fetch.dart';
 import 'package:symbiosis_school_jabalpur/widgets/button1_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -56,7 +55,10 @@ class _SocialMediaTabState extends State<SocialMediaTab> {
           ),
           SizedBox(
             width: size.width * 0.9,
-            child: const InstagramPosts(),
+            child: const InstagramPosts(
+              showOnlyImages: true,
+              limit: 6,
+            ),
           ),
           const SizedBox(
             height: 30,

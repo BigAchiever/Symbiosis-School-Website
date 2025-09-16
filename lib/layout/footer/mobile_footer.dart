@@ -141,7 +141,7 @@ class MobileFootertab extends StatelessWidget {
                         const SizedBox(height: 10),
                         GestureDetector(
                           onTap: () {
-                            context.go('/home');
+                            context.go('/');
                           },
                           child: const Text(
                             "Home",

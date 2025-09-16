@@ -13,7 +13,7 @@ class _MobileLearnMoreState extends State<MobileLearnMore> {
     return Scaffold(
       backgroundColor: const Color(0xffFFCD02),
       body: ListView(
-          physics: BouncingScrollPhysics(
+          physics: const BouncingScrollPhysics(
               decelerationRate: ScrollDecelerationRate.normal),
           children: const [Text("hello world")]),
     );

@@ -13,12 +13,12 @@ Widget sectionButtonsWidget(
     height: size.height / 12,
     child: ElevatedButton(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color>(
+        backgroundColor: WidgetStateProperty.all<Color>(
           isSelected ? Colors.yellow : Colors.white,
         ),
-        overlayColor: MaterialStateProperty.resolveWith<Color>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.hovered)) {
+        overlayColor: WidgetStateProperty.resolveWith<Color>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.hovered)) {
               return Colors.yellow;
             }
             return isSelected ? Colors.yellow : Colors.white;

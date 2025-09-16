@@ -29,7 +29,7 @@ class NotFoundPage extends StatelessWidget {
             ButtonWidget1(
               text: "Return to Home Page",
               onpressed: () {
-                GoRouter.of(context).go('/home');
+                GoRouter.of(context).go('/');
               },
             ),
           ],

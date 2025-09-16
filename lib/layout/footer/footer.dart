@@ -144,7 +144,7 @@ class FooterTab extends StatelessWidget {
                       textAlign: TextAlign.start,
                     ),
                     SizedBox(height: 10),
-                    FooterLinkItem(title: "Home", route: "/home"),
+                    FooterLinkItem(title: "Home", route: "/"),
                     SizedBox(height: 10),
                     FooterLinkItem(title: "About Us", route: "/about-us"),
                     SizedBox(height: 10),

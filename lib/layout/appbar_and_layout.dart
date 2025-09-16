@@ -40,7 +40,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                   backgroundColor: widget.color ?? const Color(0xffFFCD02),
                   title: InkWell(
                       hoverColor: Colors.transparent,
-                      onTap: () => GoRouter.of(context).go('/home'),
+                      onTap: () => GoRouter.of(context).go('/'),
                       child: const SizedBox(
                         width: 330,
                         child: Row(
@@ -158,7 +158,7 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                     padding: const EdgeInsets.all(8.0),
                     child: InkWell(
                       hoverColor: Colors.transparent,
-                      onTap: () => GoRouter.of(context).go('/home'),
+                      onTap: () => GoRouter.of(context).go('/'),
                       child: Row(
                         children: [
                           Text(
@@ -238,6 +238,29 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                             ),
                             itemBuilder: (BuildContext context) =>
                                 <PopupMenuEntry<String>>[
+                              PopupMenuItem<String>(
+                                mouseCursor: SystemMouseCursors.click,
+                                textStyle: const TextStyle(
+                                    fontFamily: "Magic Brush",
+                                    color: Colors.black),
+                                value: 'home',
+                                child: Container(
+                                    alignment: Alignment.centerLeft,
+                                    height: 40,
+                                    child: const Row(
+                                      children: [
+                                        Icon(
+                                          Icons.home_outlined,
+                                          size: 24,
+                                          color: Colors.black,
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text('Home'),
+                                      ],
+                                    )),
+                              ),
                               PopupMenuItem<String>(
                                 mouseCursor: SystemMouseCursors.click,
                                 textStyle: const TextStyle(
@@ -337,7 +360,12 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                               ),
                             ],
                             onSelected: (String tab) {
-                              if (tab == 'about') {
+                              if (tab == 'home') {
+                                GoRouter.of(context).go('/');
+                                setState(() {
+                                  menuOpened = false;
+                                });
+                              } else if (tab == 'about') {
                                 GoRouter.of(context).go('/about-us');
                                 setState(() {
                                   menuOpened = false;
@@ -349,6 +377,12 @@ class _AppbarWidgetState extends State<AppbarWidget> {
                                 });
                               } else if (tab == 'contact') {
                                 GoRouter.of(context).go('/contact-us');
+                                setState(() {
+                                  menuOpened = false;
+                                });
+                              }
+                              if (tab == 'Admin Login') {
+                                // GoRouter.of(context).go('/');
                                 setState(() {
                                   menuOpened = false;
                                 });

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:symbiosis_school_jabalpur/layout/footer/mobile_footer.dart';
+import 'package:symbiosis_school_jabalpur/utils/API/fetch.dart';
 
 import '../../widgets/bottom_picture_tab.dart';
 import '../../widgets/button1_widget.dart';
-import '../home/widgets/social_media_card.dart';
 
 class MobileSocialMedia extends StatefulWidget {
   const MobileSocialMedia({super.key});
@@ -120,38 +120,7 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
                             padding: EdgeInsets.symmetric(
                               horizontal: 30,
                             ),
-                            child: Wrap(
-                              spacing: 10.0,
-                              alignment: WrapAlignment.center,
-                              runSpacing: 30.0,
-                              children: [
-                                SocialMediaCard(
-                                  description:
-                                      "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                  image: "assets/image/dads.png",
-                                ),
-                                SocialMediaCard(
-                                  description:
-                                      "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                  image: "assets/image/dads.png",
-                                ),
-                                SocialMediaCard(
-                                  description:
-                                      "the moments that matter. Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                  image: "assets/image/dads.png",
-                                ),
-                                SocialMediaCard(
-                                  description:
-                                      "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                  image: "assets/image/dads.png",
-                                ),
-                                SocialMediaCard(
-                                  description:
-                                      "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                  image: "assets/image/dads.png",
-                                ),
-                              ],
-                            ),
+                            child: InstagramPosts(),
                           ),
                         ),
                         const SizedBox(
@@ -176,11 +145,11 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
                                     )..forward(),
                                     curve: Curves.easeIn,
                                   ),
-                                  child: const SocialMediaCard(
-                                    description:
-                                        "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                    image: "assets/image/dads.png",
-                                  ),
+                                  // child: const SocialMediaCard(
+                                  //   description:
+                                  //       "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                  //   image: "assets/image/dads.png",
+                                  // ),
                                 ),
                                 FadeTransition(
                                   opacity: CurvedAnimation(
@@ -191,11 +160,11 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
                                     )..forward(),
                                     curve: Curves.easeIn,
                                   ),
-                                  child: const SocialMediaCard(
-                                    description:
-                                        "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                    image: "assets/image/dads.png",
-                                  ),
+                                  // child: const SocialMediaCard(
+                                  //   description:
+                                  //       "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                  //   image: "assets/image/dads.png",
+                                  // ),
                                 ),
                                 FadeTransition(
                                   opacity: CurvedAnimation(
@@ -206,11 +175,11 @@ class _MobileSocialMediaState extends State<MobileSocialMedia>
                                     )..forward(),
                                     curve: Curves.easeIn,
                                   ),
-                                  child: const SocialMediaCard(
-                                    description:
-                                        "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
-                                    image: "assets/image/dads.png",
-                                  ),
+                                  // child: const SocialMediaCard(
+                                  //   description:
+                                  //       "Image is everything. We are a community of photographers, videographers, and editors. We are the ones who capture the moments that matter.",
+                                  //   image: "assets/image/dads.png",
+                                  // ),
                                 ),
                               ],
                             ),

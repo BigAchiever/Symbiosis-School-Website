@@ -6,25 +6,25 @@ class CustomDialogBox extends StatelessWidget {
   final String description;
   final String leftButtonText;
   final String rightButtonText;
-  final String leftButtonLink; // New property for left button link
+  final String leftButtonLink;
   final VoidCallback onRightButtonPressed;
 
   const CustomDialogBox({
-    Key? key,
+    super.key,
     required this.title,
     required this.description,
     required this.leftButtonText,
     required this.rightButtonText,
     required this.leftButtonLink,
     required this.onRightButtonPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Dialog(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15),
-        side: BorderSide(color: Colors.black, width: 2),
+        side: const BorderSide(color: Colors.black, width: 2),
       ),
       backgroundColor: const Color(0xffFFCD02),
       child: SizedBox(
@@ -73,7 +73,7 @@ class CustomDialogBox extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   ElevatedButton(
